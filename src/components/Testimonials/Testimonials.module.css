@@ -1,0 +1,234 @@
+.section {
+  overflow: hidden;
+  padding: clamp(4rem, 7vw, 7rem) 0;
+  background:
+    radial-gradient(ellipse 58% 82% at -8% 46%, transparent 62%, rgb(117 211 237 / 9%) 62.3%, transparent 62.7%),
+    radial-gradient(ellipse 58% 82% at 108% 46%, transparent 62%, rgb(117 211 237 / 9%) 62.3%, transparent 62.7%),
+    radial-gradient(ellipse 76% 64% at 50% 28%, transparent 68%, rgb(117 211 237 / 6%) 68.3%, transparent 68.7%),
+    radial-gradient(circle at 50% 18%, rgb(64 184 232 / 8%), transparent 38%),
+    var(--clr-charcoal);
+}
+
+.frame { max-width: 1240px; }
+
+.panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(170, 220, 233, 0.45);
+  border-radius: clamp(1.75rem, 4vw, 3.25rem);
+  background:
+    radial-gradient(circle at 50% 100%, rgba(76, 195, 229, 0.16), transparent 34%),
+    var(--clr-bg-white);
+  min-height: 720px;
+  padding: clamp(17rem, 23vw, 19rem) clamp(1.25rem, 5vw, 4.5rem) clamp(2rem, 4vw, 3.5rem);
+  box-shadow: 0 30px 80px rgba(2, 24, 34, 0.28);
+}
+
+.portraitArc {
+  position: absolute;
+  top: 1.2rem;
+  left: 50%;
+  width: min(96%, 1160px);
+  height: auto;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.mobilePortraits { display: none; }
+
+.heading {
+  max-width: 680px;
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
+  text-align: center;
+}
+
+.heading > p {
+  margin-bottom: 0.75rem;
+  color: var(--brand-primary);
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+
+.heading h2 {
+  color: var(--clr-title);
+  font-size: clamp(2.35rem, 4vw, 4rem);
+  font-weight: 760;
+  letter-spacing: -0.052em;
+  line-height: 1;
+}
+
+.heading > span {
+  display: block;
+  margin-top: 1rem;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.sliderWrap {
+  margin-inline: -0.5rem;
+  padding-bottom: 2rem;
+}
+
+.sliderWrap :global(.slick-list) {
+  overflow: hidden;
+}
+
+.sliderWrap :global(.slick-track) {
+  display: flex;
+}
+
+.sliderWrap :global(.slick-slide) {
+  height: auto;
+}
+
+.sliderWrap :global(.slick-slide > div) {
+  height: 100%;
+}
+
+.slide {
+  height: 100%;
+  padding: 0.5rem;
+}
+
+.card {
+  display: flex;
+  height: 100%;
+  min-height: 236px;
+  flex-direction: column;
+  border: 1px solid var(--border-subtle);
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.84);
+  padding: clamp(1.25rem, 2.5vw, 1.8rem);
+  opacity: 0.45;
+  transform: translateY(12px) scale(0.97);
+  transition: opacity 500ms ease, transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sliderWrap :global(.slick-active) .card {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.3rem;
+}
+
+.cardTop > svg {
+  width: 1.35rem;
+  height: 1.35rem;
+  color: var(--brand-primary);
+  fill: rgba(18, 151, 190, 0.12);
+}
+
+.stars {
+  display: flex;
+  gap: 0.18rem;
+  color: #f4ad22;
+}
+
+.stars svg {
+  width: 0.95rem;
+  height: 0.95rem;
+  fill: currentColor;
+  stroke-width: 1.5;
+}
+
+.card blockquote {
+  color: var(--text-primary);
+  font-size: 0.94rem;
+  font-weight: 560;
+  line-height: 1.6;
+}
+
+.card footer {
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
+.card strong { color: var(--clr-title); font-size: 0.82rem; }
+
+.sliderWrap :global(.slick-dots) {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sliderWrap :global(.slick-dots button) {
+  width: 7px;
+  height: 7px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 999px;
+  background: var(--clr-slate-300);
+  padding: 0;
+  color: transparent;
+  cursor: pointer;
+  transition: width 180ms ease, background-color 180ms ease;
+}
+
+.sliderWrap :global(.slick-dots .slick-active button) {
+  width: 24px;
+  background: var(--brand-primary);
+}
+
+.disclosure {
+  margin: 1.25rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .sliderWrap :global(.slick-active) .card {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .panel { min-height: 0; padding-top: clamp(10rem, 37vw, 15rem); }
+  .portraitArc { top: 1rem; width: 112%; }
+  .card { min-height: 220px; }
+}
+
+@media (max-width: 768px) {
+  .panel { padding-top: 11rem; }
+  .portraitArc { display: none; }
+  .mobilePortraits {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    display: block;
+    width: calc(100% - 1.5rem);
+    height: 9.5rem;
+    overflow: hidden;
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+  .mobilePortraits img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 216.667%;
+    max-width: none;
+    height: auto;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 520px) {
+  .section { padding-block: 3rem; }
+  .panel { padding-top: 11rem; }
+}
+@media (max-width:520px) { .heading h2 { font-size:clamp(30px,8vw,38px); } .heading > span, .card blockquote { font-size:16px; } .disclosure { font-size:14px; line-height:1.5; } }

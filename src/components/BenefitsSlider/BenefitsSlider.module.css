@@ -1,0 +1,58 @@
+.carousel { width:100%; }
+.sliderWrap { position:relative; padding:0 44px; }
+.sliderWrap :global(.slick-list) { overflow:hidden; padding-block:24px!important; }
+.sliderWrap :global(.slick-track) { display:flex; align-items:center; }
+.sliderWrap :global(.slick-slide) { position:relative; height:auto; z-index:0; opacity:.9; transition:opacity .45s ease; }
+.sliderWrap :global(.slick-center) { z-index:2; opacity:1; }
+.sliderWrap :global(.slick-slide > div) { height:100%; }
+.slide { position:relative; height:460px; padding:0 4px; }
+.benefitCard { position:absolute; top:50%; left:50%; width:calc(100% - 8px); height:410px; overflow:hidden; isolation:isolate; border:1px solid rgb(255 255 255 / 28%); border-radius:18px; background:var(--background-section-strong); box-shadow:0 12px 24px rgb(16 55 70 / 13%); transform:translate(-50%,-50%); transition:width .45s ease,height .45s ease,box-shadow .45s ease; }
+.sliderWrap :global(.slick-center) .benefitCard { width:116%; height:460px; border:0; border-radius:20px; box-shadow:0 22px 42px rgb(16 55 70 / 19%); }
+.benefitCard > img { z-index:-2; object-fit:cover; transition:transform .45s ease; }
+.sliderWrap :global(.slick-center) .benefitCard > img { transform:scale(1.02); }
+.benefitShade { position:absolute; inset:24% 0 0; z-index:-1; background:linear-gradient(transparent,rgb(8 43 55 / 96%)); }
+.benefitCopy { position:absolute; left:20px; right:20px; bottom:20px; color:var(--text-on-dark); }
+.benefitCopy h3 { font-size:18px; line-height:1.25; }
+.benefitCopy p { margin-top:6px; color:var(--text-on-dark-muted); font-size:14px; line-height:1.5; }
+.sliderWrap :global(.slick-slide:has(+ .slick-center)) .benefitCopy { right:40px; }
+.sliderWrap :global(.slick-center + .slick-slide) .benefitCopy { left:40px; }
+.sliderWrap :global(.slick-center) .benefitCopy { left:24px; right:24px; bottom:24px; }
+.sliderWrap :global(.slick-center) .benefitCopy h3 { font-size:24px; }
+.sliderWrap :global(.slick-center) .benefitCopy p { max-width:42ch; font-size:16px; }
+.arrow { position:absolute; top:50%; z-index:3; width:46px; height:46px; display:grid; place-items:center; border:1px solid var(--border-strong); border-radius:50%; color:var(--brand-primary); background:var(--background-card); box-shadow:0 8px 20px rgb(16 55 70 / 12%); transform:translateY(-50%); transition:background-color .18s ease,color .18s ease,box-shadow .18s ease; }
+.arrow:hover { color:var(--text-on-dark); background:var(--brand-primary); box-shadow:0 10px 22px rgb(16 55 70 / 18%); }
+.arrowPrev { left:0; }
+.arrowNext { right:0; border-color:var(--brand-primary); color:var(--text-on-dark); background:var(--brand-primary); }
+.arrowNext:hover { background:var(--brand-primary-dark); }
+@media (max-width:900px) {
+  .sliderWrap { padding-inline:38px; }
+  .sliderWrap :global(.slick-list) { padding-block:18px!important; }
+  .sliderWrap :global(.slick-slide) { opacity:.85; }
+  .sliderWrap :global(.slick-center) { opacity:1; }
+  .slide { height:420px; }
+  .benefitCard { width:calc(100% - 8px); height:380px; }
+  .sliderWrap :global(.slick-center) .benefitCard { width:108%; height:420px; }
+  .sliderWrap :global(.slick-slide:has(+ .slick-center)) .benefitCopy { right:24px; }
+  .sliderWrap :global(.slick-center + .slick-slide) .benefitCopy { left:24px; }
+  .benefitCopy { left:18px; right:18px; bottom:18px; }
+  .benefitCopy h3 { font-size:16px; }
+  .benefitCopy p { font-size:13px; }
+}
+@media (max-width:620px) {
+  .sliderWrap { margin-inline:-18px; padding-inline:0; }
+  .sliderWrap :global(.slick-list) { padding-block:12px!important; }
+  .sliderWrap :global(.slick-slide), .sliderWrap :global(.slick-center) { opacity:1; }
+  .slide { height:410px; padding:0 5px; }
+  .benefitCard, .sliderWrap :global(.slick-center) .benefitCard { width:calc(100% - 10px); height:410px; border-radius:16px; }
+  .sliderWrap :global(.slick-slide:has(+ .slick-center)) .benefitCopy,
+  .sliderWrap :global(.slick-center + .slick-slide) .benefitCopy { left:18px; right:18px; }
+  .arrow { width:42px; height:42px; background:rgb(255 255 255 / 94%); }
+  .arrowPrev { left:7px; }
+  .arrowNext { right:7px; background:var(--brand-primary); }
+  .benefitCopy h3 { font-size:21px; }
+  .benefitCopy p { font-size:15px; line-height:1.5; }
+  .sliderWrap :global(.slick-center) .benefitCopy p { font-size:15px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .sliderWrap :global(.slick-slide), .arrow, .benefitCard, .benefitCard > img { transition:none; }
+}

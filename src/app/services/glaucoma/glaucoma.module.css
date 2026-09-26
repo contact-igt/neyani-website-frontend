@@ -1,0 +1,247 @@
+.main { padding-top:88px; background:var(--background-page); }
+.hero { position:relative; isolation:isolate; width:100%; height:min(700px,calc(100svh - 88px)); min-height:640px; overflow:hidden; background:#f4fafc; }
+.hero::before { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,#f4fafc 0%,rgb(244 250 252 / 99%) 34%,rgb(244 250 252 / 90%) 43%,rgb(244 250 252 / 40%) 55%,transparent 68%); pointer-events:none; }
+.hero::after { content:""; position:absolute; z-index:-1; left:-170px; bottom:-300px; width:570px; height:570px; border:1px solid rgb(19 143 177 / 11%); border-radius:50%; box-shadow:0 0 0 65px rgb(19 143 177 / 3%),0 0 0 130px rgb(19 143 177 / 2%); pointer-events:none; }
+.heroImage { z-index:-2; object-fit:cover; object-position:center; }
+.heroPanel { position:absolute; inset:0 auto 0 0; width:61%; display:flex; align-items:center; color:var(--text-primary); }
+.copy { position:relative; z-index:1; width:min(810px,100%); padding:clamp(42px,5vw,72px) clamp(28px,5vw,76px); }
+.kicker { width:fit-content; display:flex; align-items:center; gap:9px; margin-bottom:22px; padding:8px 14px 8px 9px; border:1px solid var(--border-subtle); border-radius:999px; color:var(--brand-primary-dark); background:rgb(255 255 255 / 86%); font-size:11px; font-weight:750; letter-spacing:.04em; text-transform:uppercase; backdrop-filter:blur(8px); }
+.kicker span { width:28px; height:28px; display:grid; place-items:center; border-radius:50%; color:var(--brand-primary); background:var(--background-section-strong); }
+.copy h1 { max-width:750px; color:var(--title-primary); font-size:clamp(44px,5.2vw,72px); line-height:.94; letter-spacing:-.06em; }
+.copy h1 span { color:var(--brand-primary); }
+.intro { max-width:690px; margin-top:26px; color:var(--text-primary); font-size:clamp(15px,1.35vw,18px); line-height:1.7; }
+.actions { display:flex; align-items:center; flex-wrap:wrap; gap:18px; margin-top:30px; }
+.primary { min-height:54px; display:inline-flex; align-items:center; gap:15px; padding:5px 6px 5px 21px; border-radius:999px; color:var(--text-on-dark); background:var(--brand-primary); font-size:13px; font-weight:750; box-shadow:0 10px 24px var(--shadow-color); transition:background .15s ease,transform .15s ease; }
+.primary > span { width:42px; height:42px; display:grid; place-items:center; border-radius:50%; color:var(--brand-primary); background:var(--background-card); }
+.primary:hover { background:var(--brand-primary-hover); transform:translateY(-1px); }
+.call { display:inline-flex; align-items:center; gap:8px; color:var(--brand-primary-dark); font-size:13px; font-weight:700; }
+.facts { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:34px; padding-top:26px; border-top:1px solid var(--border-subtle); }
+.facts p { display:flex; align-items:flex-start; gap:11px; color:var(--text-muted); font-size:12px; line-height:1.5; }
+.facts svg { flex:0 0 auto; width:32px; height:32px; padding:7px; border-radius:50%; color:var(--brand-primary); background:#dcf3f8; }
+.facts strong { display:block; color:var(--title-primary); font-size:15px; line-height:1.3; }
+.explainer { position:relative; overflow:hidden; padding:clamp(72px,8vw,110px) 0; background-color:#f2f9fc; background-image:linear-gradient(100deg,rgb(245 250 255 / 24%),rgb(255 255 255 / 8%) 52%,rgb(226 247 252 / 16%)),url('/glaucoma-understanding-section-bg.png'); background-position:center; background-size:cover; }
+.explainer::before { content:""; position:absolute; right:-190px; top:-220px; width:520px; height:520px; border:1px solid rgb(19 143 177 / 10%); border-radius:50%; box-shadow:0 0 0 70px rgb(19 143 177 / 3%),0 0 0 140px rgb(19 143 177 / 2%); }
+.explainerLayout { position:relative; display:grid; grid-template-columns:minmax(0,.93fr) minmax(500px,1.07fr); gap:clamp(48px,7vw,100px); align-items:center; }
+.explainerCopy { position:relative; z-index:2; }
+.sectionLabel { width:fit-content; display:flex; align-items:center; gap:8px; margin-bottom:18px; padding:7px 11px; border-radius:999px; color:var(--brand-primary-dark); background:#dff3f8; font-size:10px; font-weight:750; letter-spacing:.05em; text-transform:uppercase; }
+.sectionLabel span { width:7px; height:7px; border-radius:50%; background:var(--brand-cyan); }
+.explainerCopy h2 { color:var(--title-primary); font-size:clamp(38px,4.1vw,58px); line-height:1; letter-spacing:-.055em; }
+.explainerCopy h2 span { color:var(--brand-primary); }
+.explainerCopy > p { max-width:650px; margin-top:17px; color:var(--text-primary); font-size:14px; line-height:1.72; }
+.explainerCopy > p strong { color:var(--title-primary); }
+.detectionNote { display:flex; gap:15px; margin-top:24px; padding:20px 22px; border-radius:18px; color:var(--text-on-dark); background:var(--brand-primary); box-shadow:0 16px 30px rgb(19 143 177 / 17%); }
+.detectionNote > span { width:38px; height:38px; flex:0 0 auto; display:grid; place-items:center; border-radius:50%; color:var(--brand-cyan-soft); background:rgb(255 255 255 / 13%); }
+.detectionNote h3 { font-size:14px; line-height:1.35; }
+.detectionNote p { margin-top:5px; color:rgb(255 255 255 / 82%); font-size:11px; line-height:1.55; }
+.diagnosticTags { display:flex; flex-wrap:wrap; gap:9px; margin-top:18px; padding:0; list-style:none; }
+.diagnosticTags li { display:flex; align-items:center; gap:6px; min-height:30px; padding:0 11px; border:1px solid #d9e8ee; border-radius:999px; color:var(--brand-primary-dark); background:rgb(255 255 255 / 78%); font-size:10px; font-weight:700; }
+.diagnosticTags svg { color:var(--brand-primary); }
+.explainerVisual { position:relative; min-height:530px; }
+.explainerVisual figure { position:absolute; overflow:hidden; margin:0; background:var(--background-section-strong); box-shadow:0 18px 38px rgb(16 55 70 / 15%); }
+.explainerVisual img { object-fit:cover; }
+.primaryExam { z-index:1; top:0; right:0; width:76%; height:68%; border-radius:25px 25px 8px 25px; }
+.primaryExam img { object-position:center; }
+.scanReview { z-index:2; left:0; bottom:3%; width:54%; height:43%; border-radius:22px 8px 22px 22px; }
+.patientReview { z-index:3; right:0; bottom:0; width:43%; height:38%; border-radius:8px 22px 22px 22px; }
+.scanReview img { object-position:58% center; }
+.patientReview img { object-position:center; }
+.explainerVisual figcaption { position:absolute; z-index:2; display:flex; align-items:center; gap:6px; padding:7px 10px; border-radius:999px; color:var(--brand-primary-dark); background:rgb(255 255 255 / 92%); font-size:9px; font-weight:700; backdrop-filter:blur(9px); }
+.primaryExam figcaption { top:12px; left:12px; }
+.scanReview figcaption,.patientReview figcaption { left:10px; bottom:9px; }
+.monitoringBadge { position:absolute; z-index:5; left:43%; bottom:-2%; display:flex; align-items:center; gap:10px; max-width:225px; padding:13px 15px; border-radius:15px; color:var(--text-primary); background:rgb(255 255 255 / 96%); box-shadow:0 14px 30px rgb(16 55 70 / 18%); }
+.monitoringBadge > svg { flex:0 0 auto; color:var(--brand-primary); }
+.monitoringBadge span { color:var(--text-muted); font-size:9px; line-height:1.35; }
+.monitoringBadge strong { display:block; color:var(--brand-primary-dark); font-size:11px; }
+
+.reasons { padding:clamp(72px,9vw,120px) 0; background-image:linear-gradient(rgb(255 255 255 / 16%),rgb(247 248 255 / 18%)),url('/optical-contour-section-bg.png'); background-position:center; background-size:cover; }
+.reasonsHeading { max-width:760px; margin:0 auto 46px; text-align:center; }
+.reasonsHeading .sectionLabel { margin-inline:auto; }
+.reasonsHeading h2 { color:var(--title-primary); font-size:clamp(32px,4vw,50px); line-height:1.08; letter-spacing:-.05em; }
+.reasonsHeading h2 span { color:var(--brand-primary); }
+.reasonsHeading > p:last-child { max-width:680px; margin:18px auto 0; color:var(--text-primary); font-size:14px; line-height:1.65; }
+.reasonGrid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+.reasonCard { position:relative; min-height:250px; overflow:hidden; padding:24px; border:1px solid rgb(207 228 235 / 78%); border-radius:22px; background:rgb(255 255 255 / 88%); box-shadow:0 12px 30px rgb(16 55 70 / 5%); transition:transform .18s var(--ease-out),border-color .18s ease,box-shadow .18s ease,background-color .18s ease; }
+.reasonCard::after { content:""; position:absolute; z-index:0; inset:0; background:linear-gradient(145deg,var(--brand-primary),var(--brand-primary-dark)); opacity:0; transform:translateY(24%); transition:opacity .22s ease,transform .22s var(--ease-out); pointer-events:none; }
+.reasonCard > * { position:relative; z-index:1; }
+.reasonCard:hover { transform:translateY(-7px); border-color:rgb(64 184 232 / 52%); background:var(--background-card); box-shadow:0 22px 44px rgb(16 55 70 / 13%); }
+.reasonCard:hover::after { opacity:1; transform:translateY(0); }
+.reasonTop { display:flex; align-items:flex-start; justify-content:space-between; }
+.reasonTop span { width:46px; height:46px; display:grid; place-items:center; border-radius:13px; color:var(--brand-primary); background:var(--background-section-strong); transition:transform .18s var(--ease-out),color .18s ease,background-color .18s ease; }
+.reasonTop b { color:rgb(64 184 232 / 12%); font-size:40px; line-height:1; transition:color .18s ease,transform .18s var(--ease-out); }
+.reasonCard:hover .reasonTop span { color:var(--brand-primary); background:var(--background-card); transform:translateY(-2px) rotate(-3deg); }
+.reasonCard:hover .reasonTop b { color:rgb(255 255 255 / 18%); transform:translateX(-2px); }
+.reasonCard h3 { margin-top:22px; color:var(--title-primary); font-size:17px; line-height:1.3; transition:color .18s ease; }
+.reasonCard > p { margin-top:10px; color:var(--text-primary); font-size:12px; line-height:1.65; transition:color .18s ease; }
+.reasonCard:hover h3 { color:var(--text-on-dark); }
+.reasonCard:hover > p { color:var(--text-on-dark-muted); }
+.signs { position:relative; padding:clamp(72px,8vw,112px) 0; background-color:#f1f4ff; background-image:linear-gradient(100deg,rgb(241 244 255 / 24%),rgb(255 255 255 / 8%) 52%,rgb(232 246 252 / 16%)),url('/glaucoma-check-section-bg.png'); background-position:center; background-size:cover; }
+.signsHeading { max-width:820px; margin:0 auto; text-align:center; }
+.signsHeading > p { width:fit-content; display:flex; align-items:center; gap:7px; margin:0 auto; padding:6px 10px; border-radius:999px; color:var(--brand-primary-dark); background:#dfeaf8; font-size:9px; font-weight:750; letter-spacing:.05em; text-transform:uppercase; }
+.signsHeading > p span { width:6px; height:6px; border-radius:50%; background:var(--brand-cyan); }
+.signsHeading h2 { margin-top:14px; color:var(--title-primary); font-size:clamp(34px,4vw,52px); line-height:1.04; letter-spacing:-.052em; }
+.signsHeading h2 span { color:var(--brand-primary); }
+.signsHeading > div { max-width:760px; margin:15px auto 0; color:var(--text-primary); font-size:13px; line-height:1.65; }
+.signsLayout { display:grid; grid-template-columns:minmax(0,1.08fr) minmax(440px,.92fr); gap:32px; margin-top:48px; align-items:start; }
+.screener { min-width:0; }
+.signList { display:grid; gap:10px; }
+.signList details { overflow:hidden; border:1px solid rgb(207 228 235 / 78%); border-radius:8px; background:#fdfefe; }
+.signList summary { min-height:66px; display:grid; grid-template-columns:38px 1fr auto; gap:15px; align-items:center; padding:11px 18px; color:var(--title-primary); cursor:pointer; list-style:none; }
+.signList summary::-webkit-details-marker { display:none; }
+.signList summary i { width:36px; height:36px; display:grid; place-items:center; border-radius:50%; color:var(--brand-primary); background:#dcf3f8; font-size:10px; font-style:normal; font-weight:750; }
+.signList summary strong { font-size:13px; line-height:1.4; }
+.signList summary svg { color:var(--brand-primary); transition:transform .18s ease; }
+.signList details[open] summary svg { transform:rotate(180deg); }
+.signList details > div { padding:0 21px 19px 71px; }
+.signList details > div p { color:var(--text-primary); font-size:11px; line-height:1.6; }
+.signList details > div b { display:inline-flex; margin-top:10px; padding:5px 9px; border-radius:999px; color:var(--brand-primary-dark); background:#cfe9f2; font-size:8px; font-weight:750; }
+.signList details > div span { display:flex; align-items:center; gap:7px; margin-top:12px; padding:11px 12px; color:var(--brand-primary-dark); background:#edf2ff; font-size:9px; font-weight:700; }
+.signsVisual { display:grid; gap:18px; }
+.visualGrid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.visualGrid figure { position:relative; min-height:180px; overflow:hidden; margin:0; background:var(--background-section-strong); box-shadow:0 12px 24px rgb(16 55 70 / 12%); }
+.visualGrid figure:first-child { border-radius:22px 4px 4px 4px; }
+.visualGrid figure:nth-child(2) { border-radius:4px 22px 4px 4px; }
+.visualGrid figure:nth-child(3) { border-radius:4px 4px 4px 22px; }
+.visualGrid figure:last-child { border-radius:4px 4px 22px 4px; }
+.visualGrid img { object-fit:cover; }
+.visualGrid figure::after { content:""; position:absolute; inset:48% 0 0; background:linear-gradient(transparent,rgb(8 43 55 / 82%)); }
+.visualGrid figcaption { position:absolute; z-index:2; right:9px; bottom:9px; left:9px; display:flex; align-items:center; justify-content:space-between; padding:7px 9px; border-radius:999px; color:var(--title-primary); background:rgb(255 255 255 / 92%); font-size:9px; font-weight:750; backdrop-filter:blur(8px); }
+.visualGrid figcaption span { width:24px; height:24px; display:grid; place-items:center; border-radius:50%; color:var(--text-on-dark); background:var(--brand-primary); }
+.clinicalAdvisory { min-height:100px; display:grid; grid-template-columns:38px 1fr auto; gap:13px; align-items:center; padding:18px 20px; border-radius:20px; color:var(--text-on-dark); background:var(--brand-primary-dark); box-shadow:0 13px 28px rgb(16 55 70 / 15%); }
+.clinicalAdvisory > span { width:38px; height:38px; display:grid; place-items:center; border-radius:50%; color:var(--brand-cyan-soft); background:rgb(64 184 232 / 18%); }
+.clinicalAdvisory p { color:var(--brand-cyan-soft); font-size:9px; font-weight:750; letter-spacing:.04em; text-transform:uppercase; }
+.clinicalAdvisory h3 { margin-top:3px; font-size:13px; }
+.clinicalAdvisory small { display:block; margin-top:4px; color:var(--text-on-dark-muted); font-size:9px; line-height:1.4; }
+.clinicalAdvisory a { display:inline-flex; align-items:center; gap:6px; padding:10px 13px; border-radius:999px; color:var(--text-on-dark); background:var(--brand-primary); font-size:9px; font-weight:750; white-space:nowrap; }
+@media (max-width:1050px) {
+  .main { padding-top:78px; }
+  .hero { height:680px; min-height:0; }
+  .heroPanel { width:68%; }
+  .copy { padding:46px 34px; }
+  .explainerLayout { grid-template-columns:minmax(0,.94fr) minmax(430px,1.06fr); gap:38px; }
+}
+
+@media (max-width:850px) {
+  .explainerLayout,.signsLayout { grid-template-columns:1fr; }
+  .explainerCopy { max-width:720px; }
+  .explainerVisual { width:min(680px,100%); min-height:560px; margin-inline:auto; }
+  .signsVisual { width:min(680px,100%); margin-inline:auto; }
+}
+
+@media (max-width:700px) {
+  .main { padding-top:76px; }
+  .hero { height:clamp(660px,calc(100svh - 76px),760px); background:var(--background-dark); }
+  .hero::before { background:linear-gradient(180deg,rgb(8 43 55 / 4%) 8%,rgb(8 43 55 / 28%) 38%,rgb(8 43 55 / 95%) 71%); }
+  .hero::after { display:none; }
+  .heroImage { object-position:61% center; }
+  .heroPanel { inset:0; width:100%; align-items:flex-end; color:var(--text-on-dark); }
+  .copy { width:100%; padding:30px 22px 32px; }
+  .kicker { margin-bottom:14px; border-color:rgb(255 255 255 / 34%); color:var(--text-on-dark); background:rgb(8 43 55 / 48%); }
+  .copy h1 { max-width:590px; color:var(--text-on-dark); font-size:clamp(39px,11vw,54px); text-shadow:0 2px 18px rgb(0 0 0 / 30%); }
+  .copy h1 span { color:var(--brand-cyan-soft); }
+  .intro { margin-top:16px; color:var(--text-on-dark); font-size:14px; line-height:1.55; text-shadow:0 1px 10px rgb(0 0 0 / 40%); }
+  .actions { margin-top:18px; }
+  .call { color:var(--text-on-dark); }
+  .facts { grid-template-columns:repeat(3,1fr); gap:8px; margin-top:20px; padding-top:16px; border-color:rgb(255 255 255 / 28%); }
+  .facts p { color:var(--text-on-dark-muted); }
+  .facts strong { color:var(--text-on-dark); font-size:11px; }
+  .explainer { padding:66px 0 76px; }
+  .explainerCopy h2 { font-size:clamp(34px,9vw,43px); }
+  .explainerCopy > p { font-size:15px; }
+  .explainerVisual { min-height:480px; }
+  .primaryExam { width:88%; height:61%; }
+  .scanReview { width:58%; height:40%; }
+  .patientReview { width:47%; height:36%; }
+  .monitoringBadge { left:auto; right:3%; bottom:-3%; }
+  .signs { padding:66px 0 76px; }
+  .signsHeading { text-align:left; }
+  .signsHeading > p { margin-left:0; }
+  .signsHeading h2 { font-size:clamp(32px,8.5vw,42px); }
+  .signsHeading > div { font-size:15px; }
+  .signsLayout { margin-top:34px; }
+  .signList summary { grid-template-columns:34px 1fr auto; padding-inline:10px; }
+  .signList details > div { padding-left:59px; }
+  .visualGrid figure { min-height:150px; }
+  .clinicalAdvisory { grid-template-columns:38px 1fr; }
+  .clinicalAdvisory a { width:fit-content; grid-column:2; }
+}
+
+@media (max-width:520px) {
+  .hero { height:760px; }
+  .actions { align-items:flex-start; flex-direction:column; }
+  .facts { grid-template-columns:1fr; }
+  .facts svg { width:29px; height:29px; }
+}
+
+@media (max-width:900px) { .reasonGrid { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:600px) { .reasons { padding:68px 0; } .reasonsHeading { margin-bottom:32px; text-align:left; } .reasonsHeading .sectionLabel { margin-inline:0; } .reasonGrid { grid-template-columns:1fr; } .reasonCard { min-height:0; } }
+@media (max-width:700px) {
+  .reasonsHeading > p:last-child { font-size:16px; }
+  .reasonCard > p { font-size:15px; }
+  .reasonCard h3 { font-size:19px; }
+  .reasonsHeading h2 { font-size:clamp(30px,8vw,38px); }
+}
+
+@media (prefers-reduced-motion:reduce) { .primary,.reasonCard,.reasonCard::after,.reasonTop span,.reasonTop b,.signList summary svg { transition:none; } }
+
+/* ── Treatment options, benefits and final CTA (mirrors cataract mirrors cataract page pediatric pages) ── */
+.treatments { padding:clamp(72px,9vw,120px) 0; background:linear-gradient(180deg,#f7fcfe,#edf8fb); }
+.treatmentHeading { max-width:760px; margin:0 auto 42px; text-align:center; }
+.treatmentHeading .sectionLabel { margin-inline:auto; }
+.treatmentHeading h2 { color:var(--title-primary); font-size:clamp(34px,4.5vw,52px); line-height:1.05; letter-spacing:-.052em; }
+.treatmentHeading h2 span { color:var(--brand-primary); }
+.treatmentHeading p { max-width:720px; margin:16px auto 0; color:var(--text-primary); font-size:13px; line-height:1.65; }
+.treatmentGrid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; }
+.treatmentCard { display:grid; overflow:hidden; border:1px solid var(--border-subtle); border-radius:24px; background:var(--background-card); box-shadow:0 16px 38px rgb(16 55 70 / 8%); transition:transform .15s var(--ease-out),box-shadow .15s ease,background-color .15s ease,border-color .15s ease; }
+.treatmentCard:nth-child(4) { grid-column:2; }
+.treatmentCard:hover { transform:translateY(-5px); background:var(--brand-primary); box-shadow:0 24px 48px rgb(7 113 148 / 20%); }
+.treatmentImage { position:relative; min-height:220px; overflow:hidden; margin:0; background:var(--background-section-strong); }
+.treatmentImage img { object-fit:cover; transition:transform .3s var(--ease-out); }
+.treatmentCard:hover .treatmentImage img { transform:scale(1.025); }
+.treatmentBody { display:flex; flex-direction:column; min-height:360px; padding:26px; }
+.treatmentMeta { display:flex; align-items:flex-end; justify-content:space-between; gap:16px; }
+.treatmentMeta > span { width:50px; height:50px; display:grid; place-items:center; flex:0 0 auto; margin-top:-44px; border-radius:15px; color:var(--brand-primary); background:var(--background-section-strong); box-shadow:0 10px 22px rgb(16 55 70 / 14%); }
+.treatmentMeta b { padding:7px 10px; border-radius:9px; color:var(--brand-primary); background:var(--background-section-strong); font-size:10px; letter-spacing:.04em; text-align:right; text-transform:uppercase; }
+.treatmentBody h3 { margin-top:22px; color:var(--title-primary); font-size:24px; line-height:1.2; }
+.treatmentBody > p { margin-top:12px; color:var(--text-primary); font-size:13px; line-height:1.65; }
+.treatmentBody ul { display:grid; gap:9px; margin-top:22px; list-style:none; }
+.treatmentBody li { display:flex; align-items:flex-start; gap:9px; color:var(--text-primary); font-size:12px; line-height:1.5; }
+.treatmentBody li svg { flex:0 0 auto; width:22px; height:22px; margin-top:-1px; padding:4px; border-radius:50%; color:#087c68; background:#d9f8eb; transition:color .15s ease,background-color .15s ease; }
+.treatmentBody > a { width:fit-content; display:inline-flex; align-items:center; gap:8px; margin-top:auto; padding-top:24px; color:var(--brand-primary); font-size:12px; font-weight:750; }
+.treatmentCard:hover .treatmentBody h3,.treatmentCard:hover .treatmentBody > p,.treatmentCard:hover .treatmentBody li,.treatmentCard:hover .treatmentBody > a { color:var(--text-on-dark); }
+.treatmentCard:hover .treatmentBody li svg { color:var(--text-on-dark); background:rgb(255 255 255 / 18%); }
+.treatmentNote { max-width:850px; margin:18px auto 0; color:var(--text-muted); font-size:11px; line-height:1.6; text-align:center; }
+.benefits { padding:clamp(72px,9vw,120px) 0; background:var(--background-card); }
+.benefits :global(.container) { max-width:1360px; }
+.benefitsHeading { max-width:760px; margin:0 auto 30px; text-align:center; }
+.benefitsHeading .sectionLabel { margin-inline:auto; }
+.benefitsHeading h2 { color:var(--title-primary); font-size:clamp(30px,3.5vw,42px); line-height:1.12; letter-spacing:-.04em; }
+.benefitsHeading h2 span { color:var(--brand-primary); }
+.benefitsHeading > p:last-child { max-width:690px; margin:12px auto 0; color:var(--text-primary); font-size:15px; line-height:1.6; }
+.benefitNote { max-width:820px; margin:20px auto 0; color:var(--text-muted); font-size:11px; line-height:1.6; text-align:center; }
+.finalCta { padding:clamp(64px,8vw,100px) 0; background:#f3f4ff; }
+.ctaPanel { display:grid; grid-template-columns:minmax(0,1.12fr) minmax(320px,.72fr); gap:clamp(40px,7vw,90px); align-items:center; padding:clamp(36px,5vw,64px); border-radius:28px; color:var(--text-on-dark); background:var(--brand-primary); box-shadow:0 24px 50px rgb(16 55 70 / 16%); }
+.ctaLabel { width:fit-content; display:flex; align-items:center; gap:8px; margin-bottom:20px; padding:7px 11px; border-radius:999px; color:var(--brand-primary-dark); background:var(--background-card); font-size:10px; font-weight:750; letter-spacing:.05em; text-transform:uppercase; }
+.ctaLabel span { width:7px; height:7px; border-radius:50%; background:var(--brand-cyan); }
+.ctaCopy h2 { max-width:650px; font-size:clamp(38px,5vw,60px); line-height:.98; letter-spacing:-.055em; }
+.ctaCopy > p:not(.ctaLabel):not(.ctaDetail) { max-width:620px; margin-top:20px; color:var(--text-on-dark-muted); font-size:14px; line-height:1.7; }
+.ctaActions { display:flex; align-items:center; flex-wrap:wrap; gap:12px; margin-top:26px; }
+.ctaActions a { min-height:48px; display:inline-flex; align-items:center; justify-content:center; gap:9px; padding:0 18px; border:1px solid rgb(255 255 255 / 58%); border-radius:999px; color:var(--text-on-dark); font-size:12px; font-weight:700; transition:background .15s ease,color .15s ease,transform .15s ease; }
+.ctaActions a:first-child { color:var(--brand-primary-dark); background:var(--background-card); border-color:var(--background-card); }
+.ctaActions a:hover { transform:translateY(-1px); background:rgb(255 255 255 / 14%); }
+.ctaActions a:first-child:hover { background:var(--background-section); }
+.ctaDetail { display:flex; align-items:flex-start; gap:8px; margin-top:24px; color:var(--text-on-dark-muted); font-size:11px; line-height:1.5; }
+.ctaDetail svg { flex:0 0 auto; margin-top:1px; color:var(--brand-cyan-soft); }
+.ctaVisual { position:relative; min-height:340px; overflow:hidden; border-radius:22px; background:var(--background-section-strong); }
+.ctaVisual > img { object-fit:cover; }
+.ctaVisual > div { position:absolute; left:16px; right:16px; bottom:16px; display:flex; align-items:center; gap:10px; padding:13px 15px; border-radius:14px; color:var(--text-primary); background:rgb(255 255 255 / 92%); backdrop-filter:blur(10px); }
+.ctaVisual > div > svg { flex:0 0 auto; color:var(--brand-primary); }
+.ctaVisual span { font-size:10px; line-height:1.45; }
+.ctaVisual strong { display:block; color:var(--title-primary); font-size:12px; }
+@media (max-width:800px) { .ctaPanel { grid-template-columns:1fr; } .treatmentGrid { grid-template-columns:repeat(2,minmax(0,1fr)); } .treatmentCard:nth-child(4) { grid-column:auto; } .treatmentImage { min-height:210px; } .ctaVisual { min-height:380px; } }
+@media (max-width:600px) { .treatments,.benefits { padding:68px 0; } .benefitsHeading { margin-bottom:32px; text-align:left; } .benefitsHeading .sectionLabel,.treatmentHeading .sectionLabel { margin-inline:0; } .treatmentHeading { text-align:left; } .treatmentGrid { grid-template-columns:1fr; } .treatmentImage { min-height:190px; } .treatmentBody { padding:22px; } .treatmentNote,.benefitNote { text-align:left; } .finalCta { padding:54px 0; } .ctaPanel { gap:30px; padding:28px 20px; border-radius:22px; } .ctaVisual { min-height:300px; } .ctaActions { align-items:stretch; flex-direction:column; } }
+@media (max-width:700px) {
+  .treatmentHeading p, .benefitsHeading > p:last-child, .ctaCopy > p:not(.ctaLabel):not(.ctaDetail) { font-size:16px; }
+  .treatmentBody > p, .treatmentBody li, .treatmentNote, .benefitNote { font-size:15px; }
+  .treatmentHeading h2, .benefitsHeading h2, .ctaCopy h2 { font-size:clamp(30px,8vw,38px); }
+}
+@media (prefers-reduced-motion:reduce) { .treatmentCard,.treatmentImage img { transition:none; } }

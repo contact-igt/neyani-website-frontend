@@ -1,0 +1,188 @@
+.section {
+  padding: clamp(76px, 8vw, 118px) 24px;
+  background: var(--background-page);
+  overflow: hidden;
+}
+.heading {
+  max-width: 720px;
+  margin: auto;
+  text-align: center;
+}
+.heading h2 {
+  color: var(--clr-title);
+  font-size: clamp(36px, 4.2vw, 56px);
+  line-height: 1.04;
+  letter-spacing: -0.048em;
+  font-weight: 750;
+}
+.heading p {
+  max-width: 660px;
+  margin: 16px auto 0;
+  color: var(--text-primary);
+  font-size: 15px;
+  line-height: 1.65;
+}
+.specialties {
+  max-width: 1000px;
+  margin: 42px auto 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.specialties span {
+  padding: 11px 20px;
+  border-radius: 999px;
+  color: var(--text-primary);
+  background: var(--background-section);
+  font-size: 13px;
+  font-weight: 600;
+}
+.specialties .active {
+  color: var(--text-on-dark);
+  background: var(--brand-primary);
+  box-shadow: 0 8px 18px var(--shadow-color);
+}
+.grid {
+  max-width: 1060px;
+  margin: 42px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.card {
+  position: relative;
+  height: 420px;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 25px;
+  background: var(--background-section-strong);
+}
+.portrait {
+  object-fit: cover;
+  object-position: center 20%;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.tint {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to top,
+    rgba(5, 76, 91, 0.94) 0%,
+    rgba(27, 134, 151, 0.34) 28%,
+    transparent 58%
+  );
+}
+.tone2 .tint {
+  background: linear-gradient(
+    to top,
+    rgba(6, 84, 101, 0.94) 0%,
+    rgba(52, 151, 168, 0.3) 30%,
+    transparent 60%
+  );
+}
+.tone3 .tint {
+  background: linear-gradient(
+    to top,
+    rgba(7, 94, 112, 0.93) 0%,
+    rgba(66, 184, 205, 0.3) 30%,
+    transparent 60%
+  );
+}
+.info {
+  position: absolute;
+  z-index: 2;
+  left: 22px;
+  right: 22px;
+  bottom: 20px;
+  color: #fff;
+}
+.info h3 {
+  font-size: clamp(18px, 1.55vw, 22px);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  font-weight: 700;
+}
+.role {
+  margin-top: 7px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 13px;
+  line-height: 1.35;
+}
+.credentials {
+  margin-top: 5px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 11px;
+  line-height: 1.4;
+}
+.card:hover .portrait {
+  transform: scale(1.035);
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 30px;
+}
+.pagination i {
+  width: 5px;
+  height: 5px;
+  border-radius: 99px;
+  background: var(--border-strong);
+}
+.pagination i:first-child {
+  width: 28px;
+  background: var(--clr-logo-blue);
+}
+.imageNote {
+  margin-top: 24px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 10px;
+}
+@media (max-width: 850px) {
+  .grid {
+    max-width: 680px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card:last-child {
+    grid-column: 1 / -1;
+    width: calc(50% - 11px);
+    justify-self: center;
+  }
+}
+@media (max-width: 600px) {
+  .section {
+    padding: 68px 12px;
+  }
+  .specialties {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-inline: -12px;
+    padding: 0 18px 8px;
+    scrollbar-width: none;
+  }
+  .specialties span {
+    white-space: nowrap;
+  }
+  .grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 12px;
+    padding: 0 6px 12px;
+    scrollbar-width: none;
+  }
+  .card,
+  .card:last-child {
+    flex: 0 0 86%;
+    width: auto;
+    height: 440px;
+    scroll-snap-align: center;
+  }
+}
+@media (max-width:600px) { .heading h2 { font-size:clamp(30px,8vw,38px); } .heading p { font-size:16px; } .role, .credentials { font-size:15px; } }

@@ -1,0 +1,42 @@
+.fab {
+  display: none;
+  position: fixed;
+  bottom: max(1.5rem, env(safe-area-inset-bottom));
+  right: max(1.25rem, env(safe-area-inset-right));
+  z-index: 90;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--brand-primary);
+  background: var(--background-card);
+  border: 1px solid var(--border-subtle);
+  padding: 0.875rem 1.25rem;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-lg);
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: transform var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) ease;
+}
+
+.fab:hover {
+  transform: translateY(-2px);
+  background: var(--background-section);
+  border-color: var(--border-strong);
+  box-shadow: 0 16px 48px var(--shadow-color);
+}
+
+.fab svg { color:var(--success); }
+
+.fab:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .fab {
+    display: flex;
+  }
+}
+
+.label {
+  font-weight: 700;
+}

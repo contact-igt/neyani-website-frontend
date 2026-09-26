@@ -1,0 +1,174 @@
+/* ─── Neyani Eye Hospital — Design System ────────────────────────────────── */
+/* Plus Jakarta Sans loaded via layout.tsx */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* ── Tokens ─────────────────────────────────────────────────────────────── */
+:root {
+  /* Neyani brand */
+  --brand-primary: #087ea4;
+  --brand-primary-hover: #066987;
+  --brand-primary-dark: #075f78;
+  --brand-cyan: #40b8e8;
+  --brand-cyan-soft: #a9e2f3;
+  --brand-charcoal: #38383a;
+
+  /* Typography */
+  --title-primary: #103746;
+  --title-secondary: #246b82;
+  --text-primary: #39464c;
+  --text-muted: #687a82;
+  --text-on-dark: #ffffff;
+  --text-on-dark-muted: #cbe7ef;
+
+  /* Surfaces */
+  --background-page: #ffffff;
+  --background-section: #eff9fc;
+  --background-section-strong: #ddf3fa;
+  --background-dark: #103746;
+  --background-footer: #082b37;
+  --background-card: #ffffff;
+
+  /* UI */
+  --border-subtle: #cfe4eb;
+  --border-strong: #a9d2de;
+  --focus-ring: #40b8e8;
+  --shadow-color: rgb(16 55 70 / 12%);
+  --success: #18845b;
+  --warning: #e8a92e;
+  --error: #c63f4a;
+
+  /* Existing component aliases */
+  --clr-button: var(--brand-primary);
+  --clr-title: var(--title-primary);
+  --clr-title-secondary: var(--title-secondary);
+  --clr-logo-blue: var(--brand-cyan);
+  --clr-blue-primary: var(--brand-primary);
+  --clr-teal-900: var(--background-footer);
+  --clr-teal-800: var(--brand-primary-dark);
+  --clr-teal-700: var(--brand-primary);
+  --clr-teal-600: var(--brand-primary-hover);
+  --clr-teal-500: var(--brand-cyan);
+  --clr-teal-primary: var(--title-secondary);
+  --clr-teal-dark: var(--brand-primary-hover);
+  --clr-cyan: var(--brand-cyan);
+  --clr-cyan-light: var(--background-section-strong);
+
+  /* Neutrals */
+  --clr-charcoal: var(--title-primary);
+  --clr-slate-700: var(--text-primary);
+  --clr-slate-500: var(--text-muted);
+  --clr-slate-300: var(--border-strong);
+  --clr-slate-100: var(--background-section);
+
+  /* Surfaces */
+  --clr-bg-page: var(--background-page);
+  --clr-bg-white: var(--background-card);
+  --clr-bg-section: var(--background-section);
+  --clr-bg-teal: var(--brand-primary);
+
+  /* Accent */
+  --clr-amber: var(--warning);
+  --clr-amber-light: #fff6df;
+
+  /* Typography */
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  /* Radii */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-xl: 36px;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgb(16 55 70 / 8%), 0 1px 2px rgb(16 55 70 / 4%);
+  --shadow-md: 0 4px 16px var(--shadow-color), 0 2px 6px rgb(16 55 70 / 6%);
+  --shadow-lg: 0 16px 40px rgb(16 55 70 / 10%);
+
+  /* Spacing */
+  --space-section: clamp(4rem, 8vw, 7rem);
+  --max-width: 1200px;
+  --nav-height: 76px;
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 120ms;
+  --duration-base: 150ms;
+}
+
+.title-secondary,
+.title-secondary-on-dark { color:var(--clr-logo-blue); }
+
+/* ── Reset ──────────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--background-page);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* ── Focus visible ──────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Utility classes ──────────────────────────────────────────────────────*/
+.container {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 2.5rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
