@@ -16,7 +16,7 @@ const navLinks = [
 ];
 
 const serviceLinks = [...hospital.priorityServices, ...hospital.mosaicServices];
-const serviceHref = (id:string) => ["cataract", "glaucoma", "pediatric", "retina"].includes(id) ? `/services/${id}` : `/services#${id}`;
+const serviceHref = (id:string) => ["cataract", "glaucoma", "pediatric", "retina", "general"].includes(id) ? `/services/${id}` : `/services#${id}`;
 
 export default function Header() {
   const pathname = usePathname();
