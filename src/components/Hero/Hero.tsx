@@ -12,14 +12,19 @@ const slides = [
 
 const sliderSettings: Settings = {
   arrows: false,
-  autoplay: false,
+  autoplay: true,
+  autoplaySpeed: 5000,
   cssEase: "cubic-bezier(0.22, 1, 0.36, 1)",
-  dots: true,
+  dots: false,
   draggable: false,
   infinite: true,
   pauseOnFocus: true,
   pauseOnHover: true,
   speed: 850,
+  slidesToScroll: 1,
+  slidesToShow: 1,
+  swipe: false,
+  touchMove: false,
 };
 
 export default function Hero() {
