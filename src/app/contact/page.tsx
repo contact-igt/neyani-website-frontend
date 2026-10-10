@@ -27,7 +27,7 @@ export default function ContactPage() {
           </div>
           <div className={styles.doctorCard}>
             <CalendarCheck aria-hidden="true" />
-            <span><strong>{leadDoctor.name}</strong><small>{leadDoctor.note}</small></span>
+            <span><strong>{leadDoctor.name}</strong><small>{leadDoctor.role}</small></span>
           </div>
           <div className={`container ${styles.heroInner}`}>
             <div className={styles.heroCopy}>

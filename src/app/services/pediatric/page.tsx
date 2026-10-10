@@ -8,6 +8,7 @@ import FAQ from "@/components/FAQ/FAQ";
 import Testimonials from "@/components/Testimonials/Testimonials";
 import BenefitsSlider from "@/components/BenefitsSlider/BenefitsSlider";
 import WhatsAppFAB from "@/components/WhatsAppFAB/WhatsAppFAB";
+import TreatmentOptions from "@/components/TreatmentOptions/TreatmentOptions";
 import { hospital } from "@/content/hospital";
 import styles from "./pediatric.module.css";
 
@@ -211,7 +212,8 @@ export default function PediatricEyeCarePage() {
             </div>
           </div>
         </section>
-        <section className={styles.treatments} aria-labelledby="treatment-options">
+        <TreatmentOptions className={styles.treatments} headingId="treatment-options" eyebrow="Treatment options" title={<>Our pediatric eye care &amp; <span>treatment options</span></>} intro="From vision testing and glasses to lazy eye and squint care, every treatment is planned around your child&apos;s age, eye findings and comfort." options={treatmentOptions} cta="Book child eye check" note="The right treatment depends on your child&apos;s age, eye findings and response to care. Your doctor will explain the recommended plan, expected benefits and follow-up." />
+        {/*
           <div className="container">
             <div className={styles.treatmentHeading}>
               <p className={styles.sectionLabel}><span /> Treatment options</p>
@@ -237,6 +239,7 @@ export default function PediatricEyeCarePage() {
             <p className={styles.treatmentNote}>The right treatment depends on your child&apos;s age, eye findings and response to care. Your doctor will explain the recommended plan, expected benefits and follow-up.</p>
           </div>
         </section>
+        </section>*/}
         <section className={styles.benefits} aria-labelledby="pediatric-benefits">
           <div className="container">
             <div className={styles.benefitsHeading}>

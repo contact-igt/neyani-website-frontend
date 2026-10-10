@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CalendarCheck, CalendarClock, CalendarDays, Check, CheckCircle2, ChevronDown, ClipboardPlus, Clock3, Droplets, Eye, FileText, Glasses, HeartHandshake, Languages, Microscope, ScanEye, ScanLine, ShieldCheck, Stethoscope, Phone, Users } from "lucide-react";
+import { ArrowRight, CalendarCheck, CalendarClock, CalendarDays, Check, ChevronDown, ClipboardPlus, Clock3, Droplets, Eye, FileText, Glasses, HeartHandshake, Languages, Microscope, ScanEye, ScanLine, ShieldCheck, Stethoscope, Phone, Users } from "lucide-react";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import FAQ from "@/components/FAQ/FAQ";
@@ -9,6 +9,7 @@ import Testimonials from "@/components/Testimonials/Testimonials";
 import WhatsAppFAB from "@/components/WhatsAppFAB/WhatsAppFAB";
 import { hospital } from "@/content/hospital";
 import EyeProblemsSlider from "./EyeProblemsSlider";
+import DiagnosticsShowcase from "./DiagnosticsShowcase";
 import styles from "./general.module.css";
 
 const service = hospital.mosaicServices.find((item) => item.id === "general")!;
@@ -95,10 +96,10 @@ export default function GeneralEyeCarePage() {
               <p className={styles.sectionLabel}><span /> Comprehensive eye care</p>
               <h2 id="general-eye-care-overview">What General<br /><span>Eye Care Covers</span></h2>
               <p>Beyond routine spectacle-power checks, a comprehensive examination assesses the eye from the front surface to the retina and optic nerve.</p>
-              <ul>
-                <li><CheckCircle2 aria-hidden="true" /> Slit-lamp examination</li>
-                <li><CheckCircle2 aria-hidden="true" /> Refraction and vision assessment</li>
-                <li><CheckCircle2 aria-hidden="true" /> Dilated retinal evaluation when indicated</li>
+              <ul className={styles.coverList}>
+                <li><span><ScanEye aria-hidden="true" /></span><div><strong>Slit-lamp examination</strong><small>Magnified view of the front of the eye</small></div></li>
+                <li><span><Glasses aria-hidden="true" /></span><div><strong>Refraction and vision assessment</strong><small>Clarity, focus and glasses power checked</small></div></li>
+                <li><span><Eye aria-hidden="true" /></span><div><strong>Dilated retinal evaluation</strong><small>Retina and optic nerve checked when indicated</small></div></li>
               </ul>
               <Link href="/contact#appointment" className={styles.overviewAction}>Book an eye examination <ArrowRight size={15} aria-hidden="true" /></Link>
               <small><Stethoscope size={13} aria-hidden="true" /> Specialist eye care in Gandhidham, Kutch</small>
@@ -117,6 +118,24 @@ export default function GeneralEyeCarePage() {
           </div>
         </section>
 
+        <section className={styles.reasons} aria-labelledby="why-neyani">
+          <div className="container">
+            <div className={styles.reasonsHeading}>
+              <p className={styles.sectionLabel}><span /> Why choose us</p>
+              <h2 id="why-neyani">Why patients choose <span>Neyani Eye Hospital</span><br />for everyday eye care</h2>
+              <p>Thorough examinations, clear explanations and considerate care for patients and families across Gandhidham and the Kutch region.</p>
+            </div>
+            <div className={styles.reasonGrid}>
+              {reasons.map((reason, index) => (
+                <article className={styles.reasonCard} key={reason.title}>
+                  <div className={styles.reasonTop}><span><reason.icon size={21} strokeWidth={1.7} aria-hidden="true" /></span><b>{String(index + 1).padStart(2, "0")}</b></div>
+                  <h3>{reason.title}</h3>
+                  <p>{reason.description}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
         <section className={styles.conditions} aria-labelledby="common-eye-problems-heading">
           <div className="container">
             <div className={styles.conditionsHeading}>
@@ -167,9 +186,14 @@ export default function GeneralEyeCarePage() {
           </div>
         </section>
         <section className={styles.warningSigns} aria-labelledby="warning-signs-heading">
-          <div className={`container ${styles.warningGrid}`}>
-            <div className={styles.warningCopy}>
-              <h2 id="warning-signs-heading">Watch Out for These<br /><span>Symptoms</span></h2>
+          <div className="container">
+            <header className={styles.warningHeading}>
+              <p className={styles.sectionLabel}><span /> Eye health warning signs</p>
+              <h2 id="warning-signs-heading">When should you seek an <span>eye examination?</span></h2>
+              <p>New, persistent or unusual changes in vision can need prompt attention. These common symptoms are a reason to arrange an eye-health review.</p>
+            </header>
+            <div className={styles.warningGrid}>
+              <div className={styles.warningCopy}>
               <ul>
                 {warningSigns.map((sign, index) => (
                   <li key={sign.title}>
@@ -187,6 +211,7 @@ export default function GeneralEyeCarePage() {
               <figure className={styles.mosaicStrain}><Image src="/keratoconus-light-sensitivity.png" alt="Person shielding their eyes from bright light" fill sizes="(max-width: 600px) 50vw, 45vw" /><figcaption>Light Sensitivity</figcaption></figure>
               <figure className={styles.mosaicGlare}><Image src="/keratoconus-halos-glare.png" alt="Driver affected by glare from vehicle lights at night" fill sizes="(max-width: 600px) 50vw, 45vw" /><figcaption>Eye Strain &amp; Glare</figcaption></figure>
               <figure className={styles.mosaicRedness}><Image src="/general-eye-warning-mosaic.png" alt="Person with a red, watering eye" fill sizes="(max-width: 600px) 50vw, 30vw" /><figcaption>Redness &amp; Watering</figcaption></figure>
+            </div>
             </div>
           </div>
         </section>
@@ -209,24 +234,7 @@ export default function GeneralEyeCarePage() {
             </ol>
           </div>
         </section>
-        <section className={styles.reasons} aria-labelledby="why-neyani">
-          <div className="container">
-            <div className={styles.reasonsHeading}>
-              <p className={styles.sectionLabel}><span /> Why choose us</p>
-              <h2 id="why-neyani">Why patients choose <span>Neyani Eye Hospital</span><br />for everyday eye care</h2>
-              <p>Thorough examinations, clear explanations and considerate care for patients and families across Gandhidham and the Kutch region.</p>
-            </div>
-            <div className={styles.reasonGrid}>
-              {reasons.map((reason, index) => (
-                <article className={styles.reasonCard} key={reason.title}>
-                  <div className={styles.reasonTop}><span><reason.icon size={21} strokeWidth={1.7} aria-hidden="true" /></span><b>{String(index + 1).padStart(2, "0")}</b></div>
-                  <h3>{reason.title}</h3>
-                  <p>{reason.description}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
+        <DiagnosticsShowcase />
         <Testimonials />
         <FAQ
           faqs={hospital.generalFaqs}

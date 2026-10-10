@@ -293,12 +293,6 @@ export default function CataractPage() {
             </div>
           </div>
         </section>
-        <section className={styles.note}>
-          <div className="container">
-            <p>{hospital.techSpotlight.disclaimer}</p>
-            <Link href="/services">View all eye care services <ArrowRight size={17} aria-hidden="true" /></Link>
-          </div>
-        </section>
       </main>
       <Footer />
       <WhatsAppFAB />

@@ -2,7 +2,11 @@ import Image from "next/image";
 import { hospital } from "@/content/hospital";
 import styles from "./DoctorSection.module.css";
 
-const portraits = ["/doctor-yajuvendra.png", "/doctor-urmil.png", "/doctor-ankit.png"];
+const portraits = [
+  { src: "/dr.yajuvendra-singh.jpg", position: "35% 30%", photo: true },
+  { src: "/dr.urmil-shah.jpeg", position: undefined, photo: true },
+  { src: "/dr.ankit-shah.jpeg", position: undefined, photo: true },
+];
 const specialties = ["All specialists", "Ophthalmology", "Retina", "Pediatric & Squint"];
 
 export default function DoctorSection() {
@@ -22,7 +26,7 @@ export default function DoctorSection() {
       <div className={styles.grid}>
         {hospital.doctors.map((doctor, index) => (
           <article className={`${styles.card} ${styles[`tone${index + 1}`]}`} key={doctor.id}>
-            <Image src={portraits[index]} alt={`Representative portrait for ${doctor.name}`} fill quality={95} sizes="(max-width: 700px) 88vw, 33vw" className={styles.portrait} />
+            <Image src={portraits[index].src} alt={portraits[index].photo ? doctor.name : `Representative portrait for ${doctor.name}`} fill quality={95} sizes="(max-width: 700px) 88vw, 33vw" className={styles.portrait} style={portraits[index].position ? { objectPosition: portraits[index].position } : undefined} />
             <div className={styles.tint} />
             <div className={styles.info}>
               <h3>{doctor.name}</h3>

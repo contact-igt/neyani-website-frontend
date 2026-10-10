@@ -17,6 +17,7 @@
     "react-countup": "^6.5.3",
     "react-dom": "19.2.8",
     "react-slick": "^0.30.3",
+    "slick-carousel": "^2.0.0",
     "vercel": "^59.16.0"
   },
   "devDependencies": {

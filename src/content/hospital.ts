@@ -231,6 +231,33 @@ export const hospital = {
     },
   ],
 
+  doctorsFaqs: [
+    {
+      q: "Can I book an appointment with a specific doctor?",
+      a: "Yes. When you book by phone or WhatsApp, let us know which doctor you would like to see and we will arrange a suitable appointment time.",
+    },
+    {
+      q: "When are the visiting consultants available?",
+      a: "Our visiting retina specialist and pediatric ophthalmologist see patients on scheduled consultation days. Please call the hospital to confirm upcoming dates and times.",
+    },
+    {
+      q: "Which doctor should I see for my eye problem?",
+      a: "If you are unsure, book a general eye examination first. After assessing your eyes, our team will guide you to the right specialist for cataract, retina, pediatric or squint care.",
+    },
+    {
+      q: "Can I get a second opinion from your doctors?",
+      a: "Yes. Please bring your previous prescriptions, scan reports and any medicines you are using so the doctor can review your history during the consultation.",
+    },
+    {
+      q: "In which languages can I talk to the doctor?",
+      a: "Consultations are supported in English, Hindi and Gujarati, so you and your family can clearly understand your diagnosis and treatment options.",
+    },
+    {
+      q: "Do the doctors explain treatment costs and insurance?",
+      a: "Your doctor will explain the recommended treatment, and our team can help you understand costs and support eligible insurance or TPA documentation.",
+    },
+  ],
+
   generalFaqs: [
     {
       q: "How often should I have a routine eye examination?",
@@ -321,6 +348,99 @@ export const hospital = {
     {
       q: "Is glaucoma hereditary?",
       a: "A family history of glaucoma increases your risk. If a parent or sibling has glaucoma, it is sensible to have your eyes checked regularly, even if your vision seems normal.",
+    },
+  ],
+
+  corneaFaqs: [
+    {
+      q: "What does the cornea do?",
+      a: "The cornea is the clear front window of the eye. It protects the eye and provides most of its focusing power, so even small changes in its shape or clarity can affect vision and comfort.",
+    },
+    {
+      q: "What is corneal topography?",
+      a: "Corneal topography is a painless imaging test that maps the shape and curvature of the cornea. It helps your doctor assess irregularities, plan treatment and monitor changes over time.",
+    },
+    {
+      q: "Does a cornea examination hurt?",
+      a: "No. A slit-lamp examination and corneal imaging are non-contact or very gentle. You may be given eye drops to help the examination, and most patients find it comfortable.",
+    },
+    {
+      q: "Do I need a cornea check before cataract or refractive surgery?",
+      a: "Yes, a cornea assessment is usually part of planning. It helps your surgeon judge corneal shape and health so the right lens and technique can be chosen for you.",
+    },
+    {
+      q: "I wear contact lenses and my eyes are often red or irritated. Should I be concerned?",
+      a: "Persistent redness, pain, light sensitivity or blurred vision should be checked promptly, as they can be signs of a corneal problem. Stop wearing lenses and book an examination.",
+    },
+    {
+      q: "What is corneal cross-linking assessment?",
+      a: "It checks the strength and shape of the cornea and helps your doctor monitor conditions where the cornea may change shape over time. Whether treatment is suitable is decided after examination.",
+    },
+    {
+      q: "Can I walk in, or do I need an appointment?",
+      a: "Appointments are preferred and help us give you adequate time. Walk-ins are seen subject to availability. You can book quickly via WhatsApp or phone.",
+    },
+  ],
+
+  squintFaqs: [
+    {
+      q: "What is a squint?",
+      a: "A squint, also called strabismus, is when the eyes do not line up and look in different directions. It can be constant or come and go, and can affect children and adults.",
+    },
+    {
+      q: "What is lazy eye (amblyopia)?",
+      a: "Amblyopia develops when vision in one eye does not mature clearly, often because the brain favours the other eye. It is most treatable when found early in childhood.",
+    },
+    {
+      q: "Will my child grow out of a squint?",
+      a: "Squints do not usually resolve on their own. An early examination is important, so any vision problem can be identified and treated while the visual system is still developing.",
+    },
+    {
+      q: "How is a squint treated?",
+      a: "Treatment depends on the type of squint and the child's vision. Options can include glasses, patching or other lazy-eye therapy and, when needed, surgery. Your specialist will explain the best option after examination.",
+    },
+    {
+      q: "Is squint surgery safe for children?",
+      a: "Squint surgery is a commonly performed procedure done under appropriate anaesthesia. Your surgeon will explain the benefits and risks for your child's case before any decision is made.",
+    },
+    {
+      q: "Can adults have squint treatment?",
+      a: "Yes. Adults with a squint can be assessed, and treatment options such as glasses, prisms or surgery may be considered depending on the cause and your eye health.",
+    },
+    {
+      q: "Can I walk in, or do I need an appointment?",
+      a: "Appointments are preferred and help us give you adequate time. Walk-ins are seen subject to availability. You can book quickly via WhatsApp or phone.",
+    },
+  ],
+
+  pterygiumFaqs: [
+    {
+      q: "What is a pterygium?",
+      a: "A pterygium is a common, non-cancerous growth of thin tissue on the clear surface of the eye. It usually starts on the white part of the eye and can slowly grow towards the cornea.",
+    },
+    {
+      q: "What causes a pterygium?",
+      a: "It is often linked to long-term exposure to sunlight (UV), wind and dust, which is why it is more common in people who spend a lot of time outdoors.",
+    },
+    {
+      q: "Does a pterygium always need surgery?",
+      a: "No. A small pterygium that causes little trouble may only need monitoring and lubricating eye drops. Surgery may be recommended if it causes ongoing discomfort, affects vision or keeps growing.",
+    },
+    {
+      q: "Can a pterygium affect my vision?",
+      a: "If it grows onto the cornea it can cause blurring or change astigmatism. Your doctor will check your vision and corneal shape during the examination.",
+    },
+    {
+      q: "Can a pterygium come back after surgery?",
+      a: "A pterygium can sometimes recur after removal. Your surgeon will explain the technique used and the follow-up needed to reduce this risk.",
+    },
+    {
+      q: "How can I protect my eyes?",
+      a: "Wearing UV-protective sunglasses and a hat outdoors, and protecting your eyes from dust and wind, can help. Lubricating drops may ease dryness if advised by your doctor.",
+    },
+    {
+      q: "Can I walk in, or do I need an appointment?",
+      a: "Appointments are preferred and help us give you adequate time. Walk-ins are seen subject to availability. You can book quickly via WhatsApp or phone.",
     },
   ],
 

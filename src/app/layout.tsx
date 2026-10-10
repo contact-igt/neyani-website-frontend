@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "slick-carousel/slick/slick.css";
 import { hospital } from "@/content/hospital";
 
 export const metadata: Metadata = {

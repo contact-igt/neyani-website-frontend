@@ -8,6 +8,7 @@ import FAQ from "@/components/FAQ/FAQ";
 import Testimonials from "@/components/Testimonials/Testimonials";
 import BenefitsSlider from "@/components/BenefitsSlider/BenefitsSlider";
 import WhatsAppFAB from "@/components/WhatsAppFAB/WhatsAppFAB";
+import TreatmentOptions from "@/components/TreatmentOptions/TreatmentOptions";
 import { hospital } from "@/content/hospital";
 import styles from "./retina.module.css";
 
@@ -247,7 +248,8 @@ export default function RetinaPage() {
             </div>
           </div>
         </section>
-        <section className={styles.treatments} aria-labelledby="treatment-options">
+        <TreatmentOptions className={styles.treatments} headingId="treatment-options" eyebrow="Treatment options" title={<>Our retina care &amp; <span>treatment options</span></>} intro="From detailed retinal imaging to diabetic eye care, laser treatment and vitreoretinal surgery, every plan is based on your diagnosis and eye health." options={treatmentOptions} cta="Book a retina check" note="Treatment choice depends on your diagnosis, the stage of the condition and your overall eye health. Some vision loss cannot be reversed; treatment aims to protect the sight you have." />
+        {/*
           <div className="container">
             <div className={styles.treatmentHeading}>
               <p className={styles.sectionLabel}><span /> Treatment options</p>
@@ -273,6 +275,7 @@ export default function RetinaPage() {
             <p className={styles.treatmentNote}>Treatment choice depends on your diagnosis, the stage of the condition and your overall eye health. Some vision loss cannot be reversed; treatment aims to protect the sight you have.</p>
           </div>
         </section>
+        </section>*/}
         <section className={styles.benefits} aria-labelledby="retina-benefits">
           <div className="container">
             <div className={styles.benefitsHeading}>

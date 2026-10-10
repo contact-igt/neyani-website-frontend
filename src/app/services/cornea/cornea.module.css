@@ -1,0 +1,2251 @@
+.main {
+  padding-top: 88px;
+  background: var(--background-page);
+}
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  height: min(700px, calc(100svh - 88px));
+  min-height: 620px;
+  overflow: hidden;
+  background: #062c3c;
+}
+.heroContainer {
+  height: 100%;
+}
+.heroImage {
+  z-index: -2;
+  object-fit: cover;
+  object-position: center;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgb(5 39 52 / 97%) 0%,
+    rgb(5 39 52 / 90%) 33%,
+    rgb(5 39 52 / 42%) 60%,
+    rgb(5 39 52 / 5%) 82%
+  );
+}
+
+.heroPanel {
+  width: min(53%, 760px);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: var(--text-on-dark);
+}
+.copy {
+  width: 100%;
+  padding: 48px 0;
+}
+.kicker {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 21px;
+  padding: 8px 14px 8px 9px;
+  border: 1px solid rgb(255 255 255 / 26%);
+  border-radius: 999px;
+  color: var(--text-on-dark);
+  background: rgb(5 39 52 / 52%);
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+}
+.kicker span {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--brand-cyan-soft);
+  background: rgb(64 184 232 / 18%);
+}
+.copy h1 {
+  max-width: 690px;
+  color: var(--text-on-dark);
+  font-size: clamp(46px, 5.8vw, 76px);
+  line-height: 0.98;
+  letter-spacing: -0.058em;
+}
+.copy h1 span {
+  color: var(--brand-cyan-soft);
+}
+.intro {
+  max-width: 610px;
+  margin-top: 22px;
+  color: var(--text-on-dark-muted);
+  font-size: 15px;
+  line-height: 1.68;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 27px;
+}
+.primary {
+  min-height: 54px;
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  padding: 5px 6px 5px 21px;
+  border-radius: 999px;
+  color: var(--title-primary);
+  background: var(--background-card);
+  font-size: 13px;
+  font-weight: 750;
+  box-shadow: 0 12px 26px rgb(0 0 0 / 17%);
+}
+.primary > span {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--text-on-dark);
+  background: var(--brand-primary);
+}
+.call {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-on-dark);
+  font-size: 13px;
+  font-weight: 700;
+}
+.call svg {
+  color: var(--brand-cyan-soft);
+}
+.facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 720px;
+  margin-top: 35px;
+  padding-top: 21px;
+  border-top: 1px solid rgb(255 255 255 / 22%);
+}
+.facts p {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: var(--text-on-dark-muted);
+  font-size: 10px;
+  line-height: 1.45;
+}
+.facts svg {
+  flex: 0 0 auto;
+  width: 32px;
+  height: 32px;
+  padding: 7px;
+  border-radius: 50%;
+  color: var(--brand-cyan-soft);
+  background: rgb(64 184 232 / 16%);
+}
+.facts strong {
+  display: block;
+  color: var(--text-on-dark);
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.corneaOverview {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(78px, 9vw, 122px) 0;
+  background-color: #f4f8fc;
+  background-image:
+    linear-gradient(90deg, rgb(244 248 252 / 90%), rgb(244 248 252 / 59%)),
+    url("/cornea-clinical-section-bg-v1.png");
+  background-position: center;
+  background-size: cover;
+}
+.corneaOverview::before {
+  content: "";
+  position: absolute;
+  width: 620px;
+  height: 620px;
+  top: -440px;
+  right: -230px;
+  border: 1px solid rgb(64 184 232 / 17%);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 72px rgb(64 184 232 / 3%),
+    0 0 0 144px rgb(64 184 232 / 2%);
+  pointer-events: none;
+}
+.overviewLayout {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(470px, 1.28fr);
+  gap: clamp(45px, 7vw, 108px);
+  align-items: center;
+}
+.overviewCopy {
+  max-width: 570px;
+}
+.sectionEyebrow {
+  width: fit-content;
+  margin-bottom: 15px;
+  color: var(--brand-primary-dark);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.065em;
+  text-transform: uppercase;
+}
+.sectionEyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  margin: 0 9px 3px 0;
+  background: var(--brand-primary);
+}
+.overviewCopy h2 {
+  max-width: 490px;
+  color: var(--title-primary);
+  font-size: clamp(34px, 3.45vw, 50px);
+  line-height: 1.04;
+  letter-spacing: -0.055em;
+}
+.overviewCopy h2 span {
+  color: var(--brand-primary);
+}
+.overviewIntro {
+  max-width: 540px;
+  margin-top: 20px;
+  color: var(--text-primary);
+  font-size: 14px;
+  line-height: 1.72;
+}
+.careList {
+  display: grid;
+  gap: 9px;
+  margin-top: 25px;
+}
+.careList article {
+  display: grid;
+  grid-template-columns: 35px 1fr;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid rgb(203 222 235 / 73%);
+  border-radius: 12px;
+  background: rgb(230 241 252 / 73%);
+}
+.careList article > span {
+  width: 31px;
+  height: 31px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  color: var(--brand-primary);
+  background: var(--background-card);
+}
+.careList svg {
+  width: 15px;
+  height: 15px;
+}
+.careList h3 {
+  color: var(--title-primary);
+  font-size: 13px;
+  line-height: 1.35;
+}
+.careList p {
+  margin-top: 3px;
+  color: var(--text-muted);
+  font-size: 11px;
+  line-height: 1.48;
+}
+.overviewActions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 17px;
+  margin-top: 22px;
+}
+.overviewPrimary,
+.overviewSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 750;
+}
+.overviewPrimary {
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  color: var(--text-on-dark);
+  background: var(--brand-primary);
+  box-shadow: 0 9px 20px rgb(0 104 145 / 20%);
+}
+.overviewPrimary svg:last-child {
+  margin-left: 1px;
+}
+.overviewSecondary {
+  color: var(--brand-primary-dark);
+}
+.showcase {
+  min-width: 0;
+}
+.showcase figure {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  border-radius: 20px;
+  background: #dcebf2;
+  box-shadow: 0 17px 30px rgb(16 55 70 / 12%);
+}
+.showcase img {
+  object-fit: cover;
+}
+.topographyFigure {
+  height: clamp(265px, 27vw, 372px);
+}
+.topographyFigure img {
+  object-position: center;
+}
+.topographyLabel {
+  position: absolute;
+  z-index: 1;
+  left: 18px;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  max-width: calc(100% - 36px);
+  padding: 11px 15px;
+  border-radius: 12px;
+  color: var(--title-primary);
+  background: rgb(255 255 255 / 94%);
+  box-shadow: 0 10px 20px rgb(8 43 55 / 13%);
+}
+.topographyLabel > span {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  color: var(--brand-primary);
+  background: #e1f4fa;
+}
+.topographyLabel strong,
+.supportingFigures figcaption strong {
+  display: block;
+  font-size: 11px;
+  line-height: 1.3;
+}
+.topographyLabel small,
+.supportingFigures figcaption small {
+  display: block;
+  margin-top: 2px;
+  color: var(--text-muted);
+  font-size: 9px;
+  line-height: 1.3;
+}
+.supportingFigures {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+  margin-top: 13px;
+}
+.supportingFigures figure {
+  height: clamp(142px, 15vw, 202px);
+}
+.supportingFigures figure::after {
+  content: "";
+  position: absolute;
+  inset: 52% 0 0;
+  background: linear-gradient(180deg, transparent, rgb(3 32 43 / 73%));
+  pointer-events: none;
+}
+.supportingFigures figure:first-child img {
+  object-position: center 43%;
+}
+.supportingFigures figure:last-child img {
+  object-position: center 48%;
+}
+.supportingFigures figcaption {
+  position: absolute;
+  z-index: 1;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 9px;
+  border-radius: 9px;
+  color: var(--title-primary);
+  background: rgb(255 255 255 / 93%);
+}
+.supportingFigures figcaption > svg {
+  flex: 0 0 auto;
+  color: var(--brand-primary);
+}
+
+.evaluation {
+  position: relative;
+  overflow: visible;
+  padding: clamp(78px, 8vw, 112px) 0;
+  background-color: #eff9fc;
+  background-image:
+    linear-gradient(
+      117deg,
+      rgb(255 255 255 / 91%) 0%,
+      rgb(247 252 254 / 82%) 45%,
+      rgb(228 247 252 / 73%) 100%
+    ),
+    url("/cornea-evaluation-section-bg-v1.png");
+  background-position: center;
+  background-size: cover;
+}
+.evaluation::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 8%;
+  right: 8%;
+  border-radius: 50%;
+  background: rgb(64 184 232 / 70%);
+  box-shadow:
+    -72px 855px 0 8px rgb(64 184 232 / 9%),
+    -9px 31px 0 7px rgb(64 184 232 / 12%);
+  pointer-events: none;
+}
+.evaluationLayout {
+  position: relative;
+  max-width: 1392px;
+  display: grid;
+  grid-template-columns: minmax(430px, 0.88fr) minmax(650px, 1.32fr);
+  gap: clamp(42px, 5.1vw, 78px);
+  align-items: center;
+}
+.evaluationCopy {
+  max-width: 505px;
+}
+.evaluationLabel {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 25px;
+  padding: 9px 16px 9px 12px;
+  border: 1px solid #d6edf7;
+  border-radius: 999px;
+  color: var(--brand-primary-dark);
+  background: #f1faff;
+  font-size: 12px;
+  font-weight: 750;
+}
+.evaluationLabel svg {
+  color: var(--brand-primary);
+}
+.evaluationCopy h2 {
+  max-width: 510px;
+  color: var(--title-primary);
+  font-size: clamp(42px, 3.45vw, 54px);
+  line-height: 1.06;
+  letter-spacing: -0.055em;
+}
+.evaluationCopy > p {
+  max-width: 480px;
+  margin-top: 20px;
+  color: var(--text-primary);
+  font-size: 16px;
+  line-height: 1.62;
+}
+.symptoms {
+  display: grid;
+  gap: 9px;
+  margin-top: 28px;
+  list-style: none;
+}
+.symptoms li {
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 7px 16px 7px 10px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  color: var(--title-primary);
+  background: rgb(255 255 255 / 85%);
+  box-shadow: 0 6px 14px rgb(20 56 105 / 3%);
+  font-size: 14px;
+  font-weight: 600;
+}
+.symptoms svg {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 11px;
+  color: #0799d7;
+  background: #eaf8ff;
+}
+.evaluationCta {
+  min-height: 55px;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 31px;
+  padding: 6px 6px 6px 24px;
+  border-radius: 999px;
+  color: var(--text-on-dark);
+  background: linear-gradient(100deg, #008ebc, #0081a9);
+  font-size: 14px;
+  font-weight: 750;
+  box-shadow: 0 12px 26px rgb(0 112 158 / 22%);
+}
+.evaluationCta span {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #0589ba;
+  background: var(--background-card);
+}
+.evaluationVisuals {
+  position: relative;
+  min-width: 0;
+  min-height: clamp(570px, 55vw, 745px);
+  padding-top: 27px;
+}
+.evaluationVisuals figure {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  border-radius: 22px;
+  background: #dbeaf1;
+  box-shadow: 0 16px 34px rgb(15 55 78 / 15%);
+}
+.evaluationVisuals img {
+  object-fit: cover;
+}
+.closeupFigure {
+  width: 84%;
+  height: clamp(295px, 31vw, 430px);
+  margin-left: 56px !important;
+}
+.closeupFigure img {
+  object-position: center;
+}
+.closeupFigure figcaption {
+  position: absolute;
+  z-index: 1;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 16px 10px 10px;
+  border-radius: 999px;
+  color: var(--title-primary);
+  background: rgb(255 255 255 / 94%);
+  font-size: 12px;
+  font-weight: 750;
+  box-shadow: 0 8px 18px rgb(8 43 55 / 15%);
+}
+.closeupFigure figcaption span {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  color: #0799d7;
+  background: #e6f7ff;
+}
+.closeupFigure figcaption i {
+  width: 9px;
+  height: 9px;
+  margin-left: 2px;
+  border-radius: 50%;
+  background: #4bbde2;
+}
+.evaluationHighlight {
+  position: absolute;
+  z-index: 3;
+  top: 68px;
+  left: 0;
+  width: min(51%, 330px);
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  gap: 13px;
+  align-items: center;
+  padding: 19px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 22px;
+  color: var(--title-primary);
+  background: rgb(255 255 255 / 96%);
+  box-shadow: 0 18px 40px rgb(14 59 85 / 15%);
+}
+.evaluationHighlight > span {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #0799d7;
+  background: #dff5fc;
+}
+.evaluationHighlight strong {
+  display: block;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.evaluationHighlight p {
+  margin-top: 7px;
+  color: #58719a;
+  font-size: 12px;
+  line-height: 1.45;
+}
+.evaluationHighlight > svg {
+  display: none;
+}
+.protectionFigure {
+  position: absolute !important;
+  z-index: 2;
+  top: 142px;
+  right: -3px;
+  width: clamp(176px, 20vw, 270px);
+  height: clamp(176px, 20vw, 270px);
+  overflow: visible !important;
+  border: 14px solid rgb(255 255 255 / 96%);
+  border-radius: 50% !important;
+  background: #d9edf7;
+  box-shadow: 0 16px 35px rgb(18 73 107 / 17%) !important;
+}
+.protectionFigure img {
+  border-radius: 50%;
+  object-position: center;
+}
+.protectionFigure figcaption {
+  position: absolute;
+  z-index: 1;
+  right: -12px;
+  bottom: -43px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 205px;
+  padding: 10px 14px 10px 10px;
+  border-radius: 15px;
+  color: #183a77;
+  background: rgb(255 255 255 / 96%);
+  box-shadow: 0 12px 25px rgb(18 73 107 / 13%);
+}
+.protectionFigure figcaption > span {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #0799d7;
+  background: #e5f7fd;
+}
+.protectionFigure figcaption strong {
+  display: block;
+  font-size: 10px;
+  line-height: 1.35;
+}
+.protectionFigure figcaption p {
+  margin-top: 2px;
+  color: #58719a;
+  font-size: 9px;
+}
+.evaluationCards {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 23px;
+}
+.evaluationCards figure {
+  height: clamp(205px, 21vw, 290px);
+}
+.evaluationCards figure::after {
+  content: "";
+  position: absolute;
+  inset: 48% 0 0;
+  background: linear-gradient(180deg, transparent, rgb(9 46 67 / 70%));
+  pointer-events: none;
+}
+.evaluationCards figure:first-child img {
+  object-position: center 42%;
+}
+.evaluationCards figure:last-child img {
+  object-position: center 52%;
+}
+.evaluationCards figcaption {
+  position: absolute;
+  z-index: 1;
+  right: 12px;
+  bottom: 12px;
+  left: 12px;
+  display: grid;
+  grid-template-columns: 38px 1fr 32px;
+  gap: 9px;
+  align-items: center;
+  padding: 10px;
+  border-radius: 15px;
+  color: var(--title-primary);
+  background: rgb(255 255 255 / 95%);
+}
+.evaluationCards figcaption > span {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #0799d7;
+  background: #e5f7fd;
+}
+.evaluationCards figcaption strong {
+  display: block;
+  font-size: 11px;
+  line-height: 1.35;
+}
+.evaluationCards figcaption p {
+  margin-top: 3px;
+  color: #58719a;
+  font-size: 10px;
+  line-height: 1.3;
+}
+.evaluationCards figcaption > svg {
+  justify-self: end;
+  padding: 6px;
+  box-sizing: content-box;
+  border: 1px solid #d5edf8;
+  border-radius: 50%;
+  color: #0799d7;
+}
+.assessment {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(78px, 8vw, 116px) 0;
+  background: linear-gradient(120deg, #fbfdff 0%, #effaff 55%, #fdfbf4 100%);
+}
+.assessment::before {
+  content: "";
+  position: absolute;
+  width: 540px;
+  height: 540px;
+  bottom: -340px;
+  left: -210px;
+  border: 1px solid rgb(64 184 232 / 18%);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 74px rgb(64 184 232 / 5%),
+    0 0 0 148px rgb(246 205 93 / 5%);
+}
+.assessmentLayout {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(700px, 1.38fr);
+  gap: clamp(42px, 5vw, 82px);
+  align-items: center;
+  max-width: 1420px;
+}
+.assessmentIntro {
+  position: relative;
+  z-index: 1;
+  max-width: 570px;
+}
+.assessmentLabel {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 15px;
+  border-radius: 999px;
+  color: #07516f;
+  background: #dff4fc;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.assessmentLabel span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #0ea9df;
+}
+.assessmentIntro h2 {
+  max-width: 530px;
+  margin-top: 24px;
+  color: #062d3e;
+  font-size: clamp(42px, 4.3vw, 64px);
+  line-height: 1.02;
+  letter-spacing: -0.06em;
+}
+.assessmentIntro h2 span {
+  display: block;
+  color: #079ad5;
+}
+.assessmentIntro > p {
+  max-width: 510px;
+  margin-top: 20px;
+  color: #5d6e77;
+  font-size: 16px;
+  line-height: 1.55;
+}
+.assessmentFeature {
+  position: relative;
+  height: clamp(280px, 27vw, 390px);
+  margin: 30px 0 0;
+  overflow: hidden;
+  border-radius: 46% 54% 44% 56% / 42% 45% 55% 58%;
+  background: #dcecf2;
+}
+.assessmentFeature img,
+.assessmentSteps figure img {
+  object-fit: cover;
+}
+.assessmentFeature img {
+  object-position: center 42%;
+}
+.assessmentNote {
+  position: absolute;
+  z-index: 2;
+  right: -40px;
+  bottom: -18px;
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  gap: 15px;
+  align-items: center;
+  width: min(94%, 460px);
+  padding: 16px 20px;
+  border: 1px solid #dceef5;
+  border-radius: 28px;
+  color: #083d56;
+  background: rgb(249 254 255 / 95%);
+  box-shadow: 0 15px 34px rgb(23 92 121 / 13%);
+}
+.assessmentNote > span,
+.assessmentStepCopy > span {
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #0699d5;
+  background: #e5f7fd;
+  box-shadow: 0 0 0 12px rgb(255 255 255 / 70%);
+}
+.assessmentNote > span {
+  width: 62px;
+  height: 62px;
+}
+.assessmentNote svg {
+  width: 31px;
+}
+.assessmentNote strong {
+  display: block;
+  font-size: 15px;
+  line-height: 1.25;
+}
+.assessmentNote p {
+  margin-top: 5px;
+  color: #687883;
+  font-size: 12px;
+  line-height: 1.42;
+}
+.assessmentSteps {
+  position: relative;
+  display: grid;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.assessmentSteps::before {
+  display: none;
+}
+.assessmentSteps li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 74px minmax(240px, 0.9fr) minmax(310px, 1.08fr);
+  min-height: 184px;
+}
+.assessmentSteps li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: calc(50% + 31px);
+  left: 36px;
+  height: calc(100% - 40px);
+  border-left: 2px dashed #b6dcea;
+}
+.assessmentNumber {
+  position: relative;
+  z-index: 1;
+  align-self: center;
+  justify-self: center;
+  width: 62px;
+  height: 62px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #078fc8;
+  background: #e0f5fd;
+  box-shadow: 0 0 0 10px rgb(255 255 255 / 84%);
+  font-size: 20px;
+  font-weight: 800;
+}
+.assessmentSteps li:nth-child(even) .assessmentNumber {
+  color: #725912;
+  background: #fff1c8;
+}
+.assessmentSteps figure {
+  position: relative;
+  min-height: 184px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #dbeaf0;
+  box-shadow: 0 10px 22px rgb(22 90 116 / 7%);
+}
+.assessmentSteps li:nth-child(1) figure img {
+  object-position: center 38%;
+}
+.assessmentSteps li:nth-child(2) figure img {
+  object-position: center;
+}
+.assessmentSteps li:nth-child(3) figure img {
+  object-position: center 45%;
+}
+.assessmentStepCopy {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  column-gap: 32px;
+  align-items: center;
+  min-width: 0;
+  margin-left: -10px;
+  padding: 26px 28px 26px 54px;
+  border-radius: 0 24px 24px 0;
+  background: linear-gradient(90deg, #effaff, #f8fdff);
+}
+.assessmentSteps li:nth-child(even) .assessmentStepCopy {
+  background: linear-gradient(90deg, #fffaf0, #fffdf8);
+}
+.assessmentStepCopy > span {
+  width: 62px;
+  height: 62px;
+}
+.assessmentStepCopy > span svg {
+  width: 30px;
+  height: 30px;
+}
+.assessmentSteps li:nth-child(even) .assessmentStepCopy > span {
+  color: #7b6217;
+  background: #fff6dc;
+}
+.assessmentStepCopy > div {
+  min-width: 0;
+  display: grid;
+  align-content: center;
+}
+.assessmentStepCopy h3 {
+  max-width: 300px;
+  color: #06374f;
+  font-size: clamp(17px, 1.45vw, 22px);
+  line-height: 1.18;
+  letter-spacing: -0.04em;
+}
+.assessmentStepCopy p {
+  max-width: 280px;
+  margin-top: 10px;
+  color: #667681;
+  font-size: 14px;
+  line-height: 1.42;
+}
+@media (max-width: 1050px) {
+  .main {
+    padding-top: 78px;
+  }
+  .hero {
+    height: 680px;
+    min-height: 0;
+  }
+  .heroPanel {
+    width: 66%;
+  }
+}
+@media (max-width: 1050px) {
+  .overviewLayout {
+    grid-template-columns: minmax(0, 1fr) minmax(400px, 1fr);
+    gap: 40px;
+  }
+}
+@media (max-width: 850px) {
+  .overviewLayout,
+  .evaluationLayout {
+    grid-template-columns: 1fr;
+  }
+  .overviewCopy,
+  .evaluationCopy {
+    max-width: 650px;
+  }
+  .showcase,
+  .evaluationVisuals {
+    max-width: 720px;
+    width: 100%;
+  }
+  .topographyFigure {
+    height: clamp(260px, 52vw, 390px);
+  }
+  .supportingFigures figure {
+    height: clamp(150px, 30vw, 230px);
+  }
+  .evaluationVisuals {
+    min-height: 0;
+    padding-top: 0;
+  }
+  .closeupFigure {
+    width: 82%;
+    height: clamp(290px, 60vw, 440px);
+  }
+  .evaluationHighlight {
+    top: 30px;
+    left: 0;
+  }
+  .evaluationCards {
+    width: 84%;
+  }
+  .protectionFigure {
+    top: 130px;
+    right: 0;
+  }
+}
+@media (max-width: 1050px) {
+  .assessmentLayout {
+    grid-template-columns: minmax(280px, 0.8fr) minmax(540px, 1.2fr);
+    gap: 38px;
+  }
+  .assessmentSteps li {
+    grid-template-columns: 68px minmax(185px, 0.85fr) minmax(250px, 1.15fr);
+  }
+  .assessmentStepCopy {
+    grid-template-columns: 54px minmax(0, 1fr);
+    column-gap: 20px;
+    padding: 20px 18px 20px 42px;
+  }
+  .assessmentStepCopy > span {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (max-width: 850px) {
+  .assessmentLayout {
+    grid-template-columns: 1fr;
+    gap: 58px;
+  }
+  .assessmentIntro {
+    max-width: 640px;
+  }
+  .assessmentFeature {
+    max-width: 570px;
+  }
+  .assessmentNote {
+    right: auto;
+    left: 28px;
+  }
+  .assessmentSteps {
+    max-width: 720px;
+  }
+}
+@media (max-width: 700px) {
+  .main {
+    padding-top: 76px;
+  }
+  .hero {
+    height: clamp(660px, calc(100svh - 76px), 760px);
+    background: #062c3c;
+  }
+  .hero::before {
+    background: linear-gradient(
+      180deg,
+      rgb(5 39 52 / 6%) 12%,
+      rgb(5 39 52 / 50%) 47%,
+      rgb(5 39 52 / 96%) 100%
+    );
+  }
+
+  .heroImage {
+    object-position: 66% center;
+  }
+  .heroPanel {
+    width: 100%;
+    align-items: flex-end;
+  }
+  .copy {
+    padding: 30px 0 32px;
+  }
+  .kicker {
+    margin-bottom: 14px;
+  }
+  .copy h1 {
+    font-size: clamp(40px, 11vw, 55px);
+    text-shadow: 0 2px 18px rgb(0 0 0 / 30%);
+  }
+  .intro {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.55;
+    text-shadow: 0 1px 10px rgb(0 0 0 / 40%);
+  }
+  .actions {
+    margin-top: 18px;
+  }
+  .facts {
+    gap: 8px;
+    margin-top: 20px;
+    padding-top: 16px;
+  }
+  .facts strong {
+    font-size: 10px;
+  }
+}
+@media (max-width: 520px) {
+  .hero {
+    height: 760px;
+  }
+  .actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .facts {
+    grid-template-columns: 1fr;
+  }
+  .corneaOverview,
+  .evaluation {
+    padding-block: 65px;
+  }
+  .overviewCopy h2 {
+    font-size: 34px;
+  }
+  .overviewIntro {
+    font-size: 13px;
+  }
+  .careList article {
+    grid-template-columns: 31px 1fr;
+    padding: 11px;
+  }
+  .overviewActions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .topographyFigure {
+    height: 250px;
+  }
+  .topographyLabel {
+    left: 10px;
+    bottom: 10px;
+    padding: 9px 11px;
+  }
+  .supportingFigures {
+    gap: 9px;
+    margin-top: 9px;
+  }
+  .supportingFigures figure {
+    height: 138px;
+    border-radius: 14px;
+  }
+  .supportingFigures figcaption {
+    right: 7px;
+    bottom: 7px;
+    left: 7px;
+    padding: 6px 7px;
+  }
+  .supportingFigures figcaption strong {
+    font-size: 9px;
+  }
+  .supportingFigures figcaption small {
+    display: none;
+  }
+  .evaluationCopy h2 {
+    font-size: 37px;
+  }
+  .evaluationCopy > p {
+    font-size: 14px;
+  }
+  .symptoms {
+    gap: 7px;
+    margin-top: 22px;
+  }
+  .symptoms li {
+    min-height: 48px;
+    gap: 10px;
+    padding-right: 10px;
+    font-size: 12px;
+  }
+  .symptoms svg {
+    width: 34px;
+    height: 34px;
+    padding: 8px;
+  }
+  .evaluationCta {
+    min-height: 49px;
+    margin-top: 24px;
+    padding-left: 19px;
+    font-size: 12px;
+  }
+  .evaluationCta span {
+    width: 37px;
+    height: 37px;
+  }
+  .evaluationVisuals {
+    margin-top: 5px;
+  }
+  .closeupFigure {
+    width: 100%;
+    height: 250px;
+    margin-left: 0 !important;
+    border-radius: 16px;
+  }
+  .closeupFigure figcaption {
+    bottom: 10px;
+    left: 10px;
+    padding: 8px 11px 8px 8px;
+    font-size: 10px;
+  }
+  .evaluationHighlight {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: calc(100% - 20px);
+    margin: -22px 10px 0;
+    grid-template-columns: 48px 1fr;
+    gap: 10px;
+    padding: 13px;
+    border-radius: 17px;
+  }
+  .evaluationHighlight > span {
+    width: 48px;
+    height: 48px;
+  }
+  .evaluationHighlight > span svg {
+    width: 25px;
+  }
+  .evaluationHighlight strong {
+    font-size: 12px;
+  }
+  .evaluationHighlight p {
+    margin-top: 2px;
+    font-size: 10px;
+  }
+  .protectionFigure {
+    position: relative !important;
+    top: auto;
+    right: auto;
+    width: 150px;
+    height: 150px;
+    margin: 20px auto 39px !important;
+    border-width: 9px;
+  }
+  .protectionFigure figcaption {
+    right: -52px;
+    bottom: -34px;
+    min-width: 190px;
+  }
+  .evaluationCards {
+    width: 100%;
+    gap: 9px;
+    margin-top: 13px;
+  }
+  .evaluationCards figure {
+    height: 164px;
+    border-radius: 14px;
+  }
+  .evaluationCards figcaption {
+    right: 7px;
+    bottom: 7px;
+    left: 7px;
+    grid-template-columns: 28px 1fr;
+    gap: 6px;
+    padding: 7px;
+    border-radius: 10px;
+  }
+  .evaluationCards figcaption > span {
+    width: 28px;
+    height: 28px;
+  }
+  .evaluationCards figcaption > span svg {
+    width: 14px;
+  }
+  .evaluationCards figcaption strong {
+    font-size: 8px;
+  }
+  .evaluationCards figcaption p,
+  .evaluationCards figcaption > svg {
+    display: none;
+  }
+}
+@media (max-width: 620px) {
+  .assessment {
+    padding-block: 65px;
+  }
+  .assessmentIntro h2 {
+    font-size: clamp(38px, 11vw, 52px);
+  }
+  .assessmentIntro > p {
+    font-size: 14px;
+  }
+  .assessmentFeature {
+    height: 270px;
+    margin-top: 26px;
+    border-radius: 28px;
+  }
+  .assessmentNote {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    width: calc(100% - 22px);
+    margin: -24px 11px 0;
+    grid-template-columns: 50px 1fr;
+    gap: 12px;
+    padding: 14px;
+    border-radius: 20px;
+  }
+  .assessmentNote > span {
+    width: 50px;
+    height: 50px;
+  }
+  .assessmentNote strong {
+    font-size: 13px;
+  }
+  .assessmentNote p {
+    font-size: 11px;
+  }
+  .assessmentSteps {
+    gap: 14px;
+  }
+  .assessmentSteps::before,
+  .assessmentSteps li:not(:last-child)::after {
+    display: none;
+  }
+  .assessmentSteps li {
+    grid-template-columns: 54px minmax(0, 1fr);
+    min-height: 0;
+  }
+  .assessmentNumber {
+    width: 46px;
+    height: 46px;
+    margin-top: 14px;
+    font-size: 15px;
+    box-shadow: none;
+  }
+  .assessmentSteps figure {
+    height: 150px;
+    min-height: 0;
+    border-radius: 18px 18px 0 0;
+    grid-column: 2;
+  }
+  .assessmentStepCopy {
+    grid-column: 2;
+    grid-template-columns: 42px 1fr;
+    margin-left: 0;
+    padding: 14px;
+    border-radius: 0 0 18px 18px;
+  }
+  .assessmentStepCopy > span {
+    width: 42px;
+    height: 42px;
+    box-shadow: none;
+  }
+  .assessmentStepCopy > span svg {
+    width: 21px;
+    height: 21px;
+  }
+  .assessmentStepCopy h3 {
+    font-size: 16px;
+  }
+  .assessmentStepCopy p {
+    margin-top: 5px;
+    font-size: 11px;
+  }
+}
+
+/* Shared service-page sections (mirrors glaucoma) */
+.sectionLabel {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  color: var(--brand-primary-dark);
+  background: #dff3f8;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.sectionLabel span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--brand-cyan);
+}
+.reasons { padding:clamp(72px,9vw,120px) 0; background-image:linear-gradient(rgb(255 255 255 / 16%),rgb(247 248 255 / 18%)),url('/cornea-clinical-section-bg-v1.png'); background-position:center; background-size:cover; }
+.reasonsHeading { max-width:760px; margin:0 auto 46px; text-align:center; }
+.reasonsHeading .sectionLabel { margin-inline:auto; }
+.reasonsHeading h2 {
+  margin-top: 14px;
+  color: var(--title-primary);
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.06;
+  letter-spacing: -0.055em;
+}
+.reasonsHeading h2 span {
+  color: var(--brand-primary);
+}
+.reasonsHeading > p:last-child {
+  max-width: 620px;
+  margin: 16px auto 0;
+  color: var(--text-primary);
+  font-size: 14px;
+  line-height: 1.65;
+}
+.reasonGrid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+.reasonCard { position:relative; min-height:250px; overflow:hidden; padding:24px; border:1px solid rgb(207 228 235 / 78%); border-radius:22px; background:rgb(255 255 255 / 88%); box-shadow:0 12px 30px rgb(16 55 70 / 5%); transition:transform .18s var(--ease-out),border-color .18s ease,box-shadow .18s ease,background-color .18s ease; }
+.reasonCard::after { content:""; position:absolute; z-index:0; inset:0; background:linear-gradient(145deg,var(--brand-primary),var(--brand-primary-dark)); opacity:0; transform:translateY(24%); transition:opacity .22s ease,transform .22s var(--ease-out); pointer-events:none; }
+.reasonCard > * { position:relative; z-index:1; }.reasonCard:hover { transform:translateY(-7px); border-color:rgb(64 184 232 / 52%); background:var(--background-card); box-shadow:0 22px 44px rgb(16 55 70 / 13%); }.reasonCard:hover::after { opacity:1; transform:translateY(0); }
+.reasonTop { display:flex; align-items:flex-start; justify-content:space-between; }.reasonTop span { width:46px; height:46px; display:grid; place-items:center; border-radius:13px; color:var(--brand-primary); background:var(--background-section-strong); transition:transform .18s var(--ease-out),color .18s ease,background-color .18s ease; }.reasonTop b { color:rgb(64 184 232 / 12%); font-size:40px; line-height:1; transition:color .18s ease,transform .18s var(--ease-out); }.reasonCard:hover .reasonTop span { color:var(--brand-primary); background:var(--background-card); transform:translateY(-2px) rotate(-3deg); }.reasonCard:hover .reasonTop b { color:rgb(255 255 255 / 18%); transform:translateX(-2px); }
+.reasonCard h3 { margin-top:22px; color:var(--title-primary); font-size:17px; line-height:1.3; transition:color .18s ease; }.reasonCard > p { margin-top:10px; color:var(--text-primary); font-size:12px; line-height:1.65; transition:color .18s ease; }.reasonCard:hover h3 { color:var(--text-on-dark); }.reasonCard:hover > p { color:var(--text-on-dark-muted); }
+@media (max-width: 800px) {
+  .reasonGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 520px) {
+  .reasons {
+    padding: 68px 0;
+  }
+  .reasonsHeading {
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  .reasons .sectionLabel {
+    justify-content: flex-start;
+  }
+  .reasonsHeading > p:last-child {
+    margin-inline: 0;
+  }
+  .reasonGrid {
+    grid-template-columns: 1fr;
+  }
+  .reasonCard {
+    min-height: 0;
+    padding: 22px;
+  }
+  .reasonCard h3 {
+    margin-top: 18px;
+  }
+}
+.evaluation {
+  overflow: hidden;
+  padding: clamp(76px, 9vw, 120px) 0;
+  background: #fff;
+}
+.evaluationLayout {
+  display: grid;
+  grid-template-columns: minmax(340px, 0.78fr) minmax(520px, 1.22fr);
+  gap: clamp(44px, 7vw, 106px);
+  align-items: center;
+}
+.evaluationLabel {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 15px;
+  border: 1px solid #d7edf8;
+  border-radius: 999px;
+  color: #133b78;
+  background: #f7fcff;
+  font-size: 12px;
+  font-weight: 800;
+}
+.evaluationLabel svg {
+  color: var(--brand-primary);
+}
+.evaluationCopy h2 {
+  margin-top: 34px;
+  color: #123b79;
+  font-size: clamp(43px, 4.3vw, 62px);
+  line-height: 1.05;
+  letter-spacing: -0.055em;
+}
+.evaluationCopy h2 span {
+  color: var(--brand-primary);
+}
+.evaluationCopy > p {
+  max-width: 510px;
+  margin-top: 22px;
+  color: #587197;
+  font-size: 16px;
+  line-height: 1.7;
+}
+.evaluationCopy ul {
+  display: grid;
+  gap: 10px;
+  margin-top: 28px;
+  list-style: none;
+}
+.evaluationCopy li {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  min-height: 52px;
+  padding: 7px 15px 7px 9px;
+  border: 1px solid #dcecf8;
+  border-radius: 15px;
+  color: #123b79;
+  font-size: 14px;
+  font-weight: 600;
+}
+.evaluationCopy li span {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border-radius: 12px;
+  color: var(--brand-primary);
+  background: #eaf8ff;
+}
+.evaluationCopy li svg {
+  width: 22px;
+}
+.evaluationCta {
+  min-height: 56px;
+  display: inline-flex;
+  align-items: center;
+  gap: 23px;
+  margin-top: 33px;
+  padding: 6px 7px 6px 27px;
+  border-radius: 999px;
+  color: #fff;
+  background: var(--brand-primary);
+  font-weight: 800;
+}
+.evaluationCta span {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--brand-primary);
+  background: #fff;
+}
+.evaluationVisual {
+  position: relative;
+  min-height: 760px;
+}
+.evaluationVisual::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 420px;
+  height: 420px;
+  top: 0;
+  left: 10%;
+  border-radius: 50%;
+  background: #edf8ff;
+}
+.evaluationMain {
+  position: absolute;
+  z-index: 1;
+  top: 55px;
+  left: 8%;
+  width: 74%;
+  height: 445px;
+  overflow: hidden;
+  margin: 0;
+  border-radius: 48px 90px 90px 90px;
+  box-shadow: 0 22px 52px rgb(9 95 144 / 16%);
+}
+.evaluationMain img,
+.evaluationBottom img,
+.evaluationCircle img {
+  object-fit: cover;
+}
+.evaluationCircle {
+  position: absolute;
+  z-index: 2;
+  top: 195px;
+  right: 0;
+  width: 220px;
+  height: 220px;
+  overflow: hidden;
+  margin: 0;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 8px 28px rgb(23 89 132 / 14%);
+}
+.evaluationBottom {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+.evaluationBottom figure {
+  position: relative;
+  height: 285px;
+  overflow: hidden;
+  margin: 0;
+  border-radius: 28px;
+}
+.evaluationBottom figcaption {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  left: 14px;
+  display: grid;
+  grid-template-columns: 48px 1fr 28px;
+  gap: 11px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 18px;
+  color: #143b78;
+  background: rgb(255 255 255 / 94%);
+}
+.evaluationBottom figcaption > span {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--brand-primary);
+  background: #e7f8ff;
+}
+.evaluationBottom figcaption span svg {
+  width: 22px;
+}
+.evaluationBottom strong,
+.evaluationBottom small {
+  display: block;
+}
+.evaluationBottom strong {
+  font-size: 12px;
+}
+.evaluationBottom small {
+  margin-top: 3px;
+  color: #587197;
+  font-size: 10px;
+}
+.evaluationBottom figcaption > svg {
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  border: 1px solid #cceafb;
+  border-radius: 50%;
+  color: var(--brand-primary);
+}
+@media (max-width: 950px) {
+  .evaluationLayout {
+    grid-template-columns: 1fr;
+  }
+  .evaluationCopy {
+    max-width: 650px;
+  }
+  .evaluationVisual {
+    max-width: 760px;
+    width: 100%;
+    margin-inline: auto;
+  }
+}
+@media (max-width: 600px) {
+  .evaluation {
+    padding: 68px 0;
+  }
+  .evaluationCopy h2 {
+    margin-top: 22px;
+    font-size: clamp(36px, 10vw, 48px);
+  }
+  .evaluationCopy > p {
+    font-size: 14px;
+  }
+  .evaluationCopy li {
+    min-height: 48px;
+    gap: 11px;
+    padding-right: 10px;
+    font-size: 12px;
+  }
+  .evaluationCopy li span {
+    width: 35px;
+    height: 35px;
+  }
+  .evaluationCopy li svg {
+    width: 19px;
+  }
+  .evaluationVisual {
+    min-height: 610px;
+    margin-top: 30px;
+  }
+  .evaluationMain {
+    top: 34px;
+    left: 0;
+    width: 84%;
+    height: 280px;
+    border-radius: 30px 54px 54px 54px;
+  }
+  .evaluationCircle {
+    top: 190px;
+    width: 126px;
+    height: 126px;
+  }
+  .evaluationBottom {
+    gap: 10px;
+  }
+  .evaluationBottom figure {
+    height: 205px;
+    border-radius: 18px;
+  }
+  .evaluationBottom figcaption {
+    right: 7px;
+    bottom: 7px;
+    left: 7px;
+    grid-template-columns: 30px 1fr;
+    gap: 6px;
+    padding: 7px;
+    border-radius: 12px;
+  }
+  .evaluationBottom figcaption > span {
+    width: 29px;
+    height: 29px;
+  }
+  .evaluationBottom figcaption span svg {
+    width: 15px;
+  }
+  .evaluationBottom strong {
+    font-size: 8px;
+  }
+  .evaluationBottom small,
+  .evaluationBottom figcaption > svg {
+    display: none;
+  }
+}
+.evaluation {
+  background: var(--background-page);
+}
+.evaluationLabel {
+  border-color: var(--background-section-strong);
+  color: var(--brand-primary-dark);
+  background: var(--background-section);
+}
+.evaluationCopy h2,
+.evaluationCopy li,
+.evaluationBottom figcaption {
+  color: var(--title-primary);
+}
+.evaluationCopy > p,
+.evaluationBottom small {
+  color: var(--text-muted);
+}
+.evaluationCopy li {
+  border-color: var(--background-section-strong);
+}
+.evaluationCopy li span,
+.evaluationBottom figcaption > span {
+  color: var(--brand-primary);
+  background: var(--background-section-strong);
+}
+.evaluationVisual::before {
+  background: var(--background-section);
+}
+.evaluationBottom figcaption > svg {
+  border-color: var(--brand-cyan-soft);
+  color: var(--brand-primary);
+}
+.treatments {
+  padding: clamp(72px, 9vw, 120px) 0;
+  background-color: #f2fafc;
+  background-image:
+    linear-gradient(180deg, rgb(247 252 254 / 86%), rgb(237 248 251 / 62%)),
+    url("/cornea-clinical-section-bg-v1.png");
+  background-position: center;
+  background-size: cover;
+}
+.treatmentHeading {
+  max-width: 760px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+.treatmentHeading .sectionLabel {
+  margin-inline: auto;
+}
+.treatmentHeading h2 {
+  color: var(--title-primary);
+  font-size: clamp(34px, 4.5vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -0.052em;
+}
+.treatmentHeading h2 span {
+  color: var(--brand-primary);
+}
+.treatmentHeading p {
+  max-width: 720px;
+  margin: 16px auto 0;
+  color: var(--text-primary);
+  font-size: 13px;
+  line-height: 1.65;
+}
+.treatmentGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+.treatmentCard {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  border-radius: 24px;
+  background: var(--background-card);
+  box-shadow: 0 16px 38px rgb(16 55 70 / 8%);
+  transition:
+    transform 0.15s var(--ease-out),
+    box-shadow 0.15s ease,
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+.treatmentCard:nth-child(4) {
+  grid-column: 2;
+}
+.treatmentCard:hover {
+  transform: translateY(-5px);
+  background: var(--brand-primary);
+  box-shadow: 0 24px 48px rgb(7 113 148 / 20%);
+}
+.treatmentImage {
+  position: relative;
+  min-height: 220px;
+  overflow: hidden;
+  margin: 0;
+  background: var(--background-section-strong);
+}
+.treatmentImage img {
+  object-fit: cover;
+  transition: transform 0.3s var(--ease-out);
+}
+.treatmentCard:hover .treatmentImage img {
+  transform: scale(1.025);
+}
+.treatmentBody {
+  display: flex;
+  flex-direction: column;
+  min-height: 360px;
+  padding: 26px;
+}
+.treatmentMeta {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+.treatmentMeta > span {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  margin-top: -44px;
+  border-radius: 15px;
+  color: var(--brand-primary);
+  background: var(--background-section-strong);
+  box-shadow: 0 10px 22px rgb(16 55 70 / 14%);
+}
+.treatmentMeta b {
+  padding: 7px 10px;
+  border-radius: 9px;
+  color: var(--brand-primary);
+  background: var(--background-section-strong);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-align: right;
+  text-transform: uppercase;
+}
+.treatmentBody h3 {
+  margin-top: 22px;
+  color: var(--title-primary);
+  font-size: 24px;
+  line-height: 1.2;
+}
+.treatmentBody > p {
+  margin-top: 12px;
+  color: var(--text-primary);
+  font-size: 13px;
+  line-height: 1.65;
+}
+.treatmentBody ul {
+  display: grid;
+  gap: 9px;
+  margin-top: 22px;
+  list-style: none;
+}
+.treatmentBody li {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: var(--text-primary);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.treatmentBody li svg {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  margin-top: -1px;
+  padding: 4px;
+  border-radius: 50%;
+  color: #087c68;
+  background: #d9f8eb;
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease;
+}
+.treatmentBody > a {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 24px;
+  color: var(--brand-primary);
+  font-size: 12px;
+  font-weight: 750;
+}
+.treatmentCard:hover .treatmentBody h3,
+.treatmentCard:hover .treatmentBody > p,
+.treatmentCard:hover .treatmentBody li,
+.treatmentCard:hover .treatmentBody > a {
+  color: var(--text-on-dark);
+}
+.treatmentCard:hover .treatmentBody li svg {
+  color: var(--text-on-dark);
+  background: rgb(255 255 255 / 18%);
+}
+.treatmentNote {
+  max-width: 850px;
+  margin: 18px auto 0;
+  color: var(--text-muted);
+  font-size: 11px;
+  line-height: 1.6;
+  text-align: center;
+}
+.benefits {
+  padding: clamp(72px, 9vw, 120px) 0;
+  background: var(--background-card);
+}
+.benefits :global(.container) {
+  max-width: 1360px;
+}
+.benefitsHeading {
+  max-width: 760px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+.benefitsHeading .sectionLabel {
+  margin-inline: auto;
+}
+.benefitsHeading h2 {
+  color: var(--title-primary);
+  font-size: clamp(30px, 3.5vw, 42px);
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+}
+.benefitsHeading h2 span {
+  color: var(--brand-primary);
+}
+.benefitsHeading > p:last-child {
+  max-width: 690px;
+  margin: 12px auto 0;
+  color: var(--text-primary);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.benefitNote {
+  max-width: 820px;
+  margin: 20px auto 0;
+  color: var(--text-muted);
+  font-size: 11px;
+  line-height: 1.6;
+  text-align: center;
+}
+.finalCta {
+  padding: clamp(64px, 8vw, 100px) 0;
+  background: #f3f4ff;
+}
+.ctaPanel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.72fr);
+  gap: clamp(40px, 7vw, 90px);
+  align-items: center;
+  padding: clamp(36px, 5vw, 64px);
+  border-radius: 28px;
+  color: var(--text-on-dark);
+  background: var(--brand-primary);
+  box-shadow: 0 24px 50px rgb(16 55 70 / 16%);
+}
+.ctaLabel {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  color: var(--brand-primary-dark);
+  background: var(--background-card);
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.ctaLabel span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--brand-cyan);
+}
+.ctaCopy h2 {
+  max-width: 650px;
+  font-size: clamp(38px, 5vw, 60px);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+.ctaCopy > p:not(.ctaLabel):not(.ctaDetail) {
+  max-width: 620px;
+  margin-top: 20px;
+  color: var(--text-on-dark-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.ctaActions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+.ctaActions a {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 18px;
+  border: 1px solid rgb(255 255 255 / 58%);
+  border-radius: 999px;
+  color: var(--text-on-dark);
+  font-size: 12px;
+  font-weight: 700;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    transform 0.15s ease;
+}
+.ctaActions a:first-child {
+  color: var(--brand-primary-dark);
+  background: var(--background-card);
+  border-color: var(--background-card);
+}
+.ctaActions a:hover {
+  transform: translateY(-1px);
+  background: rgb(255 255 255 / 14%);
+}
+.ctaActions a:first-child:hover {
+  background: var(--background-section);
+}
+.ctaDetail {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 24px;
+  color: var(--text-on-dark-muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+.ctaDetail svg {
+  flex: 0 0 auto;
+  margin-top: 1px;
+  color: var(--brand-cyan-soft);
+}
+.ctaVisual {
+  position: relative;
+  min-height: 340px;
+  overflow: hidden;
+  border-radius: 22px;
+  background: var(--background-section-strong);
+}
+.ctaVisual > img {
+  object-fit: cover;
+}
+.ctaVisual > div {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 15px;
+  border-radius: 14px;
+  color: var(--text-primary);
+  background: rgb(255 255 255 / 92%);
+  backdrop-filter: blur(10px);
+}
+.ctaVisual > div > svg {
+  flex: 0 0 auto;
+  color: var(--brand-primary);
+}
+.ctaVisual span {
+  font-size: 10px;
+  line-height: 1.45;
+}
+.ctaVisual strong {
+  display: block;
+  color: var(--title-primary);
+  font-size: 12px;
+}
+@media (max-width: 800px) {
+  .ctaPanel {
+    grid-template-columns: 1fr;
+  }
+  .treatmentGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .treatmentCard:nth-child(4) {
+    grid-column: auto;
+  }
+  .treatmentImage {
+    min-height: 210px;
+  }
+  .ctaVisual {
+    min-height: 380px;
+  }
+}
+@media (max-width: 600px) {
+  .treatments,
+  .benefits {
+    padding: 68px 0;
+  }
+  .benefitsHeading {
+    margin-bottom: 32px;
+    text-align: left;
+  }
+  .benefitsHeading .sectionLabel,
+  .treatmentHeading .sectionLabel {
+    margin-inline: 0;
+  }
+  .treatmentHeading {
+    text-align: left;
+  }
+  .treatmentGrid {
+    grid-template-columns: 1fr;
+  }
+  .treatmentImage {
+    min-height: 190px;
+  }
+  .treatmentBody {
+    padding: 22px;
+  }
+  .treatmentNote,
+  .benefitNote {
+    text-align: left;
+  }
+  .finalCta {
+    padding: 54px 0;
+  }
+  .ctaPanel {
+    gap: 30px;
+    padding: 28px 20px;
+    border-radius: 22px;
+  }
+  .ctaVisual {
+    min-height: 300px;
+  }
+  .ctaActions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+@media (max-width: 700px) {
+  .treatmentHeading p,
+  .benefitsHeading > p:last-child,
+  .ctaCopy > p:not(.ctaLabel):not(.ctaDetail) {
+    font-size: 16px;
+  }
+  .treatmentBody > p,
+  .treatmentBody li,
+  .treatmentNote,
+  .benefitNote {
+    font-size: 15px;
+  }
+  .treatmentHeading h2,
+  .benefitsHeading h2,
+  .ctaCopy h2 {
+    font-size: clamp(30px, 8vw, 38px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reasonCard,
+  .reasonCard::after,
+  .reasonTop span,
+  .reasonTop b {
+    transition: none;
+  }
+}
+
+/* Cornea evaluation uses the same title scale as the other service sections. */
+.evaluation {
+  background-color: var(--background-page);
+  background-image: linear-gradient(90deg, rgb(255 255 255 / 94%), rgb(255 255 255 / 66%)), url('/cornea-evaluation-clinic-bg-v1.png');
+  background-position: center;
+  background-size: cover;
+}
+.evaluationCopy h2 {
+  max-width: 540px;
+  color: var(--title-primary);
+  font-size: clamp(34px, 4.5vw, 52px);
+  line-height: 1.06;
+}
+@media (max-width: 600px) {
+  .evaluationCopy h2 { font-size: clamp(30px, 8vw, 38px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .treatmentCard,
+  .treatmentImage img {
+    transition: none;
+  }
+}
+
+@media (max-width:700px) { .hero::before { background:linear-gradient(180deg,rgb(5 39 52 / 38%) 0%,rgb(5 39 52 / 72%) 42%,rgb(5 39 52 / 100%) 100%); } }
+
+/* Phone/tablet banner: height follows content, with a short band of photo above the copy. */
+@media (max-width: 700px) {
+  .hero { height: auto; min-height: 0; }
+  .heroPanel { position: relative; inset: auto; }
+  .copy { padding-top: 48px; }
+}
