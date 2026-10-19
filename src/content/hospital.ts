@@ -66,7 +66,7 @@ export const hospital = {
     {
       id: "cataract",
       icon: "eye",
-      title: "Robotic Painless Cataract Surgery",
+      title: "Cataract Surgery",
       description:
         "Using the Oertli Faros phacoemulsification system, we perform micro-incision cataract surgery (MICS) with topical anaesthesia — no injection in most suitable cases. The 1.6 mm technique means faster healing and minimal discomfort. Outcomes depend on individual examination.",
     },
@@ -123,19 +123,60 @@ export const hospital = {
       "Surgical outcomes in cataract care have improved dramatically with modern phacoemulsification platforms. At Neyani, we invest in systems that experienced surgeons trust.",
     items: [
       {
-        title: "Oertli Robotic Faros System",
+        title: "OERTLI FAROS Phacoemulsification System",
+        description:
+          "Advanced surgical technology used for cataract removal. The system supports the surgeon during the procedure, with the technique selected according to the patient's needs.",
         detail:
-          "A premium phacoemulsification platform known for its stability and responsiveness, allowing the surgeon to work with precision even in complex cataracts.",
+          "Advanced surgical technology used for cataract removal. The system supports the surgeon during the procedure, with the technique selected according to the patient's needs.",
       },
       {
-        title: "Micro-Incision Cataract Surgery (MICS)",
+        title: "ZEISS VISU 160 Surgical Microscope",
+        description:
+          "Provides a magnified view of the eye, helping the surgeon see fine details clearly during eye surgery.",
         detail:
-          "The 1.6 mm technique reduces induced astigmatism and accelerates recovery. Topical anaesthesia (no injection) is used where the patient and clinical situation are suitable.",
+          "Provides a magnified view of the eye, helping the surgeon see fine details clearly during eye surgery.",
       },
       {
-        title: "Zeiss Visu 160 Microscope",
+        title: "LENSTAR PRO Optical Biometer",
+        description:
+          "Measures important features of the eye to help the doctor plan cataract surgery and select a suitable intraocular lens.",
         detail:
-          "High-definition, wide-field optics give the surgeon a clear, stable view throughout every procedure — a foundation of safe, precise surgery.",
+          "Measures important features of the eye to help the doctor plan cataract surgery and select a suitable intraocular lens.",
+      },
+      {
+        title: "ZEISS OCT Imaging System",
+        description:
+          "Creates detailed images of the retina, helping doctors examine the back of the eye and assess retinal conditions.",
+        detail:
+          "Creates detailed images of the retina, helping doctors examine the back of the eye and assess retinal conditions.",
+      },
+      {
+        title: "Visual Field Analyzer",
+        description:
+          "Checks a patient's field of vision and helps doctors evaluate vision changes associated with conditions such as glaucoma.",
+        detail:
+          "Checks a patient's field of vision and helps doctors evaluate vision changes associated with conditions such as glaucoma.",
+      },
+      {
+        title: "YAG Laser System",
+        description:
+          "Used for certain eye procedures, including treatment of clouding that can develop behind an artificial lens after cataract surgery.",
+        detail:
+          "Used for certain eye procedures, including treatment of clouding that can develop behind an artificial lens after cataract surgery.",
+      },
+      {
+        title: "iCare Tonometer",
+        description:
+          "Measures pressure inside the eye as part of an eye examination and glaucoma assessment.",
+        detail:
+          "Measures pressure inside the eye as part of an eye examination and glaucoma assessment.",
+      },
+      {
+        title: "UNICOS Autorefractometer/Keratometer",
+        description:
+          "Helps measure refractive error and corneal curvature, supporting vision assessments and prescription planning.",
+        detail:
+          "Helps measure refractive error and corneal curvature, supporting vision assessments and prescription planning.",
       },
     ],
     disclaimer:
@@ -477,3 +518,15 @@ export const hospital = {
 } as const;
 
 export type HospitalContent = typeof hospital;
+
+export const treatmentMenuItems = [
+  { href: "/services/cataract", title: "Cataract Surgery" },
+  { href: "/services/glaucoma", title: "Glaucoma Diagnosis & Treatment" },
+  { href: "/services/retina", title: "Diabetic Eye & Retina Care" },
+  { href: "/services/pediatric", title: "Pediatric Ophthalmology" },
+  { href: "/services/general", title: "General Eye Care" },
+  { href: "/services/cornea", title: "Cornea Care" },
+  { href: "/services/squint", title: "Squint Care" },
+  { href: "/services/pterygium", title: "Pterygium Treatment" },
+  { href: "/services/oculoplasty", title: "Oculoplasty & Watering Eye Care" },
+] as const;

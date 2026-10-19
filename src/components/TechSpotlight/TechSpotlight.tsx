@@ -6,15 +6,14 @@ import { hospital } from "@/content/hospital";
 import styles from "./TechSpotlight.module.css";
 
 const technologyImages = [
-  { src: "/service-cataract.png", alt: "Eye surgeon using an advanced operating microscope" },
-  { src: "/service-glaucoma.png", alt: "Ophthalmologist carrying out a precision eye examination" },
-  { src: "/service-diagnostics.png", alt: "Specialist reviewing detailed digital eye imaging" },
-] as const;
-
-const summaries = [
-  "Stable, responsive cataract surgery technology.",
-  "Smaller incisions designed to support faster recovery.",
-  "Clear, magnified views throughout each procedure.",
+  { src: "/cataract-equipment-detail.png", alt: "OERTLI FAROS Phacoemulsification System" },
+  { src: "/service-cataract.png", alt: "ZEISS VISU 160 Surgical Microscope" },
+  { src: "/diagnostic-optical-biometry-v1.png", alt: "LENSTAR PRO Optical Biometer" },
+  { src: "/diagnostic-oct-v1.png", alt: "ZEISS OCT Imaging System" },
+  { src: "/diagnostic-vision-testing-v1.png", alt: "Visual Field Analyzer" },
+  { src: "/glaucoma-laser-treatment.png", alt: "YAG Laser System" },
+  { src: "/glaucoma-monitoring.png", alt: "iCare Tonometer" },
+  { src: "/cornea-topography-prep-candid-v2.png", alt: "UNICOS Autorefractometer/Keratometer" },
 ] as const;
 
 const sliderSettings: Settings = {
@@ -76,7 +75,7 @@ function TechCard({ item, index }: { item: (typeof hospital.techSpotlight.items)
       </div>
       <div className={styles.itemBody}>
         <h3 className={styles.itemTitle}>{item.title}</h3>
-        <p className={styles.itemDetail}>{summaries[index]}</p>
+        <p className={styles.itemDetail}>{item.description}</p>
       </div>
     </div>
   );

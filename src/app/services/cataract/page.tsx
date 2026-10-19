@@ -32,6 +32,39 @@ const surgerySigns = [
   { title: "Double vision or frequent vision changes", detail: "Double vision or frequent vision changes are affecting one eye." },
 ] as const;
 
+const surgicalTechniques = [
+  {
+    icon: Cpu,
+    title: "Phacoemulsification",
+    description: "This technique uses ultrasound energy to break the cloudy lens into smaller pieces, which are then removed and replaced with an artificial lens.",
+  },
+  {
+    icon: Eye,
+    title: "Small Incision Cataract Surgery (SICS)",
+    description: "This procedure removes the cloudy lens through a small incision in the eye. Your doctor will determine whether this technique is suitable for you.",
+  },
+  {
+    icon: ScanLine,
+    title: "Micro-Incision Cataract Surgery (MICS)",
+    description: "This technique uses a very small incision to remove the cloudy lens, where appropriate for the patient's eye condition.",
+  },
+  {
+    icon: Droplets,
+    title: "Topical Anaesthesia (No-Injection Technique)",
+    description: "For suitable patients, cataract surgery can be performed using anaesthetic eye drops instead of an injection around the eye. Your doctor will explain whether this option is appropriate for you.",
+  },
+  {
+    icon: HeartHandshake,
+    title: "Paediatric Cataract Surgery",
+    description: "Cataracts can also affect children. An eye specialist will assess the child's condition and discuss the appropriate treatment and care.",
+  },
+  {
+    icon: ScanEye,
+    title: "YAG Laser Capsulotomy",
+    description: "Sometimes, the thin membrane behind an artificial lens becomes cloudy after cataract surgery. A YAG laser procedure may be recommended to help restore clearer vision.",
+  },
+] as const;
+
 const lensOptions = [
   {
     icon: Eye,
@@ -193,6 +226,27 @@ export default function CataractPage() {
             </div>
           </div>
         </section>
+        <section className={styles.techniques} aria-labelledby="cataract-treatment-options">
+          <div className="container">
+            <div className={styles.techniquesHeading}>
+              <p className={styles.sectionLabel}><span /> Treatment options</p>
+              <h2 id="cataract-treatment-options">Cataract Surgery and <span>Treatment Options</span></h2>
+              <p>A cataract occurs when the natural lens of the eye becomes cloudy, making vision blurry or hazy. You may find it harder to read, drive, recognise faces or carry out everyday activities. After examining your eyes, our doctor will explain the available treatment options and help you understand which approach may be right for you.</p>
+            </div>
+            <div className={styles.techniqueGrid}>
+              {surgicalTechniques.map((technique, index) => (
+                <article className={styles.techniqueCard} key={technique.title}>
+                  <div className={styles.techniqueTop}>
+                    <span><technique.icon size={21} strokeWidth={1.7} aria-hidden="true" /></span>
+                    <b>{String(index + 1).padStart(2, "0")}</b>
+                  </div>
+                  <h3>{technique.title}</h3>
+                  <p>{technique.description}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
         <section className={styles.lenses} aria-labelledby="lens-options">
           <div className="container">
             <div className={styles.lensHeading}>
@@ -261,6 +315,22 @@ export default function CataractPage() {
               </table>
             </div>
             <p className={styles.comparisonNote}>Lens illustrations are representative. Lens suitability, availability and expected visual range vary between patients. No lens can guarantee complete freedom from glasses.</p>
+          </div>
+        </section>
+        <section className={styles.biometry} aria-labelledby="optical-biometry-heading">
+          <div className="container">
+            <div className={styles.biometryPanel}>
+              <div className={styles.biometryCopy}>
+                <p className={styles.sectionLabel}><span /> Pre-operative assessment</p>
+                <h2 id="optical-biometry-heading">Optical Biometry for <span>Precise IOL Calculation</span></h2>
+                <p>Optical biometry helps measure important dimensions of the eye before cataract surgery. These measurements help the doctor calculate the appropriate power of the artificial lens, known as an intraocular lens (IOL). The final lens choice depends on your eye measurements, eye health and individual vision needs.</p>
+              </div>
+              <div className={styles.biometryVisual}>
+                <figure className={styles.biometryImageWrap}>
+                  <Image src="/diagnostic-optical-biometry-v1.png" alt="Optical biometry equipment used for accurate intraocular lens calculation" fill quality={90} sizes="(max-width: 800px) 100vw, 36vw" />
+                </figure>
+              </div>
+            </div>
           </div>
         </section>
         <section className={styles.benefits} aria-labelledby="surgery-benefits">
