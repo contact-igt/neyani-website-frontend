@@ -39,7 +39,7 @@
   .benefitCopy p { font-size:13px; }
 }
 @media (max-width:620px) {
-  .sliderWrap { margin-inline:-18px; padding-inline:0; }
+  .sliderWrap { margin-inline:calc(-1 * clamp(1rem, 4vw, 2.5rem)); padding-inline:0; }
   .sliderWrap :global(.slick-list) { padding-block:12px!important; }
   .sliderWrap :global(.slick-slide), .sliderWrap :global(.slick-center) { opacity:1; }
   .slide { height:410px; padding:0 5px; }

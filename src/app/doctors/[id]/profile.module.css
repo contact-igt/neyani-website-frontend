@@ -1,0 +1,93 @@
+/* ── Profile body ────────────────────────────────────────────────────── */
+.body { padding:clamp(142px,13vw,190px) 0 clamp(72px,9vw,120px); background:linear-gradient(180deg,#f7fcfe,#edf8fb); }
+.layout { display:grid; grid-template-columns:minmax(0,1fr) 380px; gap:28px; align-items:start; }
+.aboutHead { display:grid; grid-template-columns:220px minmax(0,1fr); gap:clamp(22px,3vw,34px); align-items:center; padding-bottom:28px; border-bottom:1px solid var(--border-subtle); }
+.portrait { position:relative; aspect-ratio:4 / 5; overflow:hidden; margin:0; border-radius:20px; background:var(--background-section-strong); box-shadow:0 14px 30px rgb(16 55 70 / 10%); }
+.aboutIntro .sectionLabel { margin-bottom:14px; }
+.aboutIntro h2 { font-size:clamp(26px,2.4vw,34px); }
+.aboutRole { margin-top:6px; color:var(--brand-primary); font-size:15px; font-weight:700; line-height:1.4; }
+.aboutFacts { display:grid; gap:10px; margin-top:20px; padding:0; list-style:none; }
+.aboutFacts li { display:flex; align-items:center; gap:10px; color:var(--text-primary); font-size:13px; font-weight:600; line-height:1.4; }
+.aboutFacts svg { box-sizing:content-box; flex:none; padding:7px; border-radius:50%; color:var(--brand-primary); background:var(--background-section); }
+.aboutBody { padding-top:24px; }
+.lead { color:var(--title-primary); font-size:16px; font-weight:500; line-height:1.7; }
+.aboutBody .paragraph { margin-top:14px; }
+.portrait img { object-fit:cover; object-position:center 14%; }
+.mainColumn { display:grid; gap:22px; min-width:0; }
+.card { padding:clamp(26px,3vw,40px); border-radius:24px; background:var(--background-card); box-shadow:0 12px 32px rgb(16 55 70 / 7%); }
+.sectionLabel { width:fit-content; display:flex; align-items:center; gap:8px; margin-bottom:16px; padding:7px 11px; border-radius:999px; color:var(--brand-primary-dark); background:var(--background-section-strong); font-size:10px; font-weight:750; letter-spacing:.05em; text-transform:uppercase; }
+.sectionLabel span { width:7px; height:7px; border-radius:50%; background:var(--brand-cyan); }
+.card h2,.others h2 { color:var(--title-primary); font-size:clamp(26px,2.6vw,34px); line-height:1.12; letter-spacing:-.045em; }
+.card h2 span,.others h2 span { color:var(--brand-primary); }
+.paragraph { max-width:760px; margin-top:16px; color:var(--text-primary); font-size:14px; line-height:1.75; }
+.quote { display:flex; align-items:flex-start; gap:10px; margin-top:22px; padding:14px 18px; border-left:4px solid var(--brand-cyan); border-radius:16px; background:rgb(239 249 252 / 90%); }
+.quote > svg { flex:none; margin-top:2px; color:var(--brand-cyan); }
+.quote p { color:var(--title-secondary); font-size:15px; font-weight:600; line-height:1.55; }
+
+.expertiseGrid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin-top:22px; padding:0; list-style:none; }
+.expertiseGrid li { display:flex; align-items:flex-start; gap:12px; padding:18px; border-radius:18px; background:var(--background-section); }
+.expertiseGrid li > span { width:30px; height:30px; flex:none; display:grid; place-items:center; border-radius:50%; color:var(--brand-primary); background:var(--background-card); }
+.expertiseGrid h3 { color:var(--title-primary); font-size:15px; line-height:1.35; }
+.expertiseGrid p { margin-top:5px; color:var(--text-muted); font-size:12.5px; line-height:1.6; }
+
+.serviceList { display:grid; gap:12px; margin-top:22px; padding:0; list-style:none; }
+.serviceList a { display:flex; align-items:center; justify-content:space-between; gap:18px; padding:18px 20px; border:1px solid var(--border-subtle); border-radius:18px; color:var(--brand-primary); transition:background .15s ease,border-color .15s ease; }
+.serviceList a:hover { border-color:rgb(64 184 232 / 52%); background:var(--background-section); }
+.serviceList a > span { color:var(--text-muted); font-size:13px; line-height:1.5; }
+.serviceList strong { display:block; color:var(--title-primary); font-size:16px; }
+.serviceList svg { flex:none; transition:transform .15s ease; }
+.serviceList a:hover svg { transform:translateX(3px); }
+
+.sidebar { position:sticky; top:120px; }
+.infoCard { padding:28px; border-radius:24px; background:var(--background-card); box-shadow:0 12px 32px rgb(16 55 70 / 7%); }
+.infoCard h2 { color:var(--title-primary); font-size:20px; letter-spacing:-.03em; }
+.infoRow { display:flex; align-items:flex-start; gap:12px; padding:16px 0; border-bottom:1px solid var(--border-subtle); }
+.infoRow:first-of-type { margin-top:8px; }
+.infoRow > svg { flex:none; margin-top:2px; color:var(--brand-primary); }
+.infoRow p { color:var(--text-muted); font-size:12.5px; line-height:1.6; }
+.infoRow strong { display:block; color:var(--title-primary); font-size:13.5px; }
+.infoActions { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:22px; }
+.bookButton { grid-column:1 / -1; min-height:50px; display:flex; align-items:center; justify-content:space-between; gap:12px; padding:5px 6px 5px 20px; border-radius:999px; color:var(--text-on-dark); background:var(--brand-primary); font-size:13px; font-weight:750; box-shadow:0 10px 24px var(--shadow-color); transition:background .15s ease,transform .15s ease; }
+.bookButton > span { width:38px; height:38px; display:grid; place-items:center; border-radius:50%; color:var(--brand-primary); background:var(--background-card); }
+.bookButton:hover { background:var(--brand-primary-hover); transform:translateY(-1px); }
+.ghostButton { min-height:44px; display:inline-flex; align-items:center; justify-content:center; gap:7px; border:1px solid var(--border-strong); border-radius:999px; color:var(--brand-primary); background:var(--background-card); font-size:12.5px; font-weight:750; transition:background .15s ease; }
+.ghostButton:hover { background:var(--background-section); }
+.bookButton:focus-visible,.ghostButton:focus-visible,.serviceList a:focus-visible,.otherCard:focus-visible { outline:3px solid rgb(64 184 232 / 40%); outline-offset:3px; }
+
+/* ── Other specialists ───────────────────────────────────────────────── */
+.others { margin-top:clamp(56px,7vw,88px); }
+.others header { margin-bottom:24px; }
+.otherGrid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; }
+.otherCard { display:grid; grid-template-columns:140px 1fr; overflow:hidden; border-radius:22px; background:var(--background-card); box-shadow:0 12px 32px rgb(16 55 70 / 7%); transition:box-shadow .18s ease,transform .18s var(--ease-out); }
+.otherCard:hover { transform:translateY(-3px); box-shadow:0 20px 40px rgb(16 55 70 / 11%); }
+.otherImage { position:relative; min-height:170px; background:var(--background-section-strong); }
+.otherImage img { object-fit:cover; object-position:center 14%; }
+.otherCopy { display:flex; flex-direction:column; justify-content:center; gap:5px; padding:20px 22px; }
+.otherCopy small { color:var(--brand-primary); font-size:10px; font-weight:750; letter-spacing:.08em; text-transform:uppercase; }
+.otherCopy strong { color:var(--title-primary); font-size:20px; letter-spacing:-.03em; }
+.otherCopy em { color:var(--text-muted); font-size:12.5px; font-style:normal; line-height:1.45; }
+.otherCopy b { display:inline-flex; align-items:center; gap:6px; margin-top:8px; color:var(--brand-primary); font-size:12.5px; }
+
+@media (max-width:1100px) {
+  .layout { grid-template-columns:1fr; }
+  .sidebar { position:static; }
+  .infoActions { grid-template-columns:1fr 1fr; max-width:520px; }
+}
+@media (max-width:700px) {
+  .expertiseGrid,.otherGrid { grid-template-columns:1fr; }
+  .aboutHead { grid-template-columns:150px minmax(0,1fr); align-items:start; }
+}
+@media (max-width:600px) {
+  .aboutHead { grid-template-columns:1fr; }
+  .portrait { width:min(100%,260px); }
+  .lead { font-size:16px; }
+  .body { padding-bottom:68px; }
+  .card,.infoCard { padding:24px 20px; }
+  .paragraph { font-size:15px; }
+  .expertiseGrid p,.serviceList a > span,.infoRow p { font-size:14px; }
+  .otherCard { grid-template-columns:110px 1fr; }
+}
+@media (prefers-reduced-motion:reduce) { .serviceList a,.serviceList svg,.bookButton,.ghostButton,.otherCard { transition:none; } }
+@media (max-width: 700px) {
+  .body { padding-top: 64px; }
+}

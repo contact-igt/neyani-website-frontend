@@ -112,7 +112,7 @@
 .examinationVisual > figure > img { object-fit:cover; }
 .imageStandards { position:absolute; top:14px; left:14px; display:flex; align-items:flex-start; flex-direction:column; gap:6px; }
 .imageStandards span { display:flex; align-items:center; gap:6px; padding:7px 10px; border-radius:999px; color:var(--brand-primary-dark); background:rgb(255 255 255 / 92%); font-size:9px; font-weight:700; backdrop-filter:blur(9px); }
-.examinationVisual figcaption { position:absolute; right:14px; bottom:14px; width:128px; height:102px; overflow:hidden; border:4px solid var(--background-card); border-radius:13px; color:var(--text-on-dark); background:var(--brand-primary-dark); box-shadow:0 10px 20px rgb(8 43 55 / 25%); }
+.examinationVisual figcaption { position:absolute; right:14px; bottom:14px; width:128px; height:102px; overflow:hidden; border-radius:13px; color:var(--text-on-dark); background:var(--brand-primary-dark); box-shadow:0 10px 20px rgb(8 43 55 / 25%); }
 .examinationVisual figcaption img { object-fit:cover; }
 .examinationVisual figcaption::after { content:""; position:absolute; inset:38% 0 0; background:linear-gradient(transparent,rgb(8 43 55 / 92%)); }
 .examinationVisual figcaption span { position:absolute; z-index:2; left:8px; bottom:7px; font-size:8px; font-weight:700; line-height:1.25; }
@@ -203,3 +203,19 @@
   .treatmentHeading h2, .benefitsHeading h2, .ctaCopy h2 { font-size:clamp(30px,8vw,38px); }
 }
 @media (prefers-reduced-motion:reduce) { .treatmentCard,.treatmentImage img { transition:none; } }
+
+@media (max-width:700px) { .hero::before { background:linear-gradient(180deg,rgb(8 43 55 / 38%) 0%,rgb(8 43 55 / 72%) 42%,rgb(8 43 55 / 100%) 100%); } }
+
+/* Phone: stack the explainer collage so notes never cover the photos or captions. */
+@media (max-width:600px) {
+  .explainerVisual { min-height:0; display:grid; gap:14px; }
+  .explainerVisual figure { position:relative; inset:auto; width:100%; }
+  .mainExamImage { height:260px; border-radius:22px; }
+  .supportImage { width:100%; height:210px; border:0; border-radius:22px; }
+  .criticalNote,.successNote { position:relative; inset:auto; width:100%; max-width:none; }
+  .criticalNote p { font-size:12px; }
+  .criticalNote strong { font-size:12px; }
+  .successNote small { font-size:12px; }
+}
+/* Age tag sits top-left so the floating note never covers it. */
+.mainExamImage > b { top:12px; left:12px; right:auto; bottom:auto; }

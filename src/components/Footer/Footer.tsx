@@ -23,7 +23,7 @@ export default function Footer() {
           <span>Specialist ophthalmology for Gandhidham and the wider Kutch region.</span>
         </div>
 
-        <nav aria-label="Footer navigation"><h3>Quick links</h3><a href="/">Home</a><a href="/#about">About us</a><a href="/#doctors">Our doctors</a><a href="/contact#appointment">Book a visit</a><a href="/contact">Contact</a></nav>
+        <nav aria-label="Footer navigation"><h3>Quick links</h3><a href="/">Home</a><a href="/about">About us</a><a href="/#doctors">Our doctors</a><a href="/contact#appointment">Book a visit</a><a href="/contact">Contact</a></nav>
         <nav aria-label="Eye care services"><h3>Services</h3><a href="#services">Cataract surgery</a><a href="#services">Glaucoma care</a><a href="#services">Retina care</a><a href="#services">Pediatric eye care</a><a href="#services">Eye diagnostics</a></nav>
 
         <div className={styles.contact}><h3>Contact information</h3><p><strong>Phone</strong><a href={hospital.phoneUrl}>{hospital.phone}</a></p><p><strong>Address</strong><span>{hospital.address}</span></p><p><strong>Clinic hours</strong><span>Mon–Sat · {hospital.hours.morning}<br />{hospital.hours.evening}</span></p></div>

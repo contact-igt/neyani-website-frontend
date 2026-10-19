@@ -8,6 +8,7 @@ import FAQ from "@/components/FAQ/FAQ";
 import Testimonials from "@/components/Testimonials/Testimonials";
 import BenefitsSlider from "@/components/BenefitsSlider/BenefitsSlider";
 import WhatsAppFAB from "@/components/WhatsAppFAB/WhatsAppFAB";
+import TreatmentOptions from "@/components/TreatmentOptions/TreatmentOptions";
 import GlaucomaSigns from "./GlaucomaSigns";
 import { hospital } from "@/content/hospital";
 import styles from "./glaucoma.module.css";
@@ -161,7 +162,8 @@ export default function GlaucomaPage() {
           </div>
         </section>
         <GlaucomaSigns />
-        <section className={styles.treatments} aria-labelledby="treatment-options">
+        <TreatmentOptions className={styles.treatments} headingId="treatment-options" eyebrow="Treatment options" title={<>Our glaucoma care &amp; <span>treatment options</span></>} intro="From detailed diagnosis to eye drops, surgery and long-term monitoring, every treatment plan is based on the type and stage of your glaucoma." options={treatmentOptions} cta="Book a glaucoma check" note="Treatment choice depends on the type and stage of glaucoma, eye pressure and your overall eye health. Vision already lost to glaucoma usually cannot be restored; treatment aims to protect remaining sight." />
+        {/*
           <div className="container">
             <div className={styles.treatmentHeading}>
               <p className={styles.sectionLabel}><span /> Treatment options</p>
@@ -187,6 +189,7 @@ export default function GlaucomaPage() {
             <p className={styles.treatmentNote}>Treatment choice depends on the type and stage of glaucoma, eye pressure and your overall eye health. Vision already lost to glaucoma usually cannot be restored; treatment aims to protect remaining sight.</p>
           </div>
         </section>
+        </section>*/}
         <section className={styles.benefits} aria-labelledby="glaucoma-benefits">
           <div className="container">
             <div className={styles.benefitsHeading}>
