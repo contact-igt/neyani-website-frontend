@@ -41,10 +41,12 @@ export const doctorProfiles: readonly DoctorProfile[] = [
     ],
     skills: ["Cataract surgery", "Pediatric cataract", "General eye care"],
     expertise: [
-      { title: "Micro-incision cataract surgery", detail: "1.6 mm MICS using the Oertli Faros system, with topical anaesthesia in suitable cases." },
-      { title: "Lens planning", detail: "Guidance on monofocal, multifocal, EDOF and toric lens options based on your eyes and lifestyle." },
-      { title: "Pediatric cataract", detail: "Assessment and surgical care for cataracts in children." },
-      { title: "Comprehensive eye care", detail: "Routine eye examinations, prescriptions and management of common eye conditions." },
+      { title: "Cataract Surgery", detail: "We use the Oertli Faros system for cataract surgery, with the surgical approach and anaesthesia chosen according to your eye condition and individual needs." },
+      { title: "Lens Planning", detail: "Choosing the right lens is an important part of cataract surgery. Our doctor will guide you through the available lens options based on your eye health, lifestyle and vision needs." },
+      { title: "Glaucoma Care", detail: "We help assess eye health and check for signs of glaucoma through appropriate examinations, so the doctor can recommend the right care for your needs." },
+      { title: "Cornea Care", detail: "The cornea is the clear front surface of your eye. We assess corneal conditions and help you understand the appropriate treatment options for your eyes." },
+      { title: "Diabetic Eye Care", detail: "Diabetes can affect your vision over time. Regular eye examinations and retinal screening can help detect changes early and support timely care." },
+      { title: "Comprehensive Eye Care", detail: "From routine eye check-ups and vision prescriptions to common eye concerns, we help you care for your eyes and maintain healthy vision." },
     ],
     services: [
       { title: "Cataract surgery", href: "/services/cataract", detail: "Robotic, painless micro-incision cataract surgery." },

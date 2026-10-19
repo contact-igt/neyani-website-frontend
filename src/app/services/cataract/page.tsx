@@ -18,7 +18,7 @@ const reasons = [
   { icon: Cpu, title: "Advanced technology", description: "The Oertli Faros phacoemulsification system and Zeiss Visu 160 operating microscope support precise cataract procedures." },
   { icon: SlidersHorizontal, title: "Individual assessment", description: "The surgical technique and anaesthesia approach are selected after examination and according to individual suitability." },
   { icon: HeartHandshake, title: "Patient support", description: "The team provides clear guidance through consultation, treatment and eligible insurance or TPA documentation." },
-  { icon: CalendarCheck, title: "Established locally", description: "Neyani Eye Hospital has served patients and families in Gandhidham and the wider Kutch region since 2019." },
+  { icon: CalendarCheck, title: "Established locally", description: "Founded in Rapar in 1989, Neyani Eye Hospital established its second eye centre in Gandhidham in 2019 to serve patients and families across Kutch." },
   { icon: ShieldCheck, title: "Micro-incision approach", description: "The 1.6 mm MICS technique and topical anaesthesia are used where the patient and clinical situation are suitable." },
   { icon: ScanEye, title: "Diagnostics under one roof", description: "Slit-lamp examination, retinoscopy, OCT, fundus photography and visual field testing support detailed assessment." },
   { icon: Languages, title: "Clear communication", description: "Consultations are supported in English, Hindi and Gujarati to help patients and families understand their care." },
@@ -122,6 +122,37 @@ const benefits = [
   { image: "/neyani-hero-care.png", title: "Greater confidence in daily life", description: "Improved vision may make routine activities easier, depending on eye health and recovery." },
   { image: "/service-glaucoma.png", title: "Reduced dependence on glasses", description: "Depending on the lens selected, many patients find they rely less on spectacles for daily tasks." },
   { image: "/neyani-consultation.png", title: "Better night vision", description: "Replacing a clouded lens may reduce glare and haloing, helping with comfort in low light." },
+] as const;
+
+const cataractFaqs = [
+  {
+    q: "Does cataract surgery hurt?",
+    a: "Most patients are surprised by how comfortable the procedure is. We use topical anaesthetic drops in suitable cases, which eliminates the need for an injection around the eye. You may feel mild pressure, but pain is not expected. If you feel anxious, let us know — we will take care of you.",
+  },
+  {
+    q: "How long does cataract surgery take?",
+    a: "The surgical procedure itself typically takes 10–15 minutes per eye. You will spend additional time for preparation and monitoring before and after. Most patients are discharged the same day.",
+  },
+  {
+    q: "When can I return to normal activities after cataract surgery?",
+    a: "Recovery varies by individual. Many patients notice improved vision within a day or two. Your surgeon will give you specific guidance on activity restrictions based on your case.",
+  },
+  {
+    q: "Do I need a cornea check before cataract or refractive surgery?",
+    a: "Yes, a cornea assessment is usually part of planning. It helps your surgeon judge corneal shape and health so the right lens and technique can be chosen for you.",
+  },
+  {
+    q: "Is it safe to have eye surgery if I have diabetes?",
+    a: "Diabetes can affect the eyes, and careful assessment is essential. Our team will evaluate the health of your retina and overall control before recommending any procedure. Please bring your recent blood sugar and HbA1c reports.",
+  },
+  {
+    q: "Do you treat patients from outside Gandhidham?",
+    a: "Yes. We regularly see patients from Adipur, Anjar, Bhachau, and across the Kutch region. Please call or WhatsApp us to schedule a convenient appointment time.",
+  },
+  {
+    q: "Can I walk in, or do I need an appointment?",
+    a: "Appointments are preferred and help us give you adequate time. Walk-ins are seen subject to availability. You can book quickly via WhatsApp or phone.",
+  },
 ] as const;
 
 export const metadata: Metadata = {
@@ -321,13 +352,13 @@ export default function CataractPage() {
           <div className="container">
             <div className={styles.biometryPanel}>
               <div className={styles.biometryCopy}>
-                <p className={styles.sectionLabel}><span /> Pre-operative assessment</p>
-                <h2 id="optical-biometry-heading">Optical Biometry for <span>Precise IOL Calculation</span></h2>
+                <p className={styles.sectionLabel}><span /> PRE-OPERATIVE ASSESSMENT</p>
+                <h2 id="optical-biometry-heading">Optical Biometry for <br className={styles.headingBreak} /><span>Precise IOL Calculation</span></h2>
                 <p>Optical biometry helps measure important dimensions of the eye before cataract surgery. These measurements help the doctor calculate the appropriate power of the artificial lens, known as an intraocular lens (IOL). The final lens choice depends on your eye measurements, eye health and individual vision needs.</p>
               </div>
               <div className={styles.biometryVisual}>
                 <figure className={styles.biometryImageWrap}>
-                  <Image src="/diagnostic-optical-biometry-v1.png" alt="Optical biometry equipment used for accurate intraocular lens calculation" fill quality={90} sizes="(max-width: 800px) 100vw, 36vw" />
+                  <Image src="/diagnostic-optical-biometry-v1.png" alt="Optical biometry equipment used for accurate intraocular lens calculation" fill quality={90} sizes="(max-width: 800px) 100vw, 42vw" />
                 </figure>
               </div>
             </div>
@@ -344,7 +375,12 @@ export default function CataractPage() {
           </div>
         </section>
         <Testimonials />
-        <FAQ />
+        <FAQ
+          faqs={cataractFaqs}
+          intro="Helpful guidance about cataract surgery, lens selection, recovery and what to expect from your consultation."
+          image="/cataract-consultation-v2.png"
+          imageAlt="An ophthalmologist explaining cataract surgery during a consultation"
+        />
         <section className={styles.finalCta} aria-labelledby="cataract-consultation">
           <div className={`container ${styles.ctaPanel}`}>
             <div className={styles.ctaCopy}>
