@@ -25,7 +25,18 @@ export default function Footer() {
         </div>
 
         <nav aria-label="Footer navigation"><h3>Quick links</h3><Link href="/">Home</Link><Link href="/about">About us</Link><Link href="/doctors">Our doctors</Link><Link href="/contact#appointment">Book a visit</Link><Link href="/contact">Contact</Link></nav>
-        <nav aria-label="Eye care services"><h3>Services</h3><Link href="/services/cataract">Cataract surgery</Link><Link href="/services/glaucoma">Glaucoma care</Link><Link href="/services/retina">Retina care</Link><Link href="/services/pediatric">Pediatric eye care</Link><Link href="/services/general">Eye diagnostics</Link></nav>
+        <nav aria-label="Eye care services">
+          <h3>Services</h3>
+          <Link href="/services/cataract">Cataract Surgery</Link>
+          <Link href="/services/glaucoma">Glaucoma Diagnosis & Treatment</Link>
+          <Link href="/services/retina">Diabetic Eye & Retina Care</Link>
+          <Link href="/services/pediatric">Pediatric Ophthalmology</Link>
+          <Link href="/services/general">General Eye Care</Link>
+          <Link href="/services/cornea">Cornea Care</Link>
+          <Link href="/services/squint">Squint Care</Link>
+          <Link href="/services/pterygium">Pterygium Treatment</Link>
+          <Link href="/services/oculoplasty">Oculoplasty & Watering Eye Care</Link>
+        </nav>
 
         <div className={styles.contact}><h3>Contact information</h3><p><strong>Phone</strong><a href={hospital.phoneUrl}>{hospital.phone}</a></p><p><strong>Address</strong><span>{hospital.address}</span></p><p><strong>Clinic hours</strong><span>Mon–Sat · {hospital.hours.morning}<br />{hospital.hours.evening}</span></p></div>
       </div>

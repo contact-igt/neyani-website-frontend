@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CalendarCheck, CalendarDays, Check, ChevronDown, Cpu, Droplets, Eye, HeartHandshake, Languages, Microscope, Phone, ScanEye, ScanLine, ShieldCheck, SlidersHorizontal, Stethoscope, TrendingUp } from "lucide-react";
+import { ArrowRight, CalendarCheck, CalendarDays, Check, ChevronDown, Cpu, Droplets, Eye, Focus, HeartHandshake, Languages, Microscope, Phone, ScanEye, ScanLine, ShieldCheck, SlidersHorizontal, Stethoscope, TrendingUp } from "lucide-react";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import FAQ from "@/components/FAQ/FAQ";
@@ -98,19 +98,28 @@ const lensOptions = [
     benefits: ["Corrects astigmatism", "Sharper clarity", "Single procedure"],
     image: "/lens-toric-v2.png",
   },
+  {
+    icon: Focus,
+    label: "Enhanced monofocal lens",
+    title: "Enhanced Monofocal",
+    description: "Provides clear distance vision with the potential for improved intermediate vision, depending on the lens design and individual needs.",
+    benefits: ["Clear distance vision", "Potentially improved intermediate vision", "Lens selection based on individual needs"],
+    image: "/enhanced-monofocal-lens.jpg",
+  },
 ] as const;
 
 const lensComparison = [
-  { feature: "Primary focus", values: ["One selected distance", "Distance to intermediate", "Distance with astigmatism correction", "Multiple focal zones"] },
-  { feature: "Distance vision", values: ["Commonly selected", "Supported", "Supported", "Supported"] },
-  { feature: "Intermediate vision", values: ["Glasses may be needed", "Designed to support", "Depends on lens design", "Designed to support"] },
-  { feature: "Near vision", values: ["Reading glasses often needed", "Reading glasses may be needed", "Depends on lens design", "Designed to support"] },
-  { feature: "Astigmatism correction", values: ["Separate correction may be considered", "Toric variants may be available", "Designed for suitable regular astigmatism", "Toric variants may be available"] },
-  { feature: "Possible need for glasses", values: ["Often for near tasks", "May remain for near tasks", "Varies by selected design", "May be reduced"] },
+  { feature: "Primary focus", values: ["One selected distance", "Distance with functional intermediate", "Distance to intermediate", "Distance with astigmatism correction", "Multiple focal zones"] },
+  { feature: "Distance vision", values: ["Commonly selected", "Supported", "Supported", "Supported", "Supported"] },
+  { feature: "Intermediate vision", values: ["Glasses may be needed", "May support everyday tasks", "Designed to support", "Depends on lens design", "Designed to support"] },
+  { feature: "Near vision", values: ["Reading glasses often needed", "Reading glasses often needed", "Reading glasses may be needed", "Depends on lens design", "Designed to support"] },
+  { feature: "Astigmatism correction", values: ["Separate correction may be considered", "Toric variants may be available", "Toric variants may be available", "Designed for suitable regular astigmatism", "Toric variants may be available"] },
+  { feature: "Possible need for glasses", values: ["Often for near tasks", "Often for near tasks", "May remain for near tasks", "Varies by selected design", "May be reduced"] },
 ] as const;
 
 const comparisonLenses = [
   { title: "Monofocal", subtitle: "Standard lens", image: "/iol-monofocal.png", featured: false },
+  { title: "Enhanced Monofocal", subtitle: "ENHANCED MONOFOCAL LENS", image: "/iol-monofocal.png", featured: false },
   { title: "EDOF IOL", subtitle: "Extended depth of focus", image: "/iol-edof.png", featured: false },
   { title: "Toric Lens", subtitle: "Astigmatism correction", image: "/iol-toric.png", featured: false },
   { title: "Multifocal", subtitle: "Multiple focus lens", image: "/iol-multifocal.png", featured: true },

@@ -123,60 +123,67 @@ export const hospital = {
       "Surgical outcomes in cataract care have improved dramatically with modern phacoemulsification platforms. At Neyani, we invest in systems that experienced surgeons trust.",
     items: [
       {
-        title: "OERTLI FAROS Phacoemulsification System",
+        title: "OERTLI ROBOTIC FAROS — Phacoemulsification System",
         description:
-          "Advanced surgical technology used for cataract removal. The system supports the surgeon during the procedure, with the technique selected according to the patient's needs.",
+          "Helps our doctors perform cataract surgery by removing the cloudy lens so it can be replaced with an artificial lens.",
         detail:
-          "Advanced surgical technology used for cataract removal. The system supports the surgeon during the procedure, with the technique selected according to the patient's needs.",
+          "Helps our doctors perform cataract surgery by removing the cloudy lens so it can be replaced with an artificial lens.",
       },
       {
-        title: "ZEISS VISU 160 Surgical Microscope",
+        title: "ZEISS VISU 160 — Surgical Microscope",
         description:
-          "Provides a magnified view of the eye, helping the surgeon see fine details clearly during eye surgery.",
+          "Gives our surgeons a clear, magnified view of the eye so they can work with precision during surgery.",
         detail:
-          "Provides a magnified view of the eye, helping the surgeon see fine details clearly during eye surgery.",
+          "Gives our surgeons a clear, magnified view of the eye so they can work with precision during surgery.",
       },
       {
-        title: "LENSTAR PRO Optical Biometer",
+        title: "LENSTAR PRO — Haag-Streit — Optical Biometer",
         description:
-          "Measures important features of the eye to help the doctor plan cataract surgery and select a suitable intraocular lens.",
+          "Helps our doctors measure important features of the eye and choose a suitable artificial lens before cataract surgery.",
         detail:
-          "Measures important features of the eye to help the doctor plan cataract surgery and select a suitable intraocular lens.",
+          "Helps our doctors measure important features of the eye and choose a suitable artificial lens before cataract surgery.",
       },
       {
-        title: "ZEISS OCT Imaging System",
+        title: "ZEISS — OCT Imaging System",
         description:
-          "Creates detailed images of the retina, helping doctors examine the back of the eye and assess retinal conditions.",
+          "Creates detailed images of the retina, helping our doctors examine the back of the eye and assess retinal health.",
         detail:
-          "Creates detailed images of the retina, helping doctors examine the back of the eye and assess retinal conditions.",
+          "Creates detailed images of the retina, helping our doctors examine the back of the eye and assess retinal health.",
       },
       {
-        title: "Visual Field Analyzer",
+        title: "ZEISS Perimetry — Visual Field Analyzer",
         description:
-          "Checks a patient's field of vision and helps doctors evaluate vision changes associated with conditions such as glaucoma.",
+          "Checks how well a person can see across their field of vision, helping our doctors assess and monitor conditions such as glaucoma.",
         detail:
-          "Checks a patient's field of vision and helps doctors evaluate vision changes associated with conditions such as glaucoma.",
+          "Checks how well a person can see across their field of vision, helping our doctors assess and monitor conditions such as glaucoma.",
       },
       {
-        title: "YAG Laser System",
+        title: "APPASAMY — YAG Laser System",
         description:
-          "Used for certain eye procedures, including treatment of clouding that can develop behind an artificial lens after cataract surgery.",
+          "Helps doctors treat clouding that can sometimes develop behind an artificial lens after cataract surgery, when laser treatment is appropriate.",
         detail:
-          "Used for certain eye procedures, including treatment of clouding that can develop behind an artificial lens after cataract surgery.",
+          "Helps doctors treat clouding that can sometimes develop behind an artificial lens after cataract surgery, when laser treatment is appropriate.",
       },
       {
-        title: "iCare Tonometer",
+        title: "ICARE — Tonometer",
         description:
-          "Measures pressure inside the eye as part of an eye examination and glaucoma assessment.",
+          "Measures the pressure inside the eye, helping our doctors assess eye health and check for signs of problems such as glaucoma.",
         detail:
-          "Measures pressure inside the eye as part of an eye examination and glaucoma assessment.",
+          "Measures the pressure inside the eye, helping our doctors assess eye health and check for signs of problems such as glaucoma.",
       },
       {
-        title: "UNICOS Autorefractometer/Keratometer",
+        title: "UNICOS UNIQUE-RK — Autorefractometer / Keratometer",
         description:
-          "Helps measure refractive error and corneal curvature, supporting vision assessments and prescription planning.",
+          "Measures the eye's focusing power and corneal curvature, helping our doctors assess vision and determine a suitable glasses prescription.",
         detail:
-          "Helps measure refractive error and corneal curvature, supporting vision assessments and prescription planning.",
+          "Measures the eye's focusing power and corneal curvature, helping our doctors assess vision and determine a suitable glasses prescription.",
+      },
+      {
+        title: "KEELER — Indirect Ophthalmoscope",
+        description:
+          "Helps our doctors examine the retina and the back of the eye to assess eye health and look for possible problems.",
+        detail:
+          "Helps our doctors examine the retina and the back of the eye to assess eye health and look for possible problems.",
       },
     ],
     disclaimer:

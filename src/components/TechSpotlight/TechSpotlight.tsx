@@ -6,14 +6,15 @@ import { hospital } from "@/content/hospital";
 import styles from "./TechSpotlight.module.css";
 
 const technologyImages = [
-  { src: "/cataract-equipment-detail.png", alt: "OERTLI FAROS Phacoemulsification System" },
-  { src: "/service-cataract.png", alt: "ZEISS VISU 160 Surgical Microscope" },
-  { src: "/diagnostic-optical-biometry-v1.png", alt: "LENSTAR PRO Optical Biometer" },
-  { src: "/diagnostic-oct-v1.png", alt: "ZEISS OCT Imaging System" },
-  { src: "/diagnostic-vision-testing-v1.png", alt: "Visual Field Analyzer" },
-  { src: "/glaucoma-laser-treatment.png", alt: "YAG Laser System" },
-  { src: "/glaucoma-monitoring.png", alt: "iCare Tonometer" },
-  { src: "/cornea-topography-prep-candid-v2.png", alt: "UNICOS Autorefractometer/Keratometer" },
+  { src: "/oertli-faros.jpg", alt: "OERTLI ROBOTIC FAROS — Phacoemulsification System" },
+  { src: "/zeiss-surgical-microscope.jpg", alt: "ZEISS VISU 160 — Surgical Microscope" },
+  { src: "/diagnostic-optical-biometry-v1.png", alt: "LENSTAR PRO — Haag-Streit — Optical Biometer" },
+  { src: "/diagnostic-oct-v1.png", alt: "ZEISS — OCT Imaging System" },
+  { src: "/zeiss-perimetry.jpg", alt: "ZEISS Perimetry — Visual Field Analyzer" },
+  { src: "/glaucoma-laser-treatment.png", alt: "APPASAMY — YAG Laser System" },
+  { src: "/icare-tonometer-doctor.jpg", alt: "ICARE — Tonometer" },
+  { src: "/unicos-unique-rk-clinical.jpg", alt: "UNICOS UNIQUE-RK — Autorefractometer / Keratometer" },
+  { src: "/diagnostic-retina-exam-v1.png", alt: "KEELER — Indirect Ophthalmoscope" },
 ] as const;
 
 const sliderSettings: Settings = {
@@ -67,10 +68,11 @@ export default function TechSpotlight() {
 }
 
 function TechCard({ item, index }: { item: (typeof hospital.techSpotlight.items)[number]; index: number }) {
+  const image = technologyImages[index] ?? technologyImages[0];
   return (
     <div className={styles.item}>
       <div className={styles.media}>
-        <Image src={technologyImages[index].src} alt={technologyImages[index].alt} fill quality={95} sizes="(max-width: 620px) 94vw, 33vw" />
+        <Image src={image.src} alt={image.alt} fill quality={95} sizes="(max-width: 620px) 94vw, 33vw" />
         <span className={styles.stepNum} aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
       </div>
       <div className={styles.itemBody}>

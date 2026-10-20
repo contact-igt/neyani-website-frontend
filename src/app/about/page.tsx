@@ -86,17 +86,49 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
-        <section className={styles.founderSection} aria-labelledby="founder-name">
+        <section className={styles.founderSection} aria-labelledby="founder-title">
           <div className="container">
+            <header className={styles.founderHeading}>
+              <h2 id="founder-title">
+                <span className={styles.founderHeadingLine} aria-hidden="true" />
+                OUR FOUNDER
+              </h2>
+            </header>
             <article className={styles.founderCard}>
-              <div className={styles.founderIcon} aria-hidden="true">
-                <GraduationCap size={28} />
+              <div className={styles.founderPhotoWrap}>
+                <Image
+                  src="/founder-dr-shivpal-singh-rathore.jpg"
+                  alt="Dr. Shivpal Singh Rathore — Founder of Neyani Eye Hospital"
+                  fill
+                  quality={95}
+                  sizes="(max-width: 640px) 100vw, (max-width: 820px) 240px, 300px"
+                  className={styles.founderPhoto}
+                />
               </div>
               <div className={styles.founderBody}>
-                <p className={styles.founderLabel}>Founder</p>
-                <h3 id="founder-name" className={styles.founderName}>Dr. Shivpal Singh Rathore</h3>
+                <p className={styles.founderRoleLabel}>FOUNDER OF NEYANI EYE HOSPITAL</p>
+                <h3 className={styles.founderName}>Dr. Shivpal Singh Rathore</h3>
                 <h4 className={styles.founderQualifications}>MBBS, MS (Ophthalmology)</h4>
-                <p className={styles.founderDescription}>Founded Neyani Eye Hospital in Rapar, Kutch, in 1989.</p>
+                <p className={styles.founderDescription}>
+                  &ldquo;Dr. Shivpal Singh Rathore founded Neyani Eye Hospital in Rapar, Kutch, in 1989, with a commitment to providing dependable and accessible eye care to the people of Kutch.&rdquo;
+                </p>
+                <div className={styles.founderMeta}>
+                  <div className={styles.founderMetaItem}>
+                    <CalendarDays size={18} aria-hidden="true" />
+                    <div>
+                      <span className={styles.founderMetaLabel}>Founded</span>
+                      <strong className={styles.founderMetaValue}>1989</strong>
+                    </div>
+                  </div>
+                  <div className={styles.founderMetaDivider} aria-hidden="true" />
+                  <div className={styles.founderMetaItem}>
+                    <MapPin size={18} aria-hidden="true" />
+                    <div>
+                      <span className={styles.founderMetaLabel}>Location</span>
+                      <strong className={styles.founderMetaValue}>Rapar, Kutch</strong>
+                    </div>
+                  </div>
+                </div>
               </div>
             </article>
           </div>
