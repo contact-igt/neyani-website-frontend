@@ -123,7 +123,7 @@ export const hospital = {
       "Surgical outcomes in cataract care have improved dramatically with modern phacoemulsification platforms. At Neyani, we invest in systems that experienced surgeons trust.",
     items: [
       {
-        title: "OERTLI ROBOTIC FAROS — Phacoemulsification System",
+        title: "OERTLI FAROS — Phacoemulsification System",
         description:
           "Helps our doctors perform cataract surgery by removing the cloudy lens so it can be replaced with an artificial lens.",
         detail:

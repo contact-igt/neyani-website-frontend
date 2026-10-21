@@ -7,7 +7,7 @@ import { hospital } from "@/content/hospital";
 import styles from "./TechSpotlight.module.css";
 
 const technologyImages = [
-  { src: "/oertli-faros.jpg", alt: "OERTLI ROBOTIC FAROS — Phacoemulsification System" },
+  { src: "/oertli-faros.jpg", alt: "OERTLI FAROS — Phacoemulsification System" },
   { src: "/zeiss-surgical-microscope.jpg", alt: "ZEISS VISU 160 — Surgical Microscope" },
   { src: "/diagnostic-optical-biometry-v1.png", alt: "LENSTAR PRO — Haag-Streit — Optical Biometer" },
   { src: "/diagnostic-oct-v1.png", alt: "ZEISS — OCT Imaging System" },
