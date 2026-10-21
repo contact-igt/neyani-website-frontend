@@ -20,14 +20,14 @@ export default function ContactPage() {
       <Header />
       <main className={styles.main}>
         <section className={styles.hero} aria-labelledby="contact-title">
-          <div className={styles.heroDoctor}>
-            <Image src="/doctor-yajuvendra-cutout-hero.png" alt="Dr. Yajuvendra Singh Rathore welcoming patients to Neyani Eye Hospital" fill preload quality={95} sizes="(max-width: 850px) 86vw, 48vw" />
-          </div>
           <div className={`container ${styles.heroInner}`}>
             <div className={styles.heroCopy}>
               <p><span /> Appointments &amp; enquiries</p>
               <h1 id="contact-title">Your eye care visit,<br /><span>made simple.</span></h1>
               <div className={styles.heroText}>Share a few details below and our team will help arrange a suitable consultation at Neyani Eye Hospital.</div>
+              <div className={styles.heroDoctor}>
+                <Image src="/doctor-yajuvendra-cutout-hero.png" alt="Dr. Yajuvendra Singh Rathore welcoming patients to Neyani Eye Hospital" fill preload quality={95} sizes="(max-width: 850px) 86vw, 48vw" />
+              </div>
               <div className={styles.heroActions}>
                 <Link href="#appointment">Book an appointment <i><ArrowRight size={17} aria-hidden="true" /></i></Link>
                 <a href={hospital.phoneUrl}><Phone size={17} aria-hidden="true" />{hospital.phone}</a>
