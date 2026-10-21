@@ -117,43 +117,34 @@
   height: 548px;
 }
 .mainImage,
-.childImage,
 .facilityImage {
   position: absolute;
   overflow: hidden;
   background: #d8edf3;
 }
 .mainImage img,
-.childImage img,
 .facilityImage img {
   object-fit: cover;
 }
 .mainImage {
   left: 0;
   top: 22px;
-  width: 59%;
-  height: 430px;
-  border-radius: 30px 30px 30px 106px;
+  width: 90%;
+  height: 440px;
+  border-radius: 32px 32px 32px 106px;
+  z-index: 0;
 }
 .mainImage img {
-  object-position: center;
-}
-.childImage {
-  right: 1%;
-  top: 62px;
-  width: 31%;
-  height: 207px;
-  border-radius: 24px;
-}
-.childImage img {
-  object-position: center;
+  object-position: center 38%;
 }
 .facilityImage {
+  z-index: 1;
   right: 0;
   bottom: 0;
   width: 47%;
   height: 266px;
   border-radius: 112px 28px 28px 28px;
+  box-shadow: -10px -10px 32px rgba(16, 55, 70, 0.16);
 }
 .facilityImage img {
   object-position: center;
@@ -519,7 +510,7 @@
     gap: 24px;
   }
   .mainImage {
-    width: 57%;
+    width: 90%;
   }
   .stats {
     min-width: 450px;
@@ -602,74 +593,50 @@
     gap: 15px;
   }
   .visual {
-    height: 470px;
+    height: 355px;
   }
   .mainImage {
-    top: 15px;
-    width: 57%;
-    height: 305px;
-    border-radius: 24px 24px 24px 76px;
-  }
-  .childImage {
-    top: 44px;
-    width: 40%;
-    height: 154px;
+    top: 24px;
+    left: 0;
+    width: 88%;
+    height: 276px;
+    border-radius: 24px 24px 24px 68px;
+    z-index: 0;
   }
   .facilityImage {
-    width: 65%;
-    height: 180px;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    width: 58%;
+    height: 170px;
+    border-radius: 64px 20px 20px 20px;
+    box-shadow: -8px -8px 24px rgba(16, 55, 70, 0.16);
   }
   .noteTop {
-    top: -12px;
-    left: 36%;
-    width: 218px;
-    padding: 11px;
+    top: 0;
+    right: 8px;
+    left: auto;
+    width: 222px;
+    max-width: calc(100% - 24px);
+    padding: 10px 13px;
+    border-radius: 18px;
+    z-index: 2;
   }
   .noteTop > span {
-    width: 37px;
-    height: 37px;
+    width: 36px;
+    height: 36px;
   }
-  .noteTop p,
-  .noteRight p {
-    font-size: 8px;
+  .noteTop > span svg {
+    width: 19px;
+    height: 19px;
   }
-  .noteTop strong,
-  .noteRight strong {
-    font-size: 9px;
+  .noteTop p {
+    font-size: 9.5px;
+    line-height: 1.35;
   }
-  .noteRight {
-    top: 171px;
-    right: -2%;
-    width: 176px;
-    padding: 10px;
-  }
-  .noteRight > span {
-    width: 35px;
-    height: 35px;
-  }
-  .stats {
-    left: 0;
-    width: 72%;
-    min-width: 0;
-    border-radius: 19px;
-  }
-  .stats div {
-    min-height: 101px;
-    padding: 10px 5px;
-  }
-  .stats div>span:first-child {
-    width: 34px;
-    height: 34px;
-    margin-bottom: 4px;
-  }
-  .stats div>span:first-child svg {
-    width: 18px;
-  }
-  .stats dt {
-    font-size: 15px;
-  }
-  .stats dd {
-    font-size: 7px;
+  .noteTop strong {
+    font-size: 11px;
+    margin-bottom: 2px;
   }
   .pillars {
     padding-block: 27px;

@@ -55,9 +55,8 @@ export default function AboutPage() {
             </div>
 
             <div className={styles.visual}>
-              <div className={styles.mainImage}><Image src="/pterygium-exam-slit-lamp-v1.png" alt="Ophthalmologist carefully examining an adult patient's eyes with a slit lamp" fill priority sizes="(max-width: 760px) 90vw, 38vw" /></div>
-              <div className={styles.childImage}><Image src="/about-pediatric-refraction-v1.png" alt="Child receiving a refraction check at an eye clinic" fill sizes="(max-width: 760px) 40vw, 16vw" /></div>
-              <div className={styles.facilityImage}><Image src="/about-banner3.jpg" alt="Neyani Eye Hospital building exterior" fill sizes="(max-width: 760px) 52vw, 30vw" /></div>
+              <div className={styles.mainImage}><Image src="/about-consultation-room.jpg" alt="Consultation room at Neyani Eye Hospital" fill priority quality={95} sizes="(max-width: 760px) 90vw, 48vw" /></div>
+              <div className={styles.facilityImage}><Image src="/about-banner3.jpg" alt="Neyani Eye Hospital building exterior" fill priority sizes="(max-width: 760px) 52vw, 30vw" /></div>
               <aside className={`${styles.note} ${styles.noteTop}`}><span><Eye size={24} aria-hidden="true" /></span><p><strong>Personalised care</strong>Every treatment plan begins with a thorough eye examination.</p></aside>
               <dl className={styles.stats}>
                 {hospital.stats.map((stat, index) => {

@@ -26,7 +26,7 @@ export default function ContactPage() {
               <h1 id="contact-title">Your eye care visit,<br /><span>made simple.</span></h1>
               <div className={styles.heroText}>Share a few details below and our team will help arrange a suitable consultation at Neyani Eye Hospital.</div>
               <div className={styles.heroDoctor}>
-                <Image src="/doctor-yajuvendra-cutout-hero.png" alt="Dr. Yajuvendra Singh Rathore welcoming patients to Neyani Eye Hospital" fill preload quality={95} sizes="(max-width: 850px) 86vw, 48vw" />
+                <Image src="/doctor-yajuvendra-office.jpg" alt="Dr. Yajuvendra Singh Rathore in his consultation office at Neyani Eye Hospital" fill priority quality={95} sizes="(max-width: 850px) 92vw, 48vw" />
               </div>
               <div className={styles.heroActions}>
                 <Link href="#appointment">Book an appointment <i><ArrowRight size={17} aria-hidden="true" /></i></Link>
