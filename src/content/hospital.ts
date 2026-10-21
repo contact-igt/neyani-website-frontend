@@ -66,7 +66,7 @@ export const hospital = {
     {
       id: "cataract",
       icon: "eye",
-      title: "Robotic Painless Cataract Surgery",
+      title: "Cataract Surgery",
       description:
         "Using the Oertli Faros phacoemulsification system, we perform micro-incision cataract surgery (MICS) with topical anaesthesia — no injection in most suitable cases. The 1.6 mm technique means faster healing and minimal discomfort. Outcomes depend on individual examination.",
     },
@@ -123,19 +123,67 @@ export const hospital = {
       "Surgical outcomes in cataract care have improved dramatically with modern phacoemulsification platforms. At Neyani, we invest in systems that experienced surgeons trust.",
     items: [
       {
-        title: "Oertli Robotic Faros System",
+        title: "OERTLI ROBOTIC FAROS — Phacoemulsification System",
+        description:
+          "Helps our doctors perform cataract surgery by removing the cloudy lens so it can be replaced with an artificial lens.",
         detail:
-          "A premium phacoemulsification platform known for its stability and responsiveness, allowing the surgeon to work with precision even in complex cataracts.",
+          "Helps our doctors perform cataract surgery by removing the cloudy lens so it can be replaced with an artificial lens.",
       },
       {
-        title: "Micro-Incision Cataract Surgery (MICS)",
+        title: "ZEISS VISU 160 — Surgical Microscope",
+        description:
+          "Gives our surgeons a clear, magnified view of the eye so they can work with precision during surgery.",
         detail:
-          "The 1.6 mm technique reduces induced astigmatism and accelerates recovery. Topical anaesthesia (no injection) is used where the patient and clinical situation are suitable.",
+          "Gives our surgeons a clear, magnified view of the eye so they can work with precision during surgery.",
       },
       {
-        title: "Zeiss Visu 160 Microscope",
+        title: "LENSTAR PRO — Haag-Streit — Optical Biometer",
+        description:
+          "Helps our doctors measure important features of the eye and choose a suitable artificial lens before cataract surgery.",
         detail:
-          "High-definition, wide-field optics give the surgeon a clear, stable view throughout every procedure — a foundation of safe, precise surgery.",
+          "Helps our doctors measure important features of the eye and choose a suitable artificial lens before cataract surgery.",
+      },
+      {
+        title: "ZEISS — OCT Imaging System",
+        description:
+          "Creates detailed images of the retina, helping our doctors examine the back of the eye and assess retinal health.",
+        detail:
+          "Creates detailed images of the retina, helping our doctors examine the back of the eye and assess retinal health.",
+      },
+      {
+        title: "ZEISS Perimetry — Visual Field Analyzer",
+        description:
+          "Checks how well a person can see across their field of vision, helping our doctors assess and monitor conditions such as glaucoma.",
+        detail:
+          "Checks how well a person can see across their field of vision, helping our doctors assess and monitor conditions such as glaucoma.",
+      },
+      {
+        title: "APPASAMY — YAG Laser System",
+        description:
+          "Helps doctors treat clouding that can sometimes develop behind an artificial lens after cataract surgery, when laser treatment is appropriate.",
+        detail:
+          "Helps doctors treat clouding that can sometimes develop behind an artificial lens after cataract surgery, when laser treatment is appropriate.",
+      },
+      {
+        title: "ICARE — Tonometer",
+        description:
+          "Measures the pressure inside the eye, helping our doctors assess eye health and check for signs of problems such as glaucoma.",
+        detail:
+          "Measures the pressure inside the eye, helping our doctors assess eye health and check for signs of problems such as glaucoma.",
+      },
+      {
+        title: "UNICOS UNIQUE-RK — Autorefractometer / Keratometer",
+        description:
+          "Measures the eye's focusing power and corneal curvature, helping our doctors assess vision and determine a suitable glasses prescription.",
+        detail:
+          "Measures the eye's focusing power and corneal curvature, helping our doctors assess vision and determine a suitable glasses prescription.",
+      },
+      {
+        title: "KEELER — Indirect Ophthalmoscope",
+        description:
+          "Helps our doctors examine the retina and the back of the eye to assess eye health and look for possible problems.",
+        detail:
+          "Helps our doctors examine the retina and the back of the eye to assess eye health and look for possible problems.",
       },
     ],
     disclaimer:
@@ -477,3 +525,15 @@ export const hospital = {
 } as const;
 
 export type HospitalContent = typeof hospital;
+
+export const treatmentMenuItems = [
+  { href: "/services/cataract", title: "Cataract Surgery" },
+  { href: "/services/glaucoma", title: "Glaucoma Diagnosis & Treatment" },
+  { href: "/services/retina", title: "Diabetic Eye & Retina Care" },
+  { href: "/services/pediatric", title: "Pediatric Ophthalmology" },
+  { href: "/services/general", title: "General Eye Care" },
+  { href: "/services/cornea", title: "Cornea Care" },
+  { href: "/services/squint", title: "Squint Care" },
+  { href: "/services/pterygium", title: "Pterygium Treatment" },
+  { href: "/services/oculoplasty", title: "Oculoplasty & Watering Eye Care" },
+] as const;

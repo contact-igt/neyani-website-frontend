@@ -6,15 +6,15 @@ import { hospital } from "@/content/hospital";
 import styles from "./TechSpotlight.module.css";
 
 const technologyImages = [
-  { src: "/service-cataract.png", alt: "Eye surgeon using an advanced operating microscope" },
-  { src: "/service-glaucoma.png", alt: "Ophthalmologist carrying out a precision eye examination" },
-  { src: "/service-diagnostics.png", alt: "Specialist reviewing detailed digital eye imaging" },
-] as const;
-
-const summaries = [
-  "Stable, responsive cataract surgery technology.",
-  "Smaller incisions designed to support faster recovery.",
-  "Clear, magnified views throughout each procedure.",
+  { src: "/oertli-faros.jpg", alt: "OERTLI ROBOTIC FAROS — Phacoemulsification System" },
+  { src: "/zeiss-surgical-microscope.jpg", alt: "ZEISS VISU 160 — Surgical Microscope" },
+  { src: "/diagnostic-optical-biometry-v1.png", alt: "LENSTAR PRO — Haag-Streit — Optical Biometer" },
+  { src: "/diagnostic-oct-v1.png", alt: "ZEISS — OCT Imaging System" },
+  { src: "/zeiss-perimetry.jpg", alt: "ZEISS Perimetry — Visual Field Analyzer" },
+  { src: "/glaucoma-laser-treatment.png", alt: "APPASAMY — YAG Laser System" },
+  { src: "/icare-tonometer-doctor.jpg", alt: "ICARE — Tonometer" },
+  { src: "/unicos-unique-rk-clinical.jpg", alt: "UNICOS UNIQUE-RK — Autorefractometer / Keratometer" },
+  { src: "/diagnostic-retina-exam-v1.png", alt: "KEELER — Indirect Ophthalmoscope" },
 ] as const;
 
 const sliderSettings: Settings = {
@@ -68,15 +68,16 @@ export default function TechSpotlight() {
 }
 
 function TechCard({ item, index }: { item: (typeof hospital.techSpotlight.items)[number]; index: number }) {
+  const image = technologyImages[index] ?? technologyImages[0];
   return (
     <div className={styles.item}>
       <div className={styles.media}>
-        <Image src={technologyImages[index].src} alt={technologyImages[index].alt} fill quality={95} sizes="(max-width: 620px) 94vw, 33vw" />
+        <Image src={image.src} alt={image.alt} fill quality={95} sizes="(max-width: 620px) 94vw, 33vw" />
         <span className={styles.stepNum} aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
       </div>
       <div className={styles.itemBody}>
         <h3 className={styles.itemTitle}>{item.title}</h3>
-        <p className={styles.itemDetail}>{summaries[index]}</p>
+        <p className={styles.itemDetail}>{item.description}</p>
       </div>
     </div>
   );

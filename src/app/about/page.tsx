@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Baby, CalendarDays, Check, Eye, Heart, Info, MapPin, MessageCircle, Phone, ScanEye, ShieldCheck, UsersRound } from "lucide-react";
+import { ArrowRight, Baby, CalendarDays, Check, Eye, GraduationCap, Heart, Info, MapPin, MessageCircle, Phone, ScanEye, ShieldCheck, UsersRound } from "lucide-react";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import FAQ from "@/components/FAQ/FAQ";
@@ -18,9 +18,9 @@ export const metadata: Metadata = {
 };
 
 const storyMilestones = [
-  { icon: CalendarDays, year: "2019", title: "Hospital Founded", text: "Started with a vision to provide quality and accessible eye care for our community." },
-  { icon: UsersRound, year: "2021", title: "Expanded Eye Services", text: "Introduced advanced diagnostics and broader treatment options to serve more patients." },
-  { icon: MapPin, year: "Today", title: "Serving Gandhidham and Nearby Kutch Region", text: "Continuing our journey with modern technology, experienced specialists and a patient-first approach." },
+  { icon: CalendarDays, year: "1989", title: "Founded in Rapar, Kutch", text: "Neyani Eye Hospital was founded by Dr. Shivpal Singh Rathore." },
+  { icon: UsersRound, year: "2019", title: "Second Eye Centre Established in Gandhidham", text: "The hospital expanded its services with its second eye centre in Gandhidham." },
+  { icon: MapPin, year: "Today", title: "Care Across Generations", text: "The legacy is being carried forward by Dr. Yajuvendra Singh Rathore. Consultation services are also provided through the Bhachau OPD centre." },
 ] as const;
 
 const carePrinciples = [
@@ -47,7 +47,7 @@ export default function AboutPage() {
             <div className={styles.copy}>
               <p className={styles.kicker}><span /> About Neyani Eye Hospital</p>
               <h1 id="about-title">Trusted eye care for brighter <em>tomorrows.</em></h1>
-              <p className={styles.intro}>Since {hospital.established}, Neyani Eye Hospital has been serving Gandhidham and Kutch with careful diagnosis, treatment and clear guidance, helping individuals and families see a brighter tomorrow.</p>
+              <p className={styles.intro}>Neyani Eye Hospital was founded in Rapar, Kutch, in 1989. Its second eye centre was established in Gandhidham in 2019, continuing the hospital&apos;s commitment to dependable and accessible eye care.</p>
               <div className={styles.actions}>
                 <Link href="/contact#appointment" className={styles.primary}>Book an appointment <span><ArrowRight size={18} aria-hidden="true" /></span></Link>
                 <a href={hospital.phoneUrl} className={styles.call}><Phone size={18} aria-hidden="true" /> {hospital.phone}</a>
@@ -77,13 +77,60 @@ export default function AboutPage() {
             </div>
             <div className={styles.storyCopy}>
               <p className={styles.kicker}><span /> Our story</p>
-              <h2 id="story-title">A journey of <em>clearer vision</em></h2>
-              <p className={styles.storyIntro}>Founded in 2019, Neyani Eye Hospital has grown from a single vision into one of Kutch&apos;s trusted eye care centres. We remain committed to providing quality, compassionate and advanced eye care to individuals and families in Gandhidham and nearby areas.</p>
+              <h2 id="story-title">Our Legacy</h2>
+              <p className={styles.storyIntro}>Neyani Eye Hospital is committed to providing eye care supported by medical expertise and modern technology. Our focus is on helping patients understand their eye health and access appropriate care for their vision needs.</p>
               <ol className={styles.timeline}>
                 {storyMilestones.map(({ icon: Icon, year, title, text }) => <li key={year}><span className={styles.timelineDot} /><span className={styles.timelineIcon}><Icon size={27} aria-hidden="true" /></span><div><strong>{year}</strong><h3>{title}</h3><p>{text}</p></div></li>)}
               </ol>
               <Link href="/contact#appointment" className={styles.storyCta}>Book an appointment <span><ArrowRight size={18} aria-hidden="true" /></span></Link>
             </div>
+          </div>
+        </section>
+        <section className={styles.founderSection} aria-labelledby="founder-title">
+          <div className="container">
+            <header className={styles.founderHeading}>
+              <h2 id="founder-title">
+                <span className={styles.founderHeadingLine} aria-hidden="true" />
+                OUR FOUNDER
+              </h2>
+            </header>
+            <article className={styles.founderCard}>
+              <div className={styles.founderPhotoWrap}>
+                <Image
+                  src="/founder-dr-shivpal-singh-rathore.jpg"
+                  alt="Dr. Shivpal Singh Rathore — Founder of Neyani Eye Hospital"
+                  fill
+                  quality={95}
+                  sizes="(max-width: 640px) 100vw, (max-width: 820px) 240px, 300px"
+                  className={styles.founderPhoto}
+                />
+              </div>
+              <div className={styles.founderBody}>
+                <p className={styles.founderRoleLabel}>FOUNDER OF NEYANI EYE HOSPITAL</p>
+                <h3 className={styles.founderName}>Dr. Shivpal Singh Rathore</h3>
+                <h4 className={styles.founderQualifications}>MBBS, MS (Ophthalmology)</h4>
+                <p className={styles.founderDescription}>
+                  &ldquo;Dr. Shivpal Singh Rathore founded Neyani Eye Hospital in Rapar, Kutch, in 1989, with a commitment to providing dependable and accessible eye care to the people of Kutch.&rdquo;
+                </p>
+                <div className={styles.founderMeta}>
+                  <div className={styles.founderMetaItem}>
+                    <CalendarDays size={18} aria-hidden="true" />
+                    <div>
+                      <span className={styles.founderMetaLabel}>Founded</span>
+                      <strong className={styles.founderMetaValue}>1989</strong>
+                    </div>
+                  </div>
+                  <div className={styles.founderMetaDivider} aria-hidden="true" />
+                  <div className={styles.founderMetaItem}>
+                    <MapPin size={18} aria-hidden="true" />
+                    <div>
+                      <span className={styles.founderMetaLabel}>Location</span>
+                      <strong className={styles.founderMetaValue}>Rapar, Kutch</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
           </div>
         </section>
         <section className={styles.philosophy} aria-labelledby="philosophy-title">

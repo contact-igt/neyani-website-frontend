@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CalendarCheck, CalendarDays, Check, ChevronDown, Cpu, Droplets, Eye, HeartHandshake, Languages, Microscope, Phone, ScanEye, ScanLine, ShieldCheck, SlidersHorizontal, Stethoscope, TrendingUp } from "lucide-react";
+import { ArrowRight, CalendarCheck, CalendarDays, Check, ChevronDown, Cpu, Droplets, Eye, Focus, HeartHandshake, Languages, Microscope, Phone, ScanEye, ScanLine, ShieldCheck, SlidersHorizontal, Stethoscope, TrendingUp } from "lucide-react";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import FAQ from "@/components/FAQ/FAQ";
@@ -18,7 +18,7 @@ const reasons = [
   { icon: Cpu, title: "Advanced technology", description: "The Oertli Faros phacoemulsification system and Zeiss Visu 160 operating microscope support precise cataract procedures." },
   { icon: SlidersHorizontal, title: "Individual assessment", description: "The surgical technique and anaesthesia approach are selected after examination and according to individual suitability." },
   { icon: HeartHandshake, title: "Patient support", description: "The team provides clear guidance through consultation, treatment and eligible insurance or TPA documentation." },
-  { icon: CalendarCheck, title: "Established locally", description: "Neyani Eye Hospital has served patients and families in Gandhidham and the wider Kutch region since 2019." },
+  { icon: CalendarCheck, title: "Established locally", description: "Founded in Rapar in 1989, Neyani Eye Hospital established its second eye centre in Gandhidham in 2019 to serve patients and families across Kutch." },
   { icon: ShieldCheck, title: "Micro-incision approach", description: "The 1.6 mm MICS technique and topical anaesthesia are used where the patient and clinical situation are suitable." },
   { icon: ScanEye, title: "Diagnostics under one roof", description: "Slit-lamp examination, retinoscopy, OCT, fundus photography and visual field testing support detailed assessment." },
   { icon: Languages, title: "Clear communication", description: "Consultations are supported in English, Hindi and Gujarati to help patients and families understand their care." },
@@ -30,6 +30,39 @@ const surgerySigns = [
   { title: "Glare, halos or difficulty seeing at night", detail: "Glare, halos or difficulty seeing at night makes driving or moving around less comfortable." },
   { title: "Colours appear faded", detail: "Colours appear faded or less vivid than before." },
   { title: "Double vision or frequent vision changes", detail: "Double vision or frequent vision changes are affecting one eye." },
+] as const;
+
+const surgicalTechniques = [
+  {
+    icon: Cpu,
+    title: "Phacoemulsification",
+    description: "This technique uses ultrasound energy to break the cloudy lens into smaller pieces, which are then removed and replaced with an artificial lens.",
+  },
+  {
+    icon: Eye,
+    title: "Small Incision Cataract Surgery (SICS)",
+    description: "This procedure removes the cloudy lens through a small incision in the eye. Your doctor will determine whether this technique is suitable for you.",
+  },
+  {
+    icon: ScanLine,
+    title: "Micro-Incision Cataract Surgery (MICS)",
+    description: "This technique uses a very small incision to remove the cloudy lens, where appropriate for the patient's eye condition.",
+  },
+  {
+    icon: Droplets,
+    title: "Topical Anaesthesia (No-Injection Technique)",
+    description: "For suitable patients, cataract surgery can be performed using anaesthetic eye drops instead of an injection around the eye. Your doctor will explain whether this option is appropriate for you.",
+  },
+  {
+    icon: HeartHandshake,
+    title: "Paediatric Cataract Surgery",
+    description: "Cataracts can also affect children. An eye specialist will assess the child's condition and discuss the appropriate treatment and care.",
+  },
+  {
+    icon: ScanEye,
+    title: "YAG Laser Capsulotomy",
+    description: "Sometimes, the thin membrane behind an artificial lens becomes cloudy after cataract surgery. A YAG laser procedure may be recommended to help restore clearer vision.",
+  },
 ] as const;
 
 const lensOptions = [
@@ -65,19 +98,28 @@ const lensOptions = [
     benefits: ["Corrects astigmatism", "Sharper clarity", "Single procedure"],
     image: "/lens-toric-v2.png",
   },
+  {
+    icon: Focus,
+    label: "Enhanced monofocal lens",
+    title: "Enhanced Monofocal",
+    description: "Provides clear distance vision with the potential for improved intermediate vision, depending on the lens design and individual needs.",
+    benefits: ["Clear distance vision", "Potentially improved intermediate vision", "Lens selection based on individual needs"],
+    image: "/enhanced-monofocal-lens.jpg",
+  },
 ] as const;
 
 const lensComparison = [
-  { feature: "Primary focus", values: ["One selected distance", "Distance to intermediate", "Distance with astigmatism correction", "Multiple focal zones"] },
-  { feature: "Distance vision", values: ["Commonly selected", "Supported", "Supported", "Supported"] },
-  { feature: "Intermediate vision", values: ["Glasses may be needed", "Designed to support", "Depends on lens design", "Designed to support"] },
-  { feature: "Near vision", values: ["Reading glasses often needed", "Reading glasses may be needed", "Depends on lens design", "Designed to support"] },
-  { feature: "Astigmatism correction", values: ["Separate correction may be considered", "Toric variants may be available", "Designed for suitable regular astigmatism", "Toric variants may be available"] },
-  { feature: "Possible need for glasses", values: ["Often for near tasks", "May remain for near tasks", "Varies by selected design", "May be reduced"] },
+  { feature: "Primary focus", values: ["One selected distance", "Distance with functional intermediate", "Distance to intermediate", "Distance with astigmatism correction", "Multiple focal zones"] },
+  { feature: "Distance vision", values: ["Commonly selected", "Supported", "Supported", "Supported", "Supported"] },
+  { feature: "Intermediate vision", values: ["Glasses may be needed", "May support everyday tasks", "Designed to support", "Depends on lens design", "Designed to support"] },
+  { feature: "Near vision", values: ["Reading glasses often needed", "Reading glasses often needed", "Reading glasses may be needed", "Depends on lens design", "Designed to support"] },
+  { feature: "Astigmatism correction", values: ["Separate correction may be considered", "Toric variants may be available", "Toric variants may be available", "Designed for suitable regular astigmatism", "Toric variants may be available"] },
+  { feature: "Possible need for glasses", values: ["Often for near tasks", "Often for near tasks", "May remain for near tasks", "Varies by selected design", "May be reduced"] },
 ] as const;
 
 const comparisonLenses = [
   { title: "Monofocal", subtitle: "Standard lens", image: "/iol-monofocal.png", featured: false },
+  { title: "Enhanced Monofocal", subtitle: "ENHANCED MONOFOCAL LENS", image: "/iol-monofocal.png", featured: false },
   { title: "EDOF IOL", subtitle: "Extended depth of focus", image: "/iol-edof.png", featured: false },
   { title: "Toric Lens", subtitle: "Astigmatism correction", image: "/iol-toric.png", featured: false },
   { title: "Multifocal", subtitle: "Multiple focus lens", image: "/iol-multifocal.png", featured: true },
@@ -89,6 +131,37 @@ const benefits = [
   { image: "/neyani-hero-care.png", title: "Greater confidence in daily life", description: "Improved vision may make routine activities easier, depending on eye health and recovery." },
   { image: "/service-glaucoma.png", title: "Reduced dependence on glasses", description: "Depending on the lens selected, many patients find they rely less on spectacles for daily tasks." },
   { image: "/neyani-consultation.png", title: "Better night vision", description: "Replacing a clouded lens may reduce glare and haloing, helping with comfort in low light." },
+] as const;
+
+const cataractFaqs = [
+  {
+    q: "Does cataract surgery hurt?",
+    a: "Most patients are surprised by how comfortable the procedure is. We use topical anaesthetic drops in suitable cases, which eliminates the need for an injection around the eye. You may feel mild pressure, but pain is not expected. If you feel anxious, let us know — we will take care of you.",
+  },
+  {
+    q: "How long does cataract surgery take?",
+    a: "The surgical procedure itself typically takes 10–15 minutes per eye. You will spend additional time for preparation and monitoring before and after. Most patients are discharged the same day.",
+  },
+  {
+    q: "When can I return to normal activities after cataract surgery?",
+    a: "Recovery varies by individual. Many patients notice improved vision within a day or two. Your surgeon will give you specific guidance on activity restrictions based on your case.",
+  },
+  {
+    q: "Do I need a cornea check before cataract or refractive surgery?",
+    a: "Yes, a cornea assessment is usually part of planning. It helps your surgeon judge corneal shape and health so the right lens and technique can be chosen for you.",
+  },
+  {
+    q: "Is it safe to have eye surgery if I have diabetes?",
+    a: "Diabetes can affect the eyes, and careful assessment is essential. Our team will evaluate the health of your retina and overall control before recommending any procedure. Please bring your recent blood sugar and HbA1c reports.",
+  },
+  {
+    q: "Do you treat patients from outside Gandhidham?",
+    a: "Yes. We regularly see patients from Adipur, Anjar, Bhachau, and across the Kutch region. Please call or WhatsApp us to schedule a convenient appointment time.",
+  },
+  {
+    q: "Can I walk in, or do I need an appointment?",
+    a: "Appointments are preferred and help us give you adequate time. Walk-ins are seen subject to availability. You can book quickly via WhatsApp or phone.",
+  },
 ] as const;
 
 export const metadata: Metadata = {
@@ -193,6 +266,27 @@ export default function CataractPage() {
             </div>
           </div>
         </section>
+        <section className={styles.techniques} aria-labelledby="cataract-treatment-options">
+          <div className="container">
+            <div className={styles.techniquesHeading}>
+              <p className={styles.sectionLabel}><span /> Treatment options</p>
+              <h2 id="cataract-treatment-options">Cataract Surgery and <span>Treatment Options</span></h2>
+              <p>A cataract occurs when the natural lens of the eye becomes cloudy, making vision blurry or hazy. You may find it harder to read, drive, recognise faces or carry out everyday activities. After examining your eyes, our doctor will explain the available treatment options and help you understand which approach may be right for you.</p>
+            </div>
+            <div className={styles.techniqueGrid}>
+              {surgicalTechniques.map((technique, index) => (
+                <article className={styles.techniqueCard} key={technique.title}>
+                  <div className={styles.techniqueTop}>
+                    <span><technique.icon size={21} strokeWidth={1.7} aria-hidden="true" /></span>
+                    <b>{String(index + 1).padStart(2, "0")}</b>
+                  </div>
+                  <h3>{technique.title}</h3>
+                  <p>{technique.description}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
         <section className={styles.lenses} aria-labelledby="lens-options">
           <div className="container">
             <div className={styles.lensHeading}>
@@ -263,6 +357,22 @@ export default function CataractPage() {
             <p className={styles.comparisonNote}>Lens illustrations are representative. Lens suitability, availability and expected visual range vary between patients. No lens can guarantee complete freedom from glasses.</p>
           </div>
         </section>
+        <section className={styles.biometry} aria-labelledby="optical-biometry-heading">
+          <div className="container">
+            <div className={styles.biometryPanel}>
+              <div className={styles.biometryCopy}>
+                <p className={styles.sectionLabel}><span /> PRE-OPERATIVE ASSESSMENT</p>
+                <h2 id="optical-biometry-heading">Optical Biometry for <br className={styles.headingBreak} /><span>Precise IOL Calculation</span></h2>
+                <p>Optical biometry helps measure important dimensions of the eye before cataract surgery. These measurements help the doctor calculate the appropriate power of the artificial lens, known as an intraocular lens (IOL). The final lens choice depends on your eye measurements, eye health and individual vision needs.</p>
+              </div>
+              <div className={styles.biometryVisual}>
+                <figure className={styles.biometryImageWrap}>
+                  <Image src="/diagnostic-optical-biometry-v1.png" alt="Optical biometry equipment used for accurate intraocular lens calculation" fill quality={90} sizes="(max-width: 800px) 100vw, 42vw" />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
         <section className={styles.benefits} aria-labelledby="surgery-benefits">
           <div className="container">
             <div className={styles.benefitsHeading}>
@@ -274,7 +384,12 @@ export default function CataractPage() {
           </div>
         </section>
         <Testimonials />
-        <FAQ />
+        <FAQ
+          faqs={cataractFaqs}
+          intro="Helpful guidance about cataract surgery, lens selection, recovery and what to expect from your consultation."
+          image="/cataract-consultation-v2.png"
+          imageAlt="An ophthalmologist explaining cataract surgery during a consultation"
+        />
         <section className={styles.finalCta} aria-labelledby="cataract-consultation">
           <div className={`container ${styles.ctaPanel}`}>
             <div className={styles.ctaCopy}>

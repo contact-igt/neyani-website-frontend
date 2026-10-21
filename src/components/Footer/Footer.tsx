@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, Phone } from "lucide-react";
 import { hospital } from "@/content/hospital";
 import styles from "./Footer.module.css";
@@ -10,7 +11,7 @@ export default function Footer() {
         <div><h2>Protect your sight with <span className="title-secondary-on-dark">specialist care</span></h2><p>Questions about your vision or treatment? Our team is ready to help you plan your next visit.</p></div>
         <div className={styles.actions}>
           <a href={hospital.phoneUrl} className={styles.call}><Phone size={16} aria-hidden="true" /> Call us</a>
-          <a href="/contact#appointment" className={styles.book}>Book appointment <i><ArrowRight size={17} aria-hidden="true" /></i></a>
+          <Link href="/contact#appointment" className={styles.book}>Book appointment <i><ArrowRight size={17} aria-hidden="true" /></i></Link>
         </div>
       </div>
 
@@ -18,13 +19,24 @@ export default function Footer() {
 
       <div className={styles.main}>
         <div className={styles.brand}>
-          <a href="#main-content" className={styles.logo} aria-label="Neyani Eye Hospital home"><Image src="/logo-new.png" alt="" width={469} height={252} /></a>
+          <Link href="/" className={styles.logo} aria-label="Neyani Eye Hospital home"><Image src="/logo-new.png" alt="" width={469} height={252} /></Link>
           <p>{hospital.tagline}</p>
           <span>Specialist ophthalmology for Gandhidham and the wider Kutch region.</span>
         </div>
 
-        <nav aria-label="Footer navigation"><h3>Quick links</h3><a href="/">Home</a><a href="/about">About us</a><a href="/#doctors">Our doctors</a><a href="/contact#appointment">Book a visit</a><a href="/contact">Contact</a></nav>
-        <nav aria-label="Eye care services"><h3>Services</h3><a href="#services">Cataract surgery</a><a href="#services">Glaucoma care</a><a href="#services">Retina care</a><a href="#services">Pediatric eye care</a><a href="#services">Eye diagnostics</a></nav>
+        <nav aria-label="Footer navigation"><h3>Quick links</h3><Link href="/">Home</Link><Link href="/about">About us</Link><Link href="/doctors">Our doctors</Link><Link href="/contact#appointment">Book a visit</Link><Link href="/contact">Contact</Link></nav>
+        <nav aria-label="Eye care services">
+          <h3>Services</h3>
+          <Link href="/services/cataract">Cataract Surgery</Link>
+          <Link href="/services/glaucoma">Glaucoma Diagnosis & Treatment</Link>
+          <Link href="/services/retina">Diabetic Eye & Retina Care</Link>
+          <Link href="/services/pediatric">Pediatric Ophthalmology</Link>
+          <Link href="/services/general">General Eye Care</Link>
+          <Link href="/services/cornea">Cornea Care</Link>
+          <Link href="/services/squint">Squint Care</Link>
+          <Link href="/services/pterygium">Pterygium Treatment</Link>
+          <Link href="/services/oculoplasty">Oculoplasty & Watering Eye Care</Link>
+        </nav>
 
         <div className={styles.contact}><h3>Contact information</h3><p><strong>Phone</strong><a href={hospital.phoneUrl}>{hospital.phone}</a></p><p><strong>Address</strong><span>{hospital.address}</span></p><p><strong>Clinic hours</strong><span>Mon–Sat · {hospital.hours.morning}<br />{hospital.hours.evening}</span></p></div>
       </div>

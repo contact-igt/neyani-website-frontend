@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ChevronDown, Menu, X } from "lucide-react";
-import { hospital } from "@/content/hospital";
+import { hospital, treatmentMenuItems } from "@/content/hospital";
 import styles from "./Header.module.css";
 
 const navLinks = [
@@ -14,9 +14,6 @@ const navLinks = [
   { href: "/#technology", label: "Technology" },
   { href: "/contact", label: "Contact us" },
 ];
-
-const serviceLinks = [...hospital.priorityServices, ...hospital.mosaicServices, { id: "cornea", title: "Cornea Care" }, { id: "squint", title: "Squint Care" }, { id: "pterygium", title: "Pterygium Treatment" }, { id: "oculoplasty", title: "Oculoplasty & Watering Eye Care" }].filter(({ id }) => id !== "screening" && id !== "technology");
-const serviceHref = (id:string) => ["cataract", "cornea", "glaucoma", "pediatric", "retina", "general", "squint", "pterygium", "oculoplasty"].includes(id) ? `/services/${id}` : `/services#${id}`;
 
 export default function Header() {
   const pathname = usePathname();
@@ -39,7 +36,7 @@ export default function Header() {
           {navLinks.slice(0,2).map((link)=><li key={link.href}><Link className={(link.href==="/"?pathname==="/":pathname.startsWith(link.href))?styles.active:""} href={link.href}>{link.label}</Link></li>)}
           <li className={styles.servicesMenu}>
             <Link href="/services" className={pathname.startsWith("/services")?styles.active:""}> Treatments <ChevronDown size={14} aria-hidden="true" /></Link>
-            <div className={styles.dropdown}>{serviceLinks.map((service)=><Link key={service.id} href={serviceHref(service.id)}>{service.title}</Link>)}</div>
+            <div className={styles.dropdown}>{treatmentMenuItems.map((service)=><Link key={service.href} href={service.href}>{service.title}</Link>)}</div>
           </li>
           {navLinks.slice(2).map((link)=><li key={link.href}><Link className={pathname.startsWith(link.href) ? styles.active : ""} href={link.href}>{link.label}</Link></li>)}
         </ul></nav>
@@ -52,7 +49,7 @@ export default function Header() {
           <summary>Treatments <ChevronDown size={18} aria-hidden="true" /></summary>
           <div>
             <Link href="/services" onClick={()=>setMenuOpen(false)}>View all treatments</Link>
-            {serviceLinks.map((service)=><Link key={service.id} href={serviceHref(service.id)} onClick={()=>setMenuOpen(false)}>{service.title}</Link>)}
+            {treatmentMenuItems.map((service)=><Link key={service.href} href={service.href} onClick={()=>setMenuOpen(false)}>{service.title}</Link>)}
           </div>
         </details>
         {navLinks.slice(2).map((link)=><Link key={link.href} href={link.href} onClick={()=>setMenuOpen(false)}>{link.label}</Link>)}
