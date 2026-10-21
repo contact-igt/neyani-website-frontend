@@ -4,23 +4,23 @@ import styles from "./Testimonials.module.css";
 const journeySteps = [
   {
     step: "01",
-    title: "Consultation and Evaluation",
+    title: "Eye Consultation and Evaluation",
     description:
-      "Eye examinations help our doctors assess your concerns and determine the appropriate next steps.",
+      "Eye examinations help our doctors assess your symptoms and eye health to determine the appropriate next steps for your care.",
     icon: Stethoscope,
   },
   {
     step: "02",
-    title: "Diagnostic Services",
+    title: "Diagnostic Eye Tests",
     description:
-      "Diagnostic evaluations help our clinical team assess eye conditions and guide care planning.",
+      "Eye examinations and diagnostic tests help our doctors assess eye conditions and guide clinical decisions.",
     icon: Activity,
   },
   {
     step: "03",
     title: "Treatment Planning and Follow-up",
     description:
-      "Your doctor will discuss appropriate treatment options and follow-up care according to your individual needs.",
+      "Our doctors discuss suitable treatment options and recommend follow-up care according to each patient's individual needs.",
     icon: ClipboardCheck,
   },
 ] as const;
@@ -33,10 +33,10 @@ export default function Testimonials() {
           <header className={styles.heading}>
             <p className={styles.label}>Patient Care</p>
             <h2 id="journey-heading">
-              Your Eye Care <span className="title-secondary">Journey</span>
+              Your Eye Care Journey <span className="title-secondary">at Neyani Eye Hospital</span>
             </h2>
             <p className={styles.description}>
-              Our team provides eye consultations, diagnostic evaluations and treatment planning based on each patient’s individual needs.
+              Our team provides eye consultations, diagnostic evaluations and treatment planning based on each patient&apos;s individual eye health needs.
             </p>
           </header>
 
