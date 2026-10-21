@@ -45,7 +45,6 @@ export default function DoctorsPage() {
                 {lead.doctor.credentials && <p className={styles.credentials}><strong>{lead.doctor.credentials}</strong>{lead.doctor.fellowships}</p>}
                 <p className={styles.profileDescription}>{lead.description}</p>
                 <blockquote className={styles.doctorQuote}><Quote size={18} aria-hidden="true" /><p>My focus is on safe, precise and personalised care for every patient.</p></blockquote>
-                <ul className={styles.skills} aria-label={`${lead.doctor.name} specialities`}>{lead.skills.map((skill) => <li key={skill}>{skill}</li>)}</ul>
                 <div className={styles.profileActions}>
                   <Link href={`/doctors/${lead.doctor.id}`} className={styles.profileButton}>View profile <span><ArrowRight size={16} aria-hidden="true" /></span></Link>
                 </div>

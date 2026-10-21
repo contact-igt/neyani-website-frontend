@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CalendarCheck, Check, Clock3, MapPin, MessageCircle, Phone } from "lucide-react";
+import { ArrowRight, Check, Clock3, MapPin, MessageCircle, Phone } from "lucide-react";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import WhatsAppFAB from "@/components/WhatsAppFAB/WhatsAppFAB";
@@ -15,19 +15,13 @@ export const metadata:Metadata={
 };
 
 export default function ContactPage() {
-  const leadDoctor = hospital.doctors[0];
-
   return (
     <>
       <Header />
       <main className={styles.main}>
         <section className={styles.hero} aria-labelledby="contact-title">
           <div className={styles.heroDoctor}>
-            <Image src="/contact-doctor-cutout.png" alt="An ophthalmologist welcoming patients to Neyani Eye Hospital" fill preload quality={95} sizes="(max-width: 850px) 86vw, 48vw" />
-          </div>
-          <div className={styles.doctorCard}>
-            <CalendarCheck aria-hidden="true" />
-            <span><strong>{leadDoctor.name}</strong><small>{leadDoctor.role}</small></span>
+            <Image src="/doctor-yajuvendra-cutout-hero.png" alt="Dr. Yajuvendra Singh Rathore welcoming patients to Neyani Eye Hospital" fill preload quality={95} sizes="(max-width: 850px) 86vw, 48vw" />
           </div>
           <div className={`container ${styles.heroInner}`}>
             <div className={styles.heroCopy}>
