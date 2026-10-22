@@ -55,9 +55,8 @@ export default function AboutPage() {
             </div>
 
             <div className={styles.visual}>
-              <div className={styles.mainImage}><Image src="/pterygium-exam-slit-lamp-v1.png" alt="Ophthalmologist carefully examining an adult patient's eyes with a slit lamp" fill priority sizes="(max-width: 760px) 90vw, 38vw" /></div>
-              <div className={styles.childImage}><Image src="/about-pediatric-refraction-v1.png" alt="Child receiving a refraction check at an eye clinic" fill sizes="(max-width: 760px) 40vw, 16vw" /></div>
-              <div className={styles.facilityImage}><Image src="/about-banner3.jpg" alt="Neyani Eye Hospital building exterior" fill sizes="(max-width: 760px) 52vw, 30vw" /></div>
+              <div className={styles.mainImage}><Image src="/about-consultation-room.jpg" alt="Consultation room at Neyani Eye Hospital" fill priority quality={95} sizes="(max-width: 760px) 90vw, 48vw" /></div>
+              <div className={styles.facilityImage}><Image src="/about-banner3.jpg" alt="Neyani Eye Hospital building exterior" fill priority sizes="(max-width: 760px) 52vw, 30vw" /></div>
               <aside className={`${styles.note} ${styles.noteTop}`}><span><Eye size={24} aria-hidden="true" /></span><p><strong>Personalised care</strong>Every treatment plan begins with a thorough eye examination.</p></aside>
               <dl className={styles.stats}>
                 {hospital.stats.map((stat, index) => {
@@ -87,11 +86,15 @@ export default function AboutPage() {
           </div>
         </section>
         <section className={styles.founderSection} aria-labelledby="founder-title">
-          <div className="container">
+          <div className={`container ${styles.founderContainer}`}>
             <header className={styles.founderHeading}>
-              <h2 id="founder-title">
+              <p className={styles.founderKicker}>
                 <span className={styles.founderHeadingLine} aria-hidden="true" />
                 OUR FOUNDER
+                <span className={styles.founderHeadingLine} aria-hidden="true" />
+              </p>
+              <h2 id="founder-title" className={styles.founderMainHeading}>
+                The Legacy Behind <span className={styles.founderTitleAccent}>Neyani Eye Hospital</span>
               </h2>
             </header>
             <article className={styles.founderCard}>
@@ -101,7 +104,8 @@ export default function AboutPage() {
                   alt="Dr. Shivpal Singh Rathore — Founder of Neyani Eye Hospital"
                   fill
                   quality={95}
-                  sizes="(max-width: 640px) 100vw, (max-width: 820px) 240px, 300px"
+                  priority
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 480px"
                   className={styles.founderPhoto}
                 />
               </div>
@@ -109,21 +113,24 @@ export default function AboutPage() {
                 <p className={styles.founderRoleLabel}>FOUNDER OF NEYANI EYE HOSPITAL</p>
                 <h3 className={styles.founderName}>Dr. Shivpal Singh Rathore</h3>
                 <h4 className={styles.founderQualifications}>MBBS, MS (Ophthalmology)</h4>
-                <p className={styles.founderDescription}>
+                <blockquote className={styles.founderDescription}>
                   &ldquo;Dr. Shivpal Singh Rathore founded Neyani Eye Hospital in Rapar, Kutch, in 1989, with a commitment to providing dependable and accessible eye care to the people of Kutch.&rdquo;
-                </p>
-                <div className={styles.founderMeta}>
-                  <div className={styles.founderMetaItem}>
-                    <CalendarDays size={18} aria-hidden="true" />
-                    <div>
+                </blockquote>
+                <div className={styles.founderMetaCards}>
+                  <div className={styles.founderMetaCard}>
+                    <span className={styles.founderMetaIconWrap}>
+                      <CalendarDays size={20} aria-hidden="true" />
+                    </span>
+                    <div className={styles.founderMetaCardContent}>
                       <span className={styles.founderMetaLabel}>Founded</span>
                       <strong className={styles.founderMetaValue}>1989</strong>
                     </div>
                   </div>
-                  <div className={styles.founderMetaDivider} aria-hidden="true" />
-                  <div className={styles.founderMetaItem}>
-                    <MapPin size={18} aria-hidden="true" />
-                    <div>
+                  <div className={styles.founderMetaCard}>
+                    <span className={styles.founderMetaIconWrap}>
+                      <MapPin size={20} aria-hidden="true" />
+                    </span>
+                    <div className={styles.founderMetaCardContent}>
                       <span className={styles.founderMetaLabel}>Location</span>
                       <strong className={styles.founderMetaValue}>Rapar, Kutch</strong>
                     </div>

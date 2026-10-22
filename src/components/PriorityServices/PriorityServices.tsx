@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import styles from "./PriorityServices.module.css";
 
 const services = [
-  { title: "Robotic Cataract Surgery", description: "Painless micro-incision surgery with advanced Oertli Faros technology.", image: "/service-cataract.png", className: "cataract" },
+  { title: "Advanced Cataract Surgery", description: "Modern cataract surgery using the OERTLI FAROS phacoemulsification system, with treatment planned according to each patient’s eye condition and clinical needs.", image: "/service-cataract.png", className: "cataract" },
   { title: "Glaucoma Care", description: "Early diagnosis, visual-field testing and tailored treatment to preserve sight.", image: "/service-glaucoma.png", className: "glaucoma" },
   { title: "Retina & Diabetic Eye Care", description: "Retinal screening, laser care and specialist support for complex conditions.", image: "/service-retina.png", className: "retina" },
   { title: "Pediatric Ophthalmology", description: "Gentle eye checks, squint care and vision support for children.", image: "/service-pediatric.png", className: "pediatric" },

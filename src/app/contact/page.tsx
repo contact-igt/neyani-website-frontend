@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CalendarCheck, Check, Clock3, MapPin, MessageCircle, Phone } from "lucide-react";
+import { ArrowRight, Check, Clock3, MapPin, MessageCircle, Phone } from "lucide-react";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import WhatsAppFAB from "@/components/WhatsAppFAB/WhatsAppFAB";
@@ -15,25 +15,19 @@ export const metadata:Metadata={
 };
 
 export default function ContactPage() {
-  const leadDoctor = hospital.doctors[0];
-
   return (
     <>
       <Header />
       <main className={styles.main}>
         <section className={styles.hero} aria-labelledby="contact-title">
-          <div className={styles.heroDoctor}>
-            <Image src="/contact-doctor-cutout.png" alt="An ophthalmologist welcoming patients to Neyani Eye Hospital" fill preload quality={95} sizes="(max-width: 850px) 86vw, 48vw" />
-          </div>
-          <div className={styles.doctorCard}>
-            <CalendarCheck aria-hidden="true" />
-            <span><strong>{leadDoctor.name}</strong><small>{leadDoctor.role}</small></span>
-          </div>
           <div className={`container ${styles.heroInner}`}>
             <div className={styles.heroCopy}>
               <p><span /> Appointments &amp; enquiries</p>
               <h1 id="contact-title">Your eye care visit,<br /><span>made simple.</span></h1>
               <div className={styles.heroText}>Share a few details below and our team will help arrange a suitable consultation at Neyani Eye Hospital.</div>
+              <div className={styles.heroDoctor}>
+                <Image src="/doctor-yajuvendra-office.jpg" alt="Dr. Yajuvendra Singh Rathore in his consultation office at Neyani Eye Hospital" fill priority quality={95} sizes="(max-width: 850px) 92vw, 48vw" />
+              </div>
               <div className={styles.heroActions}>
                 <Link href="#appointment">Book an appointment <i><ArrowRight size={17} aria-hidden="true" /></i></Link>
                 <a href={hospital.phoneUrl}><Phone size={17} aria-hidden="true" />{hospital.phone}</a>
