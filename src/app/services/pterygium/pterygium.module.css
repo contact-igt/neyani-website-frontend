@@ -296,14 +296,8 @@
   padding: 22px 20px;
   border: 1px solid rgb(18 125 162 / 7%);
   border-radius: 28px;
-  background: rgb(255 255 255 / 74%);
-  box-shadow: 0 12px 30px rgb(11 66 90 / 5%);
-}
-.factCards article:nth-child(2) {
   background: rgb(232 248 255 / 76%);
-}
-.factCards article:nth-child(3) {
-  background: rgb(255 250 234 / 80%);
+  box-shadow: 0 12px 30px rgb(11 66 90 / 5%);
 }
 .factCards span {
   display: grid;
@@ -311,16 +305,8 @@
   height: 54px;
   place-items: center;
   border-radius: 50%;
-  color: #e7a827;
-  background: #fff4dc;
-}
-.factCards article:nth-child(2) span {
   color: #049bd3;
   background: #def4ff;
-}
-.factCards article:nth-child(3) span {
-  color: #0a716f;
-  background: #e6f6ed;
 }
 .factCards span svg {
   width: 27px;
@@ -1335,22 +1321,6 @@
   box-shadow: 0 4px 10px rgb(10 74 98 / 10%);
   font-size: 17px;
 }
-.examinationSteps li:nth-child(2) figure b {
-  color: #7e6a14;
-  background: #fff8e3;
-}
-.examinationSteps li:nth-child(3) figure b {
-  color: #08736e;
-  background: #e4f8f2;
-}
-.examinationSteps li:nth-child(4) figure b {
-  color: #7367e7;
-  background: #efedff;
-}
-.examinationSteps li:nth-child(5) figure b {
-  color: #da5352;
-  background: #fff0ef;
-}
 .examinationSteps li > div {
   min-height: 205px;
   padding: 0 20px 20px;
@@ -1364,22 +1334,6 @@
   color: #0798d2;
   background: #e6f7ff;
   box-shadow: none;
-}
-.examinationSteps li:nth-child(2) > div > span {
-  color: #7e6a14;
-  background: #fff8e3;
-}
-.examinationSteps li:nth-child(3) > div > span {
-  color: #078d7d;
-  background: #e5f8f3;
-}
-.examinationSteps li:nth-child(4) > div > span {
-  color: #786be8;
-  background: #f0efff;
-}
-.examinationSteps li:nth-child(5) > div > span {
-  color: #e15255;
-  background: #fff0ef;
 }
 .examinationSteps svg {
   width: 27px;

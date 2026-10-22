@@ -1582,10 +1582,6 @@
   font-size: 20px;
   font-weight: 800;
 }
-.assessmentJourneySteps li:nth-child(even) .assessmentJourneyNumber {
-  color: #725912;
-  background: #fff1c8;
-}
 .assessmentJourneySteps figure {
   position: relative;
   min-height: 184px;
@@ -1606,9 +1602,6 @@
   border-radius: 0 24px 24px 0;
   background: linear-gradient(90deg, #effaff, #f8fdff);
 }
-.assessmentJourneySteps li:nth-child(even) .assessmentJourneyCopy {
-  background: linear-gradient(90deg, #fffaf0, #fffdf8);
-}
 .assessmentJourneyCopy > span {
   width: 62px;
   height: 62px;
@@ -1616,10 +1609,6 @@
 .assessmentJourneyCopy > span svg {
   width: 30px;
   height: 30px;
-}
-.assessmentJourneySteps li:nth-child(even) .assessmentJourneyCopy > span {
-  color: #7b6217;
-  background: #fff6dc;
 }
 .assessmentJourneyCopy > div {
   min-width: 0;
