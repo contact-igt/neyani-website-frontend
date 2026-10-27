@@ -49,16 +49,16 @@ export const hospital = {
       name: "Dr. Urmil Shah",
       credentials: "",
       fellowships: "",
-      role: "Visiting Retina Specialist",
-      note: "Visiting consultant — retinal and vitreoretinal surgery",
+      role: "Retina Specialist",
+      note: "Retina specialist — retinal and vitreoretinal surgery",
     },
     {
       id: "ankit-shah",
       name: "Dr. Ankit Shah",
       credentials: "",
       fellowships: "",
-      role: "Visiting Pediatric Ophthalmologist & Squint Surgeon",
-      note: "Visiting consultant — pediatric eye care and squint surgery",
+      role: "Pediatric Ophthalmologist & Squint Surgeon",
+      note: "Pediatric eye care and squint surgery",
     },
   ],
 
@@ -82,7 +82,7 @@ export const hospital = {
       icon: "scan",
       title: "Diabetic Eye & Retina Care",
       description:
-        "Diabetic retinopathy is a leading cause of preventable blindness. Regular retinal screening and prompt intervention — including laser photocoagulation — can protect your vision. Complex retinal and vitreoretinal surgeries are performed by our visiting retina specialist.",
+        "Diabetic retinopathy is a leading cause of preventable blindness. Regular retinal screening and prompt intervention — including laser photocoagulation — can protect your vision. Complex retinal and vitreoretinal surgeries are performed by our retina specialist.",
     },
   ],
 
@@ -92,7 +92,7 @@ export const hospital = {
       icon: "baby",
       title: "Pediatric Ophthalmology",
       description:
-        "Children's eyes need specialist attention. From newborns to school-age children, we examine and manage squints, amblyopia, refractive errors, and congenital conditions. Complex squint surgeries are performed by our visiting pediatric surgeon.",
+        "Children's eyes need specialist attention. From newborns to school-age children, we examine and manage squints, amblyopia, refractive errors, and congenital conditions. Complex squint surgeries are performed by our pediatric ophthalmologist and squint surgeon.",
     },
     {
       id: "screening",
@@ -285,8 +285,8 @@ export const hospital = {
       a: "Yes. When you book by phone or WhatsApp, let us know which doctor you would like to see and we will arrange a suitable appointment time.",
     },
     {
-      q: "When are the visiting consultants available?",
-      a: "Our visiting retina specialist and pediatric ophthalmologist see patients on scheduled consultation days. Please call the hospital to confirm upcoming dates and times.",
+      q: "When are the specialists available?",
+      a: "Our retina specialist and pediatric ophthalmologist see patients on scheduled consultation days. Please call the hospital to confirm upcoming dates and times.",
     },
     {
       q: "Which doctor should I see for my eye problem?",
@@ -364,7 +364,7 @@ export const hospital = {
     },
     {
       q: "Who performs retinal surgery at Neyani Eye Hospital?",
-      a: "Complex retinal and vitreoretinal surgeries are performed by our visiting retina specialist. Your doctor will discuss whether surgery is recommended and explain the benefits, risks and recovery.",
+      a: "Complex retinal and vitreoretinal surgeries are performed by our retina specialist. Your doctor will discuss whether surgery is recommended and explain the benefits, risks and recovery.",
     },
   ],
 
@@ -511,7 +511,7 @@ export const hospital = {
     },
     {
       q: "Does my child need surgery for a squint?",
-      a: "Not always. Depending on the type of squint, glasses, patching or other treatment may be tried first. If surgery is recommended, it is planned and performed by our visiting pediatric ophthalmologist and squint surgeon.",
+      a: "Not always. Depending on the type of squint, glasses, patching or other treatment may be tried first. If surgery is recommended, it is planned and performed by our pediatric ophthalmologist and squint surgeon.",
     },
     {
       q: "How often should my child's eyes be checked?",

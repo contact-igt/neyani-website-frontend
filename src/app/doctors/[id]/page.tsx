@@ -106,7 +106,7 @@ export default async function DoctorProfilePage({ params }: ProfilePageProps) {
                   <Clock3 size={18} aria-hidden="true" />
                   {isLead
                     ? <p><strong>{hospital.hours.weekdays}</strong>{hospital.hours.morning} · {hospital.hours.evening}<br />Sunday: {hospital.hours.sunday}</p>
-                    : <p><strong>Visiting consultation days</strong>Please call to confirm available dates and times.</p>}
+                    : <p><strong>Consultation days</strong>Please call to confirm available dates and times.</p>}
                 </div>
                 <div className={styles.infoRow}>
                   <Languages size={18} aria-hidden="true" />
@@ -134,7 +134,7 @@ export default async function DoctorProfilePage({ params }: ProfilePageProps) {
               {otherDoctors.map((item) => <Link href={`/doctors/${item.doctor.id}`} className={styles.otherCard} key={item.doctor.id}>
                 <span className={styles.otherImage}><Image src={item.image} alt="" fill sizes="140px" style={item.imagePosition ? { objectPosition: item.imagePosition } : undefined} /></span>
                 <span className={styles.otherCopy}>
-                  <small>{item.type === "lead" ? "Lead surgeon" : "Visiting consultant"}</small>
+                  <small>{item.type === "lead" ? "Lead surgeon" : "Specialist"}</small>
                   <strong>{item.doctor.name}</strong>
                   <em>{item.doctor.role}</em>
                   <b>View profile <ArrowRight size={15} aria-hidden="true" /></b>

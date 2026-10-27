@@ -13,7 +13,7 @@ import { hospital } from "@/content/hospital";
 import styles from "./pediatric.module.css";
 
 const reasons = [
-  { icon: Stethoscope, title: "Pediatric specialist care", description: "Children are seen by our visiting pediatric ophthalmologist and squint surgeon, Dr. Ankit Shah, for specialist assessment and treatment." },
+  { icon: Stethoscope, title: "Pediatric specialist care", description: "Children are seen by our pediatric ophthalmologist and squint surgeon, Dr. Ankit Shah, for specialist assessment and treatment." },
   { icon: Baby, title: "Dedicated pediatric lane", description: "A dedicated paediatric examination lane keeps visits calm, focused and comfortable for young children and their parents." },
   { icon: Smile, title: "Age-appropriate testing", description: "Picture-based charts and playful vision activities are adapted to your child's age, so even young children can take part." },
   { icon: Eye, title: "Squint & lazy eye care", description: "Assessment and management of squint and amblyopia, from glasses and patching to squint surgery where it is needed." },
@@ -54,7 +54,7 @@ const treatmentOptions = [
     icon: ScanEye,
     label: "Eye alignment",
     title: "Squint (Strabismus) Care",
-    description: "Detailed eye-alignment assessment, with non-surgical options or squint surgery by our visiting pediatric ophthalmologist and squint surgeon where needed.",
+    description: "Detailed eye-alignment assessment, with non-surgical options or squint surgery by our pediatric ophthalmologist and squint surgeon where needed.",
     benefits: ["Eye-alignment assessment", "Non-surgical options first where suitable", "Squint surgery when recommended"],
     image: "/pediatric-treatment-squint.png",
   },

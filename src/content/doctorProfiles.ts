@@ -61,9 +61,9 @@ export const doctorProfiles: readonly DoctorProfile[] = [
     specialty: "Retina specialist",
     description: "Dr. Urmil Shah specialises in medical and surgical management of retinal conditions, diabetic eye disease and vitreous disorders.",
     about: [
-      "Dr. Urmil Shah is the visiting retina specialist at Neyani Eye Hospital, providing consultation for retinal and vitreoretinal conditions.",
+      "Dr. Urmil Shah is the retina specialist at Neyani Eye Hospital, providing consultation for retinal and vitreoretinal conditions.",
       "Dr. Shah’s work covers the medical and surgical management of retinal disease, diabetic eye disease and vitreous disorders, supported by OCT and fundus imaging at the hospital.",
-      "As a visiting consultant, appointments are scheduled on consultation days. Please call the hospital to confirm availability.",
+      "Appointments are scheduled on consultation days. Please call the hospital to confirm availability.",
     ],
     skills: ["Retina & vitreous", "Diabetic eye disease", "Retinal evaluation"],
     expertise: [
@@ -83,9 +83,9 @@ export const doctorProfiles: readonly DoctorProfile[] = [
     specialty: "Pediatric & squint",
     description: "Dr. Ankit Shah specialises in pediatric ophthalmology, squint treatment and amblyopia management, providing comprehensive care for children’s eye health.",
     about: [
-      "Dr. Ankit Shah is the visiting pediatric ophthalmologist and squint surgeon at Neyani Eye Hospital.",
+      "Dr. Ankit Shah is the pediatric ophthalmologist and squint surgeon at Neyani Eye Hospital.",
       "Dr. Shah provides specialist eye care for children, including squint assessment and surgery, amblyopia (lazy eye) management and vision checks adapted to each child's age.",
-      "As a visiting consultant, appointments are scheduled on consultation days. Please call the hospital to confirm availability.",
+      "Appointments are scheduled on consultation days. Please call the hospital to confirm availability.",
     ],
     skills: ["Pediatric ophthalmology", "Squint treatment", "Amblyopia management"],
     expertise: [
