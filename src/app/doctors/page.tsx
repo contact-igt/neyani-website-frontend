@@ -55,7 +55,7 @@ export default function DoctorsPage() {
               {consultants.map(({ doctor, image, description, skills }) => <article className={styles.profileCard} key={doctor.id}>
                 <div className={styles.profileImage}><Image src={image} alt={doctor.name} fill sizes="(max-width: 760px) 100vw, 22vw" /></div>
                 <div className={styles.profileContent}>
-                  <p className={styles.rolePill}>Visiting consultant</p>
+                  <p className={styles.rolePill}>Specialist</p>
                   <h3>{doctor.name}</h3>
                   <p className={styles.profileRole}>{doctor.role}</p>
                   <p className={styles.profileDescription}>{description}</p>
@@ -70,7 +70,7 @@ export default function DoctorsPage() {
         </section>
         <FAQ
           faqs={hospital.doctorsFaqs}
-          intro="Helpful guidance about choosing a doctor, visiting consultant availability, second opinions and what to expect from your consultation."
+          intro="Helpful guidance about choosing a doctor, specialist availability, second opinions and what to expect from your consultation."
           image="/neyani-consultation.png"
           imageAlt="An ophthalmologist explaining eye examination results to a patient"
         />

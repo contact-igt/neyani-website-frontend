@@ -17,9 +17,9 @@ export default function PediatricCare() {
             from newborns through to school-age children and beyond.
           </p>
           <p className={styles.body}>
-            Our visiting pediatric ophthalmologist and squint surgeon handles
+            Our pediatric ophthalmologist and squint surgeon handles
             conditions including amblyopia, squints, and congenital eye disorders.
-            Complex squint surgery is performed as a visiting consultant service.
+            Complex squint surgery is performed with dedicated specialist care.
           </p>
           <div className={styles.firstCheck}>
             <span className={styles.checkIcon} aria-hidden="true">

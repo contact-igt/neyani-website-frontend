@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 };
 
 const reasons = [
-  { icon: Stethoscope, title: "Specialist-led care", description: "Squint care is supported by our visiting pediatric ophthalmologist and squint surgeon, Dr. Ankit Shah." },
+  { icon: Stethoscope, title: "Specialist-led care", description: "Squint care is supported by our pediatric ophthalmologist and squint surgeon, Dr. Ankit Shah." },
   { icon: Baby, title: "Child-friendly examination", description: "Gentle, age-appropriate vision and alignment checks help children stay comfortable and cooperative." },
   { icon: Focus, title: "Alignment assessment", description: "Cover tests and eye-movement checks help assess how well the eyes work together." },
   { icon: ScanEye, title: "Amblyopia screening", description: "Vision in each eye is checked so lazy eye can be identified early, when treatment tends to help most." },
