@@ -32,8 +32,8 @@ const carePrinciples = [
 
 const specialists = [
   { doctor: hospital.doctors[0], portrait: "/dr.yajuvendra-singh.jpg", position: "35% 30%", label: "Lead surgeon", specialty: "Proprietor and Lead Surgeon", description: "Dr. Yajuvendra Singh Rathore leads the clinical care at Neyani Eye Hospital with a focus on clear communication, ethical treatment and patient-first care.", expertise: [{ icon: Eye, label: "Cataract Surgery" }, { icon: ShieldCheck, label: "General Eye Care" }] },
-  { doctor: hospital.doctors[1], portrait: "/dr.urmil-shah.jpeg", position: "center top", label: "Visiting consultant", specialty: "Retina Specialist", description: "Dr. Urmil Shah specialises in medical and surgical management of retinal conditions, including diabetic retinopathy, macular disorders and other complex retinal diseases.", expertise: [{ icon: Eye, label: "Medical and Surgical Retina" }, { icon: ScanEye, label: "Retinal Disorders" }] },
-  { doctor: hospital.doctors[2], portrait: "/dr.ankit-shah.jpeg", position: "center top", label: "Visiting consultant", specialty: "Pediatric Ophthalmology and Squint Surgery", description: "Dr. Ankit Shah specialises in pediatric ophthalmology and squint surgery, helping children with vision and eye alignment issues.", expertise: [{ icon: Baby, label: "Pediatric Ophthalmology" }, { icon: Eye, label: "Squint Evaluation & Surgery" }] },
+  { doctor: hospital.doctors[1], portrait: "/dr.urmil-shah.jpeg", position: "center top", label: "Specialist", specialty: "Retina Specialist", description: "Dr. Urmil Shah specialises in medical and surgical management of retinal conditions, including diabetic retinopathy, macular disorders and other complex retinal diseases.", expertise: [{ icon: Eye, label: "Medical and Surgical Retina" }, { icon: ScanEye, label: "Retinal Disorders" }] },
+  { doctor: hospital.doctors[2], portrait: "/dr.ankit-shah.jpeg", position: "center top", label: "Specialist", specialty: "Pediatric Ophthalmologist & Squint Surgeon", description: "Dr. Ankit Shah specialises in pediatric ophthalmology and squint surgery, helping children with vision and eye alignment issues.", expertise: [{ icon: Baby, label: "Pediatric Ophthalmology" }, { icon: Eye, label: "Squint Evaluation & Surgery" }] },
 ] as const;
 
 export default function AboutPage() {
@@ -172,7 +172,7 @@ export default function AboutPage() {
                 </div>
               </article>)}
             </div>
-            <aside className={styles.specialistNote}><Info aria-hidden="true" /><span><strong>Retinal surgeries and squint surgeries are provided through visiting consultants or referral pathways when appropriate.</strong><small>We work with a network of experienced specialists to ensure you receive the most suitable care for your condition.</small></span></aside>
+            <aside className={styles.specialistNote}><Info aria-hidden="true" /><span><strong>Retinal surgeries and squint surgeries are provided through specialist consultants or referral pathways when appropriate.</strong><small>We work with a network of experienced specialists to ensure you receive the most suitable care for your condition.</small></span></aside>
           </div>
         </section>
         <section className={styles.impact} aria-labelledby="impact-title">

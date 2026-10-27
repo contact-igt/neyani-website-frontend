@@ -15,12 +15,12 @@ import styles from "./retina.module.css";
 const retina = hospital.priorityServices.find((service) => service.id === "retina")!;
 
 const reasons = [
-  { icon: Stethoscope, title: "Visiting retina specialist", description: "Complex retinal conditions are assessed and treated by our visiting retina specialist, Dr. Urmil Shah, with experience in retinal and vitreoretinal care." },
+  { icon: Stethoscope, title: "Retina specialist care", description: "Complex retinal conditions are assessed and treated by our retina specialist, Dr. Urmil Shah, with experience in retinal and vitreoretinal care." },
   { icon: Droplet, title: "Diabetic eye screening", description: "Regular retinal screening for people with diabetes helps detect diabetic retinopathy early, often before vision is affected." },
   { icon: ScanLine, title: "OCT retinal imaging", description: "Optical coherence tomography (OCT) gives detailed cross-sectional images of the retina and macula to detect swelling or damage." },
   { icon: Images, title: "Fundus photography", description: "Photographs of the back of the eye record the retina and blood vessels, allowing changes to be compared over time." },
   { icon: Zap, title: "Laser photocoagulation", description: "Laser treatment is available where suitable to help seal leaking blood vessels and reduce the risk of further vision loss." },
-  { icon: Microscope, title: "Vitreoretinal surgery", description: "Complex retinal and vitreoretinal surgeries are performed by our visiting retina specialist when surgery is recommended." },
+  { icon: Microscope, title: "Vitreoretinal surgery", description: "Complex retinal and vitreoretinal surgeries are performed by our retina specialist when surgery is recommended." },
   { icon: History, title: "Long-term monitoring", description: "Scheduled reviews compare imaging and examination results over time, so treatment can be adjusted when needed." },
   { icon: HeartHandshake, title: "Patient support", description: "Clear guidance through diagnosis, treatment and eligible insurance or TPA documentation, in English, Hindi or Gujarati." },
 ] as const;
@@ -70,7 +70,7 @@ const treatmentOptions = [
     icon: Microscope,
     label: "Surgical care",
     title: "Vitreoretinal Surgery",
-    description: "Complex retinal and vitreoretinal surgeries are performed by our visiting retina specialist when surgery is the most suitable option.",
+    description: "Complex retinal and vitreoretinal surgeries are performed by our retina specialist when surgery is the most suitable option.",
     benefits: ["Specialist surgical assessment", "Benefits and risks explained", "Close post-operative follow-up"],
     image: "/retina-treatment-surgery.png",
   },
