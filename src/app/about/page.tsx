@@ -13,8 +13,9 @@ import { hospital } from "@/content/hospital";
 import styles from "./about.module.css";
 
 export const metadata: Metadata = {
-  title: `About ${hospital.name}`,
-  description: `Learn about the specialist eye-care approach at ${hospital.name} in Gandhidham.`,
+  title: "Neyani Eye Hospital | Our Legacy and Founder",
+  description:
+    "Learn about Neyani Eye Hospital's history, founded by Dr. Shivpal Singh Rathore in Rapar, Kutch, in 1989, and its commitment to eye care across the region.",
 };
 
 const storyMilestones = [
@@ -113,9 +114,17 @@ export default function AboutPage() {
                 <p className={styles.founderRoleLabel}>FOUNDER OF NEYANI EYE HOSPITAL</p>
                 <h3 className={styles.founderName}>Dr. Shivpal Singh Rathore</h3>
                 <h4 className={styles.founderQualifications}>MBBS, MS (Ophthalmology)</h4>
-                <blockquote className={styles.founderDescription}>
-                  &ldquo;Dr. Shivpal Singh Rathore founded Neyani Eye Hospital in Rapar, Kutch, in 1989, with a commitment to providing dependable and accessible eye care to the people of Kutch.&rdquo;
-                </blockquote>
+                <div className={styles.founderDescription}>
+                  <p>
+                    Dr. Shivpal Singh Rathore founded Neyani Eye Hospital in Rapar, Kutch, in 1989, with a commitment to providing dependable and accessible eye care to the people of the region.
+                  </p>
+                  <p>
+                    He completed his MBBS and MS from MGM Medical College, Indore, and has performed more than 100,000 surgeries. His areas of expertise include cataract surgery and glaucoma.
+                  </p>
+                  <p>
+                    His vision laid the foundation for Neyani Eye Hospital&apos;s continued service to the Kutch community, with its presence extending to Gandhidham and consultation services in Bhachau.
+                  </p>
+                </div>
                 <div className={styles.founderMetaCards}>
                   <div className={styles.founderMetaCard}>
                     <span className={styles.founderMetaIconWrap}>
