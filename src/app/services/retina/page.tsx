@@ -15,7 +15,7 @@ import styles from "./retina.module.css";
 const retina = hospital.priorityServices.find((service) => service.id === "retina")!;
 
 const reasons = [
-  { icon: Stethoscope, title: "Retina specialist care", description: "Complex retinal conditions are assessed and treated by our retina specialist, Dr. Urmil Shah, with experience in retinal and vitreoretinal care." },
+  { icon: Stethoscope, title: "Retina specialist care", description: "Complex retinal conditions are assessed and treated by our retina specialist, Dr. Urmil Shah – Diploma in Ophthalmology, DNB Ophthalmology, with experience in retinal and vitreoretinal care." },
   { icon: Droplet, title: "Diabetic eye screening", description: "Regular retinal screening for people with diabetes helps detect diabetic retinopathy early, often before vision is affected." },
   { icon: ScanLine, title: "OCT retinal imaging", description: "Optical coherence tomography (OCT) gives detailed cross-sectional images of the retina and macula to detect swelling or damage." },
   { icon: Images, title: "Fundus photography", description: "Photographs of the back of the eye record the retina and blood vessels, allowing changes to be compared over time." },

@@ -42,7 +42,12 @@ export default function DoctorsPage() {
                 <p className={styles.rolePill}>Lead surgeon</p>
                 <h3>{lead.doctor.name}</h3>
                 <p className={styles.profileRole}>{lead.doctor.role}</p>
-                {lead.doctor.credentials && <p className={styles.credentials}><strong>{lead.doctor.credentials}</strong>{lead.doctor.fellowships}</p>}
+                {lead.doctor.credentials && (
+                  <p className={styles.credentials}>
+                    <strong>{lead.doctor.credentials}</strong>
+                    {lead.doctor.regNo && <span className={styles.regNumber}>Gujarat Medical Council Reg. No.: {lead.doctor.regNo}</span>}
+                  </p>
+                )}
                 <p className={styles.profileDescription}>{lead.description}</p>
                 <blockquote className={styles.doctorQuote}><Quote size={18} aria-hidden="true" /><p>My focus is on safe, precise and personalised care for every patient.</p></blockquote>
                 <div className={styles.profileActions}>
@@ -58,6 +63,11 @@ export default function DoctorsPage() {
                   <p className={styles.rolePill}>Specialist</p>
                   <h3>{doctor.name}</h3>
                   <p className={styles.profileRole}>{doctor.role}</p>
+                  {doctor.credentials && (
+                    <p className={styles.credentials}>
+                      <strong>{doctor.credentials}</strong>
+                    </p>
+                  )}
                   <p className={styles.profileDescription}>{description}</p>
                   <ul className={styles.skills} aria-label={`${doctor.name} specialities`}>{skills.slice(0, 2).map((skill) => <li key={skill}>{skill}</li>)}</ul>
                   <div className={styles.profileActions}>

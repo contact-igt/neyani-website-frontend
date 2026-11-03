@@ -16,7 +16,7 @@ import styles from "./glaucoma.module.css";
 const glaucoma = hospital.priorityServices.find((service) => service.id === "glaucoma")!;
 
 const reasons = [
-  { icon: Stethoscope, title: "Specialist-led care", description: "Care led by Dr. Yajuvendra Singh Rathore, MBBS, MS Ophthalmology, with experience in diagnosing and managing glaucoma." },
+  { icon: Stethoscope, title: "Specialist-led care", description: "Care led by Dr. Yajuvendra Singh Rathore, MBBS, MS Ophthalmology (Reg. No: G-60559), with experience in diagnosing and managing glaucoma." },
   { icon: Gauge, title: "Eye-pressure measurement", description: "Intraocular pressure (IOP) is measured as part of a glaucoma assessment and rechecked at follow-up visits." },
   { icon: ScanEye, title: "Optic nerve & OCT imaging", description: "Optic disc evaluation with OCT and fundus imaging helps detect and document changes to the optic nerve." },
   { icon: Activity, title: "Visual field testing", description: "A visual field analyser checks side vision, helping identify functional changes that may not be noticed day to day." },

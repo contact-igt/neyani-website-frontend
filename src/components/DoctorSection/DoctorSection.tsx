@@ -32,6 +32,7 @@ export default function DoctorSection() {
               <h3>{doctor.name}</h3>
               <p className={styles.role}>{doctor.role}</p>
               {doctor.credentials && <p className={styles.credentials}>{doctor.credentials}</p>}
+              {doctor.regNo && <p className={styles.regNo}>GMC Reg. No: {doctor.regNo}</p>}
             </div>
           </article>
         ))}

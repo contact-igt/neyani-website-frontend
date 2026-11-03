@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowRight, CalendarDays, Check, Clock3, GraduationCap, Languages, MapPin, MessageCircle, Phone, Quote } from "lucide-react";
+import { ArrowRight, CalendarDays, Check, Clock3, GraduationCap, Languages, MapPin, MessageCircle, Phone, Quote, ShieldCheck } from "lucide-react";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import WhatsAppFAB from "@/components/WhatsAppFAB/WhatsAppFAB";
@@ -59,6 +59,7 @@ export default async function DoctorProfilePage({ params }: ProfilePageProps) {
                     <p className={styles.aboutRole}>{doctor.role}</p>
                     <ul className={styles.aboutFacts}>
                       <li><GraduationCap size={16} aria-hidden="true" />{doctor.credentials || profile.specialty}</li>
+                      {doctor.regNo && <li><ShieldCheck size={16} aria-hidden="true" />Gujarat Medical Council Reg. No.: {doctor.regNo}</li>}
                       <li><CalendarDays size={16} aria-hidden="true" />At {hospital.name} · Gandhidham</li>
                       <li><Languages size={16} aria-hidden="true" />{hospital.languages.join(", ")}</li>
                     </ul>
@@ -100,7 +101,10 @@ export default async function DoctorProfilePage({ params }: ProfilePageProps) {
                 <h2>Consultation details</h2>
                 {doctor.credentials && <div className={styles.infoRow}>
                   <GraduationCap size={18} aria-hidden="true" />
-                  <p><strong>{doctor.credentials}</strong>{doctor.fellowships}</p>
+                  <div>
+                    <p><strong>Qualifications</strong>{doctor.credentials}{doctor.fellowships ? ` · ${doctor.fellowships}` : ""}</p>
+                    {doctor.regNo && <p style={{ marginTop: "4px" }}>Gujarat Medical Council Reg. No.: <strong>{doctor.regNo}</strong></p>}
+                  </div>
                 </div>}
                 <div className={styles.infoRow}>
                   <Clock3 size={18} aria-hidden="true" />

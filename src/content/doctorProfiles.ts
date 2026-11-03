@@ -35,8 +35,8 @@ export const doctorProfiles: readonly DoctorProfile[] = [
     specialty: "Cataract & eye care",
     description: "Dr. Yajuvendra Singh Rathore is an experienced ophthalmologist specialising in cataract surgery, pediatric cataract and comprehensive eye care. With a patient-centric approach, he combines advanced technology with personalised treatment plans for clear and healthy vision.",
     about: [
-      "Dr. Yajuvendra Singh Rathore is the Proprietor and Lead Surgeon at Neyani Eye Hospital, serving patients and families in Gandhidham and the wider Kutch region since 2019.",
-      "Dr. Rathore holds an MBBS and MS in Ophthalmology, a fellowship in Phaco & Refractive surgery from H.V. Desai Eye Hospital, Pune, and FICO (UK). The practice focuses on cataract surgery, pediatric cataract and comprehensive eye care.",
+      "Dr. Yajuvendra Singh Rathore is the Proprietor and Lead Surgeon at Neyani Eye Hospital, serving patients and families across Gandhidham and the wider Kutch region.",
+      "Dr. Rathore completed his MBBS from Padmashree Dr. D. Y. Patil University, Navi Mumbai (2013), and MS Ophthalmology from Dr. D. Y. Patil Vidyapeeth, Pimpri, Pune (2016). He holds Gujarat Medical Council Registration No.: G-60559, alongside a fellowship in Phaco & Refractive surgery from H.V. Desai Eye Hospital, Pune, and FICO (UK). The practice focuses on cataract surgery, pediatric cataract and comprehensive eye care.",
       "Treatment is planned after a detailed examination, and every patient receives a clear explanation of their options in English, Hindi or Gujarati.",
     ],
     skills: ["Cataract surgery", "Pediatric cataract", "General eye care"],
@@ -49,7 +49,7 @@ export const doctorProfiles: readonly DoctorProfile[] = [
       { title: "Comprehensive Eye Care", detail: "From routine eye check-ups and vision prescriptions to common eye concerns, we help you care for your eyes and maintain healthy vision." },
     ],
     services: [
-      { title: "Cataract surgery", href: "/services/cataract", detail: "Robotic, painless micro-incision cataract surgery." },
+      { title: "Cataract surgery", href: "/services/cataract", detail: "Micro-incision cataract surgery with topical anaesthesia in suitable cases." },
       { title: "General eye care", href: "/services/general", detail: "Eye checkups, prescriptions and everyday eye problems." },
     ],
     quote: "My focus is on safe, precise and personalised care for every patient.",
@@ -62,6 +62,7 @@ export const doctorProfiles: readonly DoctorProfile[] = [
     description: "Dr. Urmil Shah specialises in medical and surgical management of retinal conditions, diabetic eye disease and vitreous disorders.",
     about: [
       "Dr. Urmil Shah is the retina specialist at Neyani Eye Hospital, providing consultation for retinal and vitreoretinal conditions.",
+      "Dr. Shah completed her Diploma in Ophthalmology from Gujarat University (2010) and DNB Ophthalmology from the National Board of Examinations (2014). She was awarded the Dr. G. Venkataswamy Gold Medal for securing the highest marks in the DNB Ophthalmology final examination (June 2012 session).",
       "Dr. Shah’s work covers the medical and surgical management of retinal disease, diabetic eye disease and vitreous disorders, supported by OCT and fundus imaging at the hospital.",
       "Appointments are scheduled on consultation days. Please call the hospital to confirm availability.",
     ],
@@ -84,6 +85,7 @@ export const doctorProfiles: readonly DoctorProfile[] = [
     description: "Dr. Ankit Shah specialises in pediatric ophthalmology, squint treatment and amblyopia management, providing comprehensive care for children’s eye health.",
     about: [
       "Dr. Ankit Shah is the pediatric ophthalmologist and squint surgeon at Neyani Eye Hospital.",
+      "Dr. Shah completed his Diploma in Ophthalmology from West Bengal University of Health Sciences, Kolkata (2016), and DNB Ophthalmology from the National Board of Examinations, New Delhi (2018).",
       "Dr. Shah provides specialist eye care for children, including squint assessment and surgery, amblyopia (lazy eye) management and vision checks adapted to each child's age.",
       "Appointments are scheduled on consultation days. Please call the hospital to confirm availability.",
     ],

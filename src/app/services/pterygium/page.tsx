@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 };
 
 const reasons = [
-  { icon: Stethoscope, title: "Specialist-led care", description: "Care led by Dr. Yajuvendra Singh Rathore, MBBS, MS Ophthalmology, with experience in examining and managing eye-surface conditions." },
+  { icon: Stethoscope, title: "Specialist-led care", description: "Care led by Dr. Yajuvendra Singh Rathore – MBBS, MS Ophthalmology (Reg. No: G-60559), with experience in examining and managing eye-surface conditions." },
   { icon: ScanEye, title: "Slit-lamp examination", description: "A detailed slit-lamp review shows the size and position of the growth and the health of the surrounding eye surface." },
   { icon: Eye, title: "Vision and astigmatism check", description: "Clarity and corneal astigmatism are assessed, as a pterygium reaching the cornea can affect how clearly you see." },
   { icon: Sun, title: "Comfort and UV guidance", description: "Practical advice on irritation, redness and sun protection helps you look after your eyes between visits." },

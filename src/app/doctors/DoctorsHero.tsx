@@ -1,15 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CalendarDays, Eye, Heart, UsersRound } from "lucide-react";
-import { hospital } from "@/content/hospital";
-import StatValue from "@/components/StatValue/StatValue";
+import { ArrowRight, CalendarDays, Eye, Heart, Stethoscope } from "lucide-react";
 import styles from "./doctors.module.css";
 
 const trustItems = [
-  { icon: UsersRound, value: "80,000+", label: "Patients treated" },
-  { icon: Eye, value: "30,000+", label: "Cataract surgeries" },
-  { icon: CalendarDays, value: `Since ${hospital.established}`, label: "Trusted care" },
-  { icon: Heart, value: "Personalised care", label: "For a healthier tomorrow" },
+  { icon: Stethoscope, value: "Individual Care", label: "Thorough clinical examination" },
+  { icon: Eye, value: "Specialist Care", label: "Care across relevant ophthalmic specialities" },
+  { icon: CalendarDays, value: "Since 2019", label: "Serving Gandhidham since 2019" },
+  { icon: Heart, value: "Personalised Care", label: "Clear options and shared decisions" },
 ] as const;
 
 /** Banner shared by /doctors and every /doctors/[id] profile page. */
@@ -31,10 +29,14 @@ export default function DoctorsHero({ specialistsHref = "/about#specialists-titl
           <Image src="/doctors-hero-team-v1.png" alt="Dr. Yajuvendra Singh Rathore, Dr. Urmil Shah and Dr. Ankit Shah" fill priority sizes="(max-width: 700px) 110vw, 66vw" />
         </div>
 
-        <dl className={styles.trustStrip}>
-          {trustItems.map(({ icon: Icon, value, label }) => <div key={value}>
-            <span className={styles.trustIcon}><Icon size={27} aria-hidden="true" /></span><dt><StatValue value={value} /></dt><dd>{label}</dd>
-          </div>)}
+        <dl className={styles.trustStrip} aria-label="Our care commitments">
+          {trustItems.map(({ icon: Icon, value, label }) => (
+            <div key={value}>
+              <span className={styles.trustIcon}><Icon size={26} aria-hidden="true" /></span>
+              <dt>{value}</dt>
+              <dd>{label}</dd>
+            </div>
+          ))}
         </dl>
       </div>
     </section>

@@ -41,7 +41,13 @@ export default function Footer() {
         <div className={styles.contact}><h3>Contact information</h3><p><strong>Phone</strong><a href={hospital.phoneUrl}>{hospital.phone}</a></p><p><strong>Address</strong><span>{hospital.address}</span></p><p><strong>Clinic hours</strong><span>Mon–Sat · {hospital.hours.morning}<br />{hospital.hours.evening}</span></p></div>
       </div>
 
-      <div className={styles.bottom}><p>© {new Date().getFullYear()} {hospital.name}. All rights reserved.</p><p>Information on this website does not replace a clinical examination or medical advice.</p></div>
+      <div className={styles.bottom}>
+        <div className={styles.legalInfo}>
+          <p>© {new Date().getFullYear()} {hospital.name}. All rights reserved.</p>
+          <p className={styles.registration}>{hospital.clinicalRegistration}</p>
+        </div>
+        <p className={styles.disclaimer}>Information on this website does not replace a clinical examination or medical advice.</p>
+      </div>
     </footer>
   );
 }

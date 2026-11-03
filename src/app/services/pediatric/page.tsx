@@ -13,13 +13,13 @@ import { hospital } from "@/content/hospital";
 import styles from "./pediatric.module.css";
 
 const reasons = [
-  { icon: Stethoscope, title: "Pediatric specialist care", description: "Children are seen by our pediatric ophthalmologist and squint surgeon, Dr. Ankit Shah, for specialist assessment and treatment." },
+  { icon: Stethoscope, title: "Pediatric specialist care", description: "Children are seen by our pediatric ophthalmologist and squint surgeon, Dr. Ankit Shah – Diploma in Ophthalmology, DNB Ophthalmology, for specialist assessment and treatment." },
   { icon: Baby, title: "Dedicated pediatric lane", description: "A dedicated paediatric examination lane keeps visits calm, focused and comfortable for young children and their parents." },
   { icon: Smile, title: "Age-appropriate testing", description: "Picture-based charts and playful vision activities are adapted to your child's age, so even young children can take part." },
   { icon: Eye, title: "Squint & lazy eye care", description: "Assessment and management of squint and amblyopia, from glasses and patching to squint surgery where it is needed." },
   { icon: ScanEye, title: "Diagnostics under one roof", description: "Retinoscopy, refraction, slit-lamp examination and retinal imaging support a detailed assessment in a single visit." },
   { icon: HeartHandshake, title: "Support for parents", description: "Findings and next steps are explained clearly, with guidance on follow-up and eligible insurance or TPA documentation." },
-  { icon: CalendarCheck, title: "Established locally", description: "Neyani Eye Hospital has served patients and families in Gandhidham and the wider Kutch region since 2019." },
+  { icon: HeartHandshake, title: "Parent guidance", description: "Clear explanations and practical advice help parents support their child's vision care and compliance at home." },
   { icon: Languages, title: "Clear communication", description: "Consultations are supported in English, Hindi and Gujarati to help children and families understand their care." },
 ] as const;
 

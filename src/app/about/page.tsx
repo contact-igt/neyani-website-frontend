@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Baby, CalendarDays, Check, Eye, GraduationCap, Heart, Info, MapPin, MessageCircle, Phone, ScanEye, ShieldCheck, UsersRound } from "lucide-react";
+import { ArrowRight, Baby, CalendarDays, Check, Eye, GraduationCap, Heart, Info, Languages, MapPin, MessageCircle, Phone, ScanEye, ShieldCheck, UsersRound } from "lucide-react";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import FAQ from "@/components/FAQ/FAQ";
@@ -61,7 +61,7 @@ export default function AboutPage() {
               <aside className={`${styles.note} ${styles.noteTop}`}><span><Eye size={24} aria-hidden="true" /></span><p><strong>Personalised care</strong>Every treatment plan begins with a thorough eye examination.</p></aside>
               <dl className={styles.stats}>
                 {hospital.stats.map((stat, index) => {
-                  const Icon = [CalendarDays, UsersRound, Eye][index];
+                  const Icon = [CalendarDays, ShieldCheck, MapPin][index];
                   return <div key={stat.label}><span><Icon size={25} aria-hidden="true" /></span><dt><StatValue value={stat.value} /></dt><dd>{stat.label}</dd></div>;
                 })}
               </dl>
@@ -176,7 +176,12 @@ export default function AboutPage() {
               {specialists.map(({ doctor, portrait, position, label, specialty, description, expertise }) => <article className={styles.specialistCard} key={doctor.id}>
                 <div className={styles.specialistPortrait}><Image src={portrait} alt={doctor.name} fill sizes="(max-width: 760px) 88vw, 31vw" style={{ objectPosition: position }} /></div>
                 <div className={styles.specialistBody}>
-                  <p className={styles.specialistLabel}>{label}</p><h3>{doctor.name}</h3><h4>{specialty}</h4><p className={styles.specialistDescription}>{description}</p>
+                  <p className={styles.specialistLabel}>{label}</p>
+                  <h3>{doctor.name}</h3>
+                  <h4>{specialty}</h4>
+                  {doctor.credentials && <p className={styles.specialistCredentials}>{doctor.credentials}</p>}
+                  {doctor.regNo && <p className={styles.specialistReg}>Gujarat Medical Council Reg. No.: {doctor.regNo}</p>}
+                  <p className={styles.specialistDescription}>{description}</p>
                   <div className={styles.expertise}><strong>Areas of expertise</strong><ul>{expertise.map(({ icon: Icon, label: itemLabel }) => <li key={itemLabel}><span><Icon size={20} aria-hidden="true" /></span>{itemLabel}</li>)}</ul></div>
                 </div>
               </article>)}
@@ -188,8 +193,8 @@ export default function AboutPage() {
           <div className={`container ${styles.impactInner}`}>
             <div className={styles.impactImage} aria-hidden="true"><Image src="/cataract-consultation-v2.png" alt="" fill sizes="(max-width: 760px) 100vw, 62vw" /></div>
             <header className={styles.impactHeading}>
-              <p className={styles.kicker}><span /> Impact &amp; trust</p>
-              <h2 id="impact-title">Trusted by thousands{" "}<br /><em>for healthier vision.</em></h2>
+              <p className={styles.kicker}><span /> Clinical care standards</p>
+              <h2 id="impact-title">Committed to ethical care{" "}<br /><em>and patient wellbeing.</em></h2>
             </header>
             <ImpactStats />
             <aside className={styles.impactContact}>

@@ -7,15 +7,17 @@ import { hospital } from "@/content/hospital";
 import styles from "./TechSpotlight.module.css";
 
 const technologyImages = [
-  { src: "/oertli-faros.jpg", alt: "OERTLI FAROS — Phacoemulsification System" },
-  { src: "/zeiss-surgical-microscope.jpg", alt: "ZEISS VISU 160 — Surgical Microscope" },
-  { src: "/diagnostic-optical-biometry-v1.png", alt: "LENSTAR PRO — Haag-Streit — Optical Biometer" },
-  { src: "/diagnostic-oct-v1.png", alt: "ZEISS — OCT Imaging System" },
-  { src: "/zeiss-perimetry.jpg", alt: "ZEISS Perimetry — Visual Field Analyzer" },
-  { src: "/glaucoma-laser-treatment.png", alt: "APPASAMY — YAG Laser System" },
-  { src: "/icare-tonometer-doctor.jpg", alt: "ICARE — Tonometer" },
-  { src: "/unicos-unique-rk-clinical.jpg", alt: "UNICOS UNIQUE-RK — Autorefractometer / Keratometer" },
-  { src: "/diagnostic-retina-exam-v1.png", alt: "KEELER — Indirect Ophthalmoscope" },
+  { src: "/tech-chair-unit.webp", alt: "Ophthalmic Chair Unit — Integrated Examination Suite" },
+  { src: "/tech-unicos-rk.webp", alt: "UNICOS UNIQUE-RK — Auto Refractometer and Keratometer" },
+  { src: "/tech-slit-lamp-imaging.webp", alt: "Slit Lamp with High-Resolution Digital Imaging Module" },
+  { src: "/tech-icare-tonometer.webp", alt: "iCare ic100 — Rebound Tonometer" },
+  { src: "/tech-lenstar-biometer.webp", alt: "Haag-Streit Lenstar 900 — Optical Biometer" },
+  { src: "/tech-zeiss-oct.webp", alt: "ZEISS Cirrus HD-OCT — Optical Coherence Tomography System" },
+  { src: "/tech-zeiss-perimetry.webp", alt: "ZEISS Humphrey Field Analyzer — Visual Field Perimeter" },
+  { src: "/tech-appasamy-yag.webp", alt: "Appasamy Appa YAG Laser 307 — Ophthalmic Laser System" },
+  { src: "/tech-oertli-faros.webp", alt: "OERTLI FAROS — Phacoemulsification System" },
+  { src: "/tech-zeiss-visu150.webp", alt: "ZEISS VISU 150 — Surgical Operating Microscope" },
+  { src: "/tech-alcon-infiniti.webp", alt: "Alcon Infiniti Vision System — Phacoemulsification Platform" },
 ] as const;
 
 export default function TechSpotlight() {
@@ -128,7 +130,9 @@ function TechCard({ item, index }: { item: (typeof hospital.techSpotlight.items)
           src={image.src}
           alt={image.alt}
           fill
-          quality={95}
+          quality={88}
+          priority={index === 0}
+          loading={index === 0 ? "eager" : "lazy"}
           sizes="(max-width: 620px) 85vw, (max-width: 1024px) 340px, 360px"
         />
       </div>
