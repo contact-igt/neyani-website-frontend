@@ -22,7 +22,7 @@ const reasons = [
   { icon: Eye, title: "Vision and astigmatism check", description: "Clarity and corneal astigmatism are assessed, as a pterygium reaching the cornea can affect how clearly you see." },
   { icon: Sun, title: "Comfort and UV guidance", description: "Practical advice on irritation, redness and sun protection helps you look after your eyes between visits." },
   { icon: SlidersHorizontal, title: "Individual treatment plans", description: "Monitoring, eye drops or surgery are considered only after examination, based on the growth and your symptoms." },
-  { icon: Microscope, title: "Advanced surgical technology", description: "Surgery is supported by the Zeiss Visu 160 operating microscope, with a clear, magnified view throughout the procedure." },
+  { icon: Microscope, title: "Advanced surgical technology", description: "Surgery is supported by the Zeiss Visu 150 operating microscope, with a clear, magnified view throughout the procedure." },
   { icon: HeartHandshake, title: "Patient support", description: "The team provides clear guidance through diagnosis, treatment and eligible insurance or TPA documentation." },
   { icon: Languages, title: "Clear communication", description: "Consultations are supported in English, Hindi and Gujarati to help patients and families understand their care." },
 ] as const;

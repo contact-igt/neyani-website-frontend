@@ -8,7 +8,7 @@ Add a diagnostic-services and advanced-equipment section immediately after the â
 
 1. A full-width diagnostic hero image introduces the section.
 2. **Diagnostic Services** follows as one large feature card. It auto-advances slowly through seven services, with accessible manual pagination and pause-on-focus/hover behavior. Each slide presents one service with an icon, title, concise clinical description, and the generated clinical image.
-3. **Advanced Equipment** follows as a responsive card grid. It contains six equipment entries: Oertli FAROS, ZEISS VISU 160, ZEISS OCT, Lenstar Pro, iCare Tonometer, and Appasamy YAG Laser.
+3. **Advanced Equipment** follows as a responsive card grid. It contains six equipment entries: Oertli FAROS, ZEISS VISU 150, ZEISS OCT, Lenstar Pro, iCare Tonometer, and Appasamy YAG Laser.
 
 ## Visual rules
 
@@ -34,7 +34,7 @@ Add a diagnostic-services and advanced-equipment section immediately after the â
 ### Advanced Equipment
 
 - Oertli FAROS
-- ZEISS VISU 160
+- ZEISS VISU 150
 - ZEISS OCT
 - Lenstar Pro
 - iCare Tonometer
