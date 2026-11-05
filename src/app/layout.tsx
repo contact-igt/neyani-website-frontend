@@ -121,6 +121,7 @@ const localBusinessSchema = {
     { "@type": "City", name: "Adipur" },
     { "@type": "City", name: "Anjar" },
     { "@type": "City", name: "Bhachau" },
+    { "@type": "City", name: "Rapar" },
     { "@type": "AdministrativeArea", name: "Kutch" },
     { "@type": "AdministrativeArea", name: "Gujarat" },
   ],

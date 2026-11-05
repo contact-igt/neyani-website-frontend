@@ -35,7 +35,7 @@ export const hospital = {
   stats: [
     { value: "35+ Years Legacy", label: "Serving Kutch Communities Since 1989" },
     { value: "Certified Specialists", label: "GMC Registered Ophthalmologists" },
-    { value: "Regional Eye Care", label: "Gandhidham Hospital & Bhachau OPD" },
+    { value: "Regional Eye Care", label: "Gandhidham, Rapar & Bhachau" },
   ],
 
   doctors: [
