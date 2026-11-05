@@ -14,11 +14,11 @@ import styles from "./cataract.module.css";
 const cataract = hospital.priorityServices.find((service) => service.id === "cataract")!;
 
 const reasons = [
-  { icon: Stethoscope, title: "Specialist-led care", description: "Care led by Dr. Yajuvendra Singh Rathore, MBBS, MS Ophthalmology, with fellowship training in phaco and refractive surgery." },
+  { icon: Stethoscope, title: "Specialist-led care", description: "Care led by Dr. Yajuvendra Singh Rathore, MBBS, MS Ophthalmology (Reg. No: G-60559)." },
   { icon: Cpu, title: "Advanced technology", description: "The Oertli Faros phacoemulsification system and Zeiss Visu 160 operating microscope support precise cataract procedures." },
   { icon: SlidersHorizontal, title: "Individual assessment", description: "The surgical technique and anaesthesia approach are selected after examination and according to individual suitability." },
   { icon: HeartHandshake, title: "Patient support", description: "The team provides clear guidance through consultation, treatment and eligible insurance or TPA documentation." },
-  { icon: CalendarCheck, title: "Established locally", description: "Founded in Rapar in 1989, Neyani Eye Hospital established its second eye centre in Gandhidham in 2019 to serve patients and families across Kutch." },
+  { icon: ShieldCheck, title: "Structured follow-up", description: "Post-operative examinations and clear recovery guidance ensure your vision stabilizes safely after cataract surgery." },
   { icon: ShieldCheck, title: "Micro-incision approach", description: "The 1.6 mm MICS technique and topical anaesthesia are used where the patient and clinical situation are suitable." },
   { icon: ScanEye, title: "Diagnostics under one roof", description: "Slit-lamp examination, retinoscopy, OCT, fundus photography and visual field testing support detailed assessment." },
   { icon: Languages, title: "Clear communication", description: "Consultations are supported in English, Hindi and Gujarati to help patients and families understand their care." },

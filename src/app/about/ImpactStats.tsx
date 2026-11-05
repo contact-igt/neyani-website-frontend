@@ -1,15 +1,30 @@
-"use client";
-
-import CountUp from "react-countup";
-import { CalendarDays, Eye, UsersRound } from "lucide-react";
+import { CalendarCheck, ScanEye, ShieldCheck } from "lucide-react";
 import styles from "./about.module.css";
 
 export default function ImpactStats() {
   return (
-    <div className={styles.impactStats}>
-      <article><span><UsersRound aria-hidden="true" /></span><div><strong><CountUp end={80000} separator="," duration={2} enableScrollSpy scrollSpyOnce />+</strong><p>Patients treated</p></div></article>
-      <article><span><Eye aria-hidden="true" /></span><div><strong><CountUp end={30000} separator="," duration={2} enableScrollSpy scrollSpyOnce />+</strong><p>Cataract surgeries<br />completed</p></div></article>
-      <article><span><CalendarDays aria-hidden="true" /></span><div><p>Since</p><strong><CountUp end={2019} separator="" duration={2} enableScrollSpy scrollSpyOnce /></strong><p>Serving with care</p></div></article>
+    <div className={styles.impactStats} aria-label="Clinical care commitments">
+      <article>
+        <span><ScanEye size={36} aria-hidden="true" /></span>
+        <div>
+          <strong>Objective Diagnostics</strong>
+          <p>Clinical decisions backed by precision diagnostic imaging and slit-lamp examinations.</p>
+        </div>
+      </article>
+      <article>
+        <span><ShieldCheck size={36} aria-hidden="true" /></span>
+        <div>
+          <strong>Transparent Guidance</strong>
+          <p>Open discussions regarding treatment benefits, alternatives and expected recovery steps.</p>
+        </div>
+      </article>
+      <article>
+        <span><CalendarCheck size={36} aria-hidden="true" /></span>
+        <div>
+          <strong>Follow-Up Continuity</strong>
+          <p>Structured post-procedure reviews to monitor recovery and protect visual outcomes.</p>
+        </div>
+      </article>
     </div>
   );
 }

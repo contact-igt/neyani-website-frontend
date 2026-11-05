@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Baby, CalendarDays, Check, Eye, GraduationCap, Heart, Info, MapPin, MessageCircle, Phone, ScanEye, ShieldCheck, UsersRound } from "lucide-react";
+import { ArrowRight, Baby, CalendarDays, Check, Eye, GraduationCap, Heart, Info, Languages, MapPin, MessageCircle, Phone, ScanEye, ShieldCheck, UsersRound } from "lucide-react";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import FAQ from "@/components/FAQ/FAQ";
@@ -13,8 +13,9 @@ import { hospital } from "@/content/hospital";
 import styles from "./about.module.css";
 
 export const metadata: Metadata = {
-  title: `About ${hospital.name}`,
-  description: `Learn about the specialist eye-care approach at ${hospital.name} in Gandhidham.`,
+  title: "Neyani Eye Hospital | Our Legacy and Founder",
+  description:
+    "Learn about Neyani Eye Hospital's history, founded by Dr. Shivpal Singh Rathore in Rapar, Kutch, in 1989, and its commitment to eye care across the region.",
 };
 
 const storyMilestones = [
@@ -60,7 +61,7 @@ export default function AboutPage() {
               <aside className={`${styles.note} ${styles.noteTop}`}><span><Eye size={24} aria-hidden="true" /></span><p><strong>Personalised care</strong>Every treatment plan begins with a thorough eye examination.</p></aside>
               <dl className={styles.stats}>
                 {hospital.stats.map((stat, index) => {
-                  const Icon = [CalendarDays, UsersRound, Eye][index];
+                  const Icon = [CalendarDays, ShieldCheck, MapPin][index];
                   return <div key={stat.label}><span><Icon size={25} aria-hidden="true" /></span><dt><StatValue value={stat.value} /></dt><dd>{stat.label}</dd></div>;
                 })}
               </dl>
@@ -113,9 +114,17 @@ export default function AboutPage() {
                 <p className={styles.founderRoleLabel}>FOUNDER OF NEYANI EYE HOSPITAL</p>
                 <h3 className={styles.founderName}>Dr. Shivpal Singh Rathore</h3>
                 <h4 className={styles.founderQualifications}>MBBS, MS (Ophthalmology)</h4>
-                <blockquote className={styles.founderDescription}>
-                  &ldquo;Dr. Shivpal Singh Rathore founded Neyani Eye Hospital in Rapar, Kutch, in 1989, with a commitment to providing dependable and accessible eye care to the people of Kutch.&rdquo;
-                </blockquote>
+                <div className={styles.founderDescription}>
+                  <p>
+                    Dr. Shivpal Singh Rathore founded Neyani Eye Hospital in Rapar, Kutch, in 1989, with a commitment to providing dependable and accessible eye care to the people of the region.
+                  </p>
+                  <p>
+                    He completed his MBBS and MS from MGM Medical College, Indore, and has performed more than 100,000 surgeries. His areas of expertise include cataract surgery and glaucoma.
+                  </p>
+                  <p>
+                    His vision laid the foundation for Neyani Eye Hospital&apos;s continued service to the Kutch community, with its presence extending to Gandhidham and consultation services in Bhachau.
+                  </p>
+                </div>
                 <div className={styles.founderMetaCards}>
                   <div className={styles.founderMetaCard}>
                     <span className={styles.founderMetaIconWrap}>
@@ -167,7 +176,12 @@ export default function AboutPage() {
               {specialists.map(({ doctor, portrait, position, label, specialty, description, expertise }) => <article className={styles.specialistCard} key={doctor.id}>
                 <div className={styles.specialistPortrait}><Image src={portrait} alt={doctor.name} fill sizes="(max-width: 760px) 88vw, 31vw" style={{ objectPosition: position }} /></div>
                 <div className={styles.specialistBody}>
-                  <p className={styles.specialistLabel}>{label}</p><h3>{doctor.name}</h3><h4>{specialty}</h4><p className={styles.specialistDescription}>{description}</p>
+                  <p className={styles.specialistLabel}>{label}</p>
+                  <h3>{doctor.name}</h3>
+                  <h4>{specialty}</h4>
+                  {doctor.credentials && <p className={styles.specialistCredentials}>{doctor.credentials}</p>}
+                  {doctor.regNo && <p className={styles.specialistReg}>Gujarat Medical Council Reg. No.: {doctor.regNo}</p>}
+                  <p className={styles.specialistDescription}>{description}</p>
                   <div className={styles.expertise}><strong>Areas of expertise</strong><ul>{expertise.map(({ icon: Icon, label: itemLabel }) => <li key={itemLabel}><span><Icon size={20} aria-hidden="true" /></span>{itemLabel}</li>)}</ul></div>
                 </div>
               </article>)}
@@ -179,8 +193,8 @@ export default function AboutPage() {
           <div className={`container ${styles.impactInner}`}>
             <div className={styles.impactImage} aria-hidden="true"><Image src="/cataract-consultation-v2.png" alt="" fill sizes="(max-width: 760px) 100vw, 62vw" /></div>
             <header className={styles.impactHeading}>
-              <p className={styles.kicker}><span /> Impact &amp; trust</p>
-              <h2 id="impact-title">Trusted by thousands{" "}<br /><em>for healthier vision.</em></h2>
+              <p className={styles.kicker}><span /> Clinical care standards</p>
+              <h2 id="impact-title">Committed to ethical care{" "}<br /><em>and patient wellbeing.</em></h2>
             </header>
             <ImpactStats />
             <aside className={styles.impactContact}>

@@ -117,6 +117,12 @@
   font-size: 11px;
   line-height: 1.4;
 }
+.regNo {
+  margin-top: 3px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 11px;
+  line-height: 1.4;
+}
 .card:hover .portrait {
   transform: scale(1.035);
 }
@@ -185,4 +191,4 @@
     scroll-snap-align: center;
   }
 }
-@media (max-width:600px) { .heading h2 { font-size:clamp(30px,8vw,38px); } .heading p { font-size:16px; } .role, .credentials { font-size:15px; } }
+@media (max-width:600px) { .heading h2 { font-size:clamp(30px,8vw,38px); } .heading p { font-size:16px; } .role, .credentials, .regNo { font-size:15px; } }

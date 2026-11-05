@@ -14,7 +14,7 @@ export default function Introduction() {
       <div className={`container ${styles.inner}`}>
         <div className={styles.imageWrap}>
           <Image src="/neyani-consultation.png" alt="Ophthalmologist explaining an eye scan to a patient" width={1122} height={1402} quality={95} sizes="(max-width: 768px) 100vw, 44vw" className={styles.image} />
-          <span className={styles.imageBadge}>Since 2019 <i /> Gandhidham</span>
+          <span className={styles.imageBadge}>Specialist Eye Care <i /> Gandhidham</span>
         </div>
         <div className={styles.content}>
           <h2 className={styles.heading}>Eye care, <span className="title-secondary">explained clearly.</span></h2>

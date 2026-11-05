@@ -43,13 +43,13 @@ const examinationSteps = [
 ] as const;
 
 const reasons = [
-  { icon: Stethoscope, title: "Specialist-led care", description: "Examinations are led by Dr. Yajuvendra Singh Rathore, MBBS, MS Ophthalmology, with fellowship training in phaco and refractive surgery." },
+  { icon: Stethoscope, title: "Specialist-led care", description: "Examinations are led by Dr. Yajuvendra Singh Rathore – MBBS, MS Ophthalmology (Reg. No: G-60559)." },
   { icon: ScanEye, title: "Thorough eye examinations", description: "Slit-lamp examination, retinoscopy and a dedicated refraction lane support a careful check of both vision and eye health." },
   { icon: Glasses, title: "Accurate prescriptions", description: "Vision is tested carefully so spectacle prescriptions support clear, comfortable sight for reading, work and daily life." },
   { icon: Droplets, title: "Dry eye & allergy care", description: "Assessment and management of dry eye, conjunctivitis and allergic eye disease, based on the cause of your symptoms." },
   { icon: ScanLine, title: "Diagnostics under one roof", description: "OCT, fundus photography and visual field testing are available when your examination shows they are needed." },
   { icon: Users, title: "Care for the whole family", description: "Routine annual checkups for adults and children, with dedicated pediatric examination facilities for younger patients." },
-  { icon: CalendarCheck, title: "Established locally", description: "Neyani Eye Hospital has served patients and families in Gandhidham and the wider Kutch region since 2019." },
+  { icon: ShieldCheck, title: "Preventive eye care", description: "Routine evaluations help identify vision changes, refractive errors and eye pressure variations before symptoms advance." },
   { icon: Languages, title: "Clear communication", description: "Consultations are supported in English, Hindi and Gujarati to help patients and families understand their care." },
 ] as const;
 

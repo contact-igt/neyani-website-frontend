@@ -164,7 +164,21 @@
   gap: 24px;
   border-top: 1px solid rgb(203 231 239 / 20%);
   color: var(--text-on-dark-muted);
-  font-size: 10px;
+  font-size: 11px;
+}
+.legalInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.registration {
+  color: var(--brand-cyan-soft);
+  font-size: 11px;
+}
+.disclaimer {
+  max-width: 50ch;
+  text-align: right;
+  line-height: 1.5;
 }
 @media (max-width: 900px) {
   .top {
@@ -212,6 +226,10 @@
   .bottom {
     align-items: flex-start;
     flex-direction: column;
+    gap: 12px;
+  }
+  .disclaimer {
+    text-align: left;
   }
 }
 @media (max-width: 600px) {
@@ -222,5 +240,9 @@
   }
   .main nav a {
     font-size: 14px;
+  }
+  .bottom p,
+  .registration {
+    font-size: 12px;
   }
 }

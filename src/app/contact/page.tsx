@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Check, Clock3, MapPin, MessageCircle, Phone } from "lucide-react";
+import { ArrowRight, Check, Clock3, Eye, MapPin, MessageCircle, Phone } from "lucide-react";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import WhatsAppFAB from "@/components/WhatsAppFAB/WhatsAppFAB";
@@ -9,9 +9,10 @@ import { hospital } from "@/content/hospital";
 import AppointmentForm from "./AppointmentForm";
 import styles from "./contact.module.css";
 
-export const metadata:Metadata={
-  title:`Contact & Appointments — ${hospital.name}`,
-  description:`Book an eye consultation at ${hospital.name} in Gandhidham or contact our team for directions and visiting hours.`,
+export const metadata: Metadata = {
+  title: "Contact Neyani Eye Hospital | Gandhidham & Bhachau",
+  description:
+    "Find Neyani Eye Hospital's locations in Gandhidham and Bhachau, Kutch. View location details and contact the hospital to enquire about eye consultations and appointments.",
 };
 
 export default function ContactPage() {
@@ -71,6 +72,40 @@ export default function ContactPage() {
                   allowFullScreen
                 />
               </div>
+            </div>
+
+            <div className={styles.location} aria-labelledby="bhachau-location-heading">
+              <div className={styles.locationHeading}>
+                <div>
+                  <p>OPD consultations</p>
+                  <h2 id="bhachau-location-heading">Bhachau OPD Centre</h2>
+                </div>
+              </div>
+              <aside className={styles.contactCard} style={{ minHeight: "auto", maxWidth: "680px" }}>
+                <div className={styles.contactHeading}>
+                  <p>OPD Consultation Centre</p>
+                  <h3 style={{ marginTop: "10px", color: "var(--text-on-dark)", fontSize: "clamp(26px, 2.8vw, 36px)", fontWeight: 750, letterSpacing: "-0.04em" }}>
+                    Bhachau OPD Centre
+                  </h3>
+                  <span>OPD consultation services for patients across Bhachau and the wider Kutch region.</span>
+                </div>
+                <div className={styles.contactList}>
+                  <div>
+                    <i><MapPin size={18} aria-hidden="true" /></i>
+                    <span>
+                      <small>Address</small>
+                      <strong>Neyani Eye Hospital, 1st Floor, Jyoti Medical, Opposite Old Post Office, Bhachau, Kutch, Gujarat, India.</strong>
+                    </span>
+                  </div>
+                  <div>
+                    <i><Eye size={18} aria-hidden="true" /></i>
+                    <span>
+                      <small>Location type</small>
+                      <strong>OPD consultations</strong>
+                    </span>
+                  </div>
+                </div>
+              </aside>
             </div>
           </div>
         </section>

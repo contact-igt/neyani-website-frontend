@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 };
 
 const reasons = [
-  { icon: Stethoscope, title: "Specialist-led care", description: "Squint care is supported by our pediatric ophthalmologist and squint surgeon, Dr. Ankit Shah." },
+  { icon: Stethoscope, title: "Specialist-led care", description: "Squint care is supported by our visiting pediatric ophthalmologist and squint surgeon, Dr. Ankit Shah, Diploma in Ophthalmology – West Bengal University of Health Sciences, Kolkata (2016), DNB Ophthalmology – National Board of Examinations, New Delhi (2018)." },
   { icon: Baby, title: "Child-friendly examination", description: "Gentle, age-appropriate vision and alignment checks help children stay comfortable and cooperative." },
   { icon: Focus, title: "Alignment assessment", description: "Cover tests and eye-movement checks help assess how well the eyes work together." },
   { icon: ScanEye, title: "Amblyopia screening", description: "Vision in each eye is checked so lazy eye can be identified early, when treatment tends to help most." },
@@ -43,7 +43,7 @@ const treatmentOptions = [
     title: "Glasses & Refraction",
     description: "Some squints are linked to uncorrected focusing errors. The right glasses can improve alignment and help vision develop evenly.",
     benefits: ["Careful refraction testing", "Guidance on wearing glasses", "Reviewed at follow-up visits"],
-    image: "/squint-improved-vision-v1.png",
+    image: "/squint-ongoing-support-diag-v1.png",
   },
   {
     icon: Eye,
@@ -59,15 +59,15 @@ const treatmentOptions = [
     title: "Squint Surgery",
     description: "When other measures are not enough, surgery on the eye muscles may be recommended to improve alignment.",
     benefits: ["Considered after careful assessment", "Benefits and risks explained", "Close post-operative follow-up"],
-    image: "/squint-before-treatment-v1.png",
+    image: "/squint-alignment-assessment-diag-v1.png",
   },
 ] as const;
 
 const benefits = [
-  { image: "/squint-improved-vision-v1.png", title: "Better eye alignment", description: "Glasses, therapy or surgery may help the eyes line up and work together more comfortably." },
+  { image: "/squint-ongoing-support-diag-v1.png", title: "Better eye alignment", description: "Glasses, therapy or surgery may help the eyes line up and work together more comfortably." },
   { image: "/squint-pediatric-exam-v1.png", title: "Healthier visual development", description: "Early care in childhood supports clearer vision in both eyes as the visual system matures." },
   { image: "/squint-alignment-assessment-v1.png", title: "Improved coordination", description: "Well-aligned eyes may support depth perception, reading and everyday activities." },
-  { image: "/squint-before-treatment-v1.png", title: "Greater confidence", description: "Many children and adults feel more comfortable in social situations once their eyes look and work better together." },
+  { image: "/squint-alignment-assessment-diag-v1.png", title: "Greater confidence", description: "Many children and adults feel more comfortable in social situations once their eyes look and work better together." },
   { image: "/squint-care-hero-v1.png", title: "Clear guidance for families", description: "Each step is explained clearly, so parents know what to expect and how to support treatment at home." },
 ] as const;
 
@@ -97,10 +97,10 @@ export default function SquintPage() {
           <aside className={styles.assurance}><span><ShieldCheck size={24} aria-hidden="true" /></span><div><strong>Early treatment can improve vision and coordination</strong><p>We explain every recommended next step clearly, with care matched to your child&apos;s examination.</p></div></aside>
         </div>
         <div className={styles.journey} aria-label="Squint care journey">
-          <article><figure><Image src="/squint-before-treatment-v1.png" alt="Child before a squint assessment" fill sizes="(max-width: 850px) 100vw, 48vw" /></figure><div className={styles.journeyCard}><span className={styles.journeyIcon}><Eye aria-hidden="true" /></span><div className={styles.journeyContent}><b>01</b><h3>Before treatment</h3><p>Early signs may include eyes that do not appear to work together.</p></div></div><svg className={styles.journeyArrow} viewBox="0 0 92 58" fill="none" aria-hidden="true"><path d="M15 3C15 35 35 46 70 46" /><path d="m61 37 9 9-10 8" /></svg></article>
-          <article><figure><Image src="/squint-alignment-assessment-v1.png" alt="Doctor assessing a child's eye alignment" fill sizes="(max-width: 850px) 100vw, 48vw" /></figure><div className={styles.journeyCard}><span className={styles.journeyIcon}><Focus aria-hidden="true" /></span><div className={styles.journeyContent}><b>02</b><h3>Eye alignment assessment</h3><p>Gentle vision and cover tests help us assess alignment accurately.</p></div></div><svg className={styles.journeyArrow} viewBox="0 0 92 58" fill="none" aria-hidden="true"><path d="M15 3C15 35 35 46 70 46" /><path d="m61 37 9 9-10 8" /></svg></article>
+          <article><figure><Image src="/squint-alignment-assessment-diag-v1.png" alt="Clinical medical illustration showing eye alignment assessment" fill sizes="(max-width: 850px) 100vw, 48vw" /></figure><div className={styles.journeyCard}><span className={styles.journeyIcon}><Eye aria-hidden="true" /></span><div className={styles.journeyContent}><b>01</b><h3>Alignment Assessment</h3><p>Objective evaluation of visual axes, direction and positioning of both eyes.</p></div></div><svg className={styles.journeyArrow} viewBox="0 0 92 58" fill="none" aria-hidden="true"><path d="M15 3C15 35 35 46 70 46" /><path d="m61 37 9 9-10 8" /></svg></article>
+          <article><figure><Image src="/squint-alignment-assessment-v1.png" alt="Doctor assessing a child's eye alignment" fill sizes="(max-width: 850px) 100vw, 48vw" /></figure><div className={styles.journeyCard}><span className={styles.journeyIcon}><Focus aria-hidden="true" /></span><div className={styles.journeyContent}><b>02</b><h3>Clinical alignment examination</h3><p>Gentle vision and cover tests help us assess alignment accurately.</p></div></div><svg className={styles.journeyArrow} viewBox="0 0 92 58" fill="none" aria-hidden="true"><path d="M15 3C15 35 35 46 70 46" /><path d="m61 37 9 9-10 8" /></svg></article>
           <article><figure><Image src="/squint-pediatric-exam-v1.png" alt="Pediatric eye examination with a slit lamp" fill sizes="(max-width: 850px) 100vw, 48vw" /></figure><div className={styles.journeyCard}><span className={styles.journeyIcon}><ScanEye aria-hidden="true" /></span><div className={styles.journeyContent}><b>03</b><h3>Pediatric eye examination</h3><p>We check vision, eye movement and overall eye health.</p></div></div><svg className={styles.journeyArrow} viewBox="0 0 92 58" fill="none" aria-hidden="true"><path d="M15 3C15 35 35 46 70 46" /><path d="m61 37 9 9-10 8" /></svg></article>
-          <article><figure><Image src="/squint-improved-vision-v1.png" alt="Child wearing glasses after an eye appointment" fill sizes="(max-width: 850px) 100vw, 48vw" /></figure><div className={styles.journeyCard}><span className={styles.journeyIcon}><Eye aria-hidden="true" /></span><div className={styles.journeyContent}><b>04</b><h3>Improved vision after treatment</h3><p>Glasses, therapy or surgery may support clearer, more coordinated vision.</p></div></div></article>
+          <article><figure><Image src="/squint-ongoing-support-diag-v1.png" alt="Clinical medical illustration representing ongoing squint care and alignment support" fill sizes="(max-width: 850px) 100vw, 48vw" /></figure><div className={styles.journeyCard}><span className={styles.journeyIcon}><Eye aria-hidden="true" /></span><div className={styles.journeyContent}><b>04</b><h3>Ongoing Alignment Support</h3><p>Regular follow-up, optical guidance and ongoing monitoring to support coordination.</p></div></div></article>
         </div>
       </div>
     </section>
@@ -134,7 +134,7 @@ export default function SquintPage() {
           <Link href="/contact#appointment" className={styles.evaluationCta}>Book an evaluation <span><ArrowRight size={18} aria-hidden="true" /></span></Link>
         </div>
         <div className={styles.evaluationFlow} aria-label="Squint evaluation process">
-          <article><Image src="/squint-before-treatment-v1.png" alt="Child before a squint assessment" fill sizes="(max-width: 850px) 100vw, 34vw" /><h3><b>01</b> Before treatment</h3><aside><Eye aria-hidden="true" /><span><strong>Eyes misaligned</strong>Difficulty focusing and depth perception</span></aside></article><article><Image src="/squint-alignment-assessment-v1.png" alt="Eye alignment assessment for a child" fill sizes="(max-width: 850px) 100vw, 34vw" /><h3><b>02</b> Eye alignment assessment</h3><aside><Focus aria-hidden="true" /><span><strong>Precise evaluation</strong>Detailed tests for eye alignment and vision</span></aside></article><div className={styles.treatmentPlan}><ShieldCheck size={20} aria-hidden="true" /> Personalized treatment plan</div><article><Image src="/squint-pediatric-exam-v1.png" alt="Pediatric eye examination" fill sizes="(max-width: 850px) 100vw, 34vw" /><h3><b>03</b> Pediatric examination</h3><aside><ScanEye aria-hidden="true" /><span><strong>Specialist assessment</strong>Child-friendly comprehensive evaluation</span></aside></article><article><Image src="/squint-improved-vision-v1.png" alt="Child with improved vision after treatment" fill sizes="(max-width: 850px) 100vw, 34vw" /><h3><b>04</b> Improved vision after treatment</h3><aside><Eye aria-hidden="true" /><span><strong>Better alignment</strong>Improved vision and confidence</span></aside></article>
+          <article><Image src="/squint-alignment-assessment-diag-v1.png" alt="Medical illustration of eye alignment assessment" fill sizes="(max-width: 850px) 100vw, 34vw" /><h3><b>01</b> Alignment Assessment</h3><aside><Eye aria-hidden="true" /><span><strong>Visual axis evaluation</strong>Assessing the direction and positioning of both eyes</span></aside></article><article><Image src="/squint-alignment-assessment-v1.png" alt="Eye alignment assessment for a child" fill sizes="(max-width: 850px) 100vw, 34vw" /><h3><b>02</b> Eye alignment assessment</h3><aside><Focus aria-hidden="true" /><span><strong>Precise evaluation</strong>Detailed tests for eye alignment and vision</span></aside></article><div className={styles.treatmentPlan}><ShieldCheck size={20} aria-hidden="true" /> Personalized treatment plan</div><article><Image src="/squint-pediatric-exam-v1.png" alt="Pediatric eye examination" fill sizes="(max-width: 850px) 100vw, 34vw" /><h3><b>03</b> Pediatric examination</h3><aside><ScanEye aria-hidden="true" /><span><strong>Specialist assessment</strong>Child-friendly comprehensive evaluation</span></aside></article><article><Image src="/squint-ongoing-support-diag-v1.png" alt="Medical illustration representing ongoing alignment support" fill sizes="(max-width: 850px) 100vw, 34vw" /><h3><b>04</b> Ongoing Alignment Support</h3><aside><ShieldCheck aria-hidden="true" /><span><strong>Ongoing care</strong>Follow-up assessment and coordinated support</span></aside></article>
         </div>
       </div>
     </section>

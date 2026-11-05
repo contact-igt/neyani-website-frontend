@@ -28,10 +28,14 @@ export const hospital = {
 
   established: "2019",
 
+  clinicalRegistrationNo: "GUJKAC202500085PR",
+  clinicalRegistration:
+    "Clinical Establishment Registration No.: GUJKAC202500085PR",
+
   stats: [
-    { value: "Est. 2019", label: "Serving Gandhidham since" },
-    { value: "80,000+", label: "Patients treated" },
-    { value: "30,000+", label: "Cataract surgeries performed" },
+    { value: "Since 2019", label: "Serving Gandhidham since 2019" },
+    { value: "Registered Facility", label: "Clinical Reg. GUJKAC202500085PR" },
+    { value: "Regional Care", label: "Gandhidham Hospital & Bhachau OPD" },
   ],
 
   doctors: [
@@ -39,6 +43,12 @@ export const hospital = {
       id: "yajuvendra-singh-rathore",
       name: "Dr. Yajuvendra Singh Rathore",
       credentials: "MBBS, MS Ophthalmology",
+      regNo: "G-60559",
+      registration: "Gujarat Medical Council Registration No.: G-60559",
+      qualifications: [
+        "MBBS – Padmashree Dr. D. Y. Patil University, Navi Mumbai (2013)",
+        "MS Ophthalmology – Dr. D. Y. Patil Vidyapeeth, Pimpri, Pune (2016)",
+      ],
       fellowships:
         "Fellow Phaco & Refractive, H.V. Desai Eye Hospital, Pune · FICO (UK)",
       role: "Proprietor & Lead Surgeon",
@@ -47,7 +57,16 @@ export const hospital = {
     {
       id: "urmil-shah",
       name: "Dr. Urmil Shah",
-      credentials: "",
+      credentials: "Diploma in Ophthalmology, DNB Ophthalmology",
+      regNo: "",
+      registration: "",
+      qualifications: [
+        "Diploma in Ophthalmology – Gujarat University (2010)",
+        "DNB Ophthalmology – National Board of Examinations (2014)",
+      ],
+      awards: [
+        "Dr. G. Venkataswamy Gold Medal – Highest marks in DNB Ophthalmology final examination (June 2012 session)",
+      ],
       fellowships: "",
       role: "Retina Specialist",
       note: "Retina specialist — retinal and vitreoretinal surgery",
@@ -55,7 +74,13 @@ export const hospital = {
     {
       id: "ankit-shah",
       name: "Dr. Ankit Shah",
-      credentials: "",
+      credentials: "Diploma in Ophthalmology, DNB Ophthalmology",
+      regNo: "",
+      registration: "",
+      qualifications: [
+        "Diploma in Ophthalmology – West Bengal University of Health Sciences, Kolkata (2016)",
+        "DNB Ophthalmology – National Board of Examinations, New Delhi (2018)",
+      ],
       fellowships: "",
       role: "Pediatric Ophthalmologist & Squint Surgeon",
       note: "Pediatric eye care and squint surgery",
@@ -113,7 +138,7 @@ export const hospital = {
       icon: "cpu",
       title: "Technology-Driven Treatment",
       description:
-        "Zeiss Visu 160 operating microscope, Oertli Faros phacoemulsification system, and advanced diagnostic imaging ensure precision at every step.",
+        "Zeiss Visu 150 operating microscope, Oertli Faros phacoemulsification system, and advanced diagnostic imaging ensure precision at every step.",
     },
   ],
 
@@ -123,67 +148,81 @@ export const hospital = {
       "Surgical outcomes in cataract care have improved dramatically with modern phacoemulsification platforms. At Neyani, we invest in systems that experienced surgeons trust.",
     items: [
       {
-        title: "OERTLI FAROS — Phacoemulsification System",
+        title: "OPHTHALMIC CHAIR UNIT — Examination Suite",
         description:
-          "Helps our doctors perform cataract surgery by removing the cloudy lens so it can be replaced with an artificial lens.",
+          "Provides motorized patient positioning and integrated diagnostic instruments for a comfortable, thorough eye examination.",
         detail:
-          "Helps our doctors perform cataract surgery by removing the cloudy lens so it can be replaced with an artificial lens.",
+          "Provides motorized patient positioning and integrated diagnostic instruments for a comfortable, thorough eye examination.",
       },
       {
-        title: "ZEISS VISU 160 — Surgical Microscope",
+        title: "UNICOS UNIQUE-RK — Auto Ref-Keratometer",
         description:
-          "Gives our surgeons a clear, magnified view of the eye so they can work with precision during surgery.",
+          "Measures the eye's refractive power and corneal curvature to help determine an accurate prescription and evaluate astigmatism.",
         detail:
-          "Gives our surgeons a clear, magnified view of the eye so they can work with precision during surgery.",
+          "Measures the eye's refractive power and corneal curvature to help determine an accurate prescription and evaluate astigmatism.",
       },
       {
-        title: "LENSTAR PRO — Haag-Streit — Optical Biometer",
+        title: "SLIT LAMP — With Digital Imaging Module",
         description:
-          "Helps our doctors measure important features of the eye and choose a suitable artificial lens before cataract surgery.",
+          "Gives our doctors an illuminated, high-magnification view and digital imaging of the cornea, lens, and anterior eye structures.",
         detail:
-          "Helps our doctors measure important features of the eye and choose a suitable artificial lens before cataract surgery.",
+          "Gives our doctors an illuminated, high-magnification view and digital imaging of the cornea, lens, and anterior eye structures.",
       },
       {
-        title: "ZEISS — OCT Imaging System",
+        title: "ICARE — Rebound Tonometer",
         description:
-          "Creates detailed images of the retina, helping our doctors examine the back of the eye and assess retinal health.",
+          "Measures the pressure inside the eye gently and quickly without requiring anaesthetic eye drops or uncomfortable air puffs.",
         detail:
-          "Creates detailed images of the retina, helping our doctors examine the back of the eye and assess retinal health.",
+          "Measures the pressure inside the eye gently and quickly without requiring anaesthetic eye drops or uncomfortable air puffs.",
       },
       {
-        title: "ZEISS Perimetry — Visual Field Analyzer",
+        title: "HAAG-STREIT LENSTAR — Optical Biometer",
         description:
-          "Checks how well a person can see across their field of vision, helping our doctors assess and monitor conditions such as glaucoma.",
+          "Measures critical eye dimensions with laser precision to calculate the ideal artificial lens power before cataract surgery.",
         detail:
-          "Checks how well a person can see across their field of vision, helping our doctors assess and monitor conditions such as glaucoma.",
+          "Measures critical eye dimensions with laser precision to calculate the ideal artificial lens power before cataract surgery.",
+      },
+      {
+        title: "ZEISS — Optical Coherence Tomography (OCT)",
+        description:
+          "Creates high-definition cross-sectional images of the retina and optic nerve, aiding early diagnosis of glaucoma and retinal conditions.",
+        detail:
+          "Creates high-definition cross-sectional images of the retina and optic nerve, aiding early diagnosis of glaucoma and retinal conditions.",
+      },
+      {
+        title: "ZEISS — Visual Field Perimeter",
+        description:
+          "Checks how well a person sees across their entire field of vision, helping our doctors assess and monitor glaucoma progression.",
+        detail:
+          "Checks how well a person sees across their entire field of vision, helping our doctors assess and monitor glaucoma progression.",
       },
       {
         title: "APPASAMY — YAG Laser System",
         description:
-          "Helps doctors treat clouding that can sometimes develop behind an artificial lens after cataract surgery, when laser treatment is appropriate.",
+          "Helps doctors treat clouding that can sometimes develop behind an artificial lens after cataract surgery and manage narrow-angle glaucoma.",
         detail:
-          "Helps doctors treat clouding that can sometimes develop behind an artificial lens after cataract surgery, when laser treatment is appropriate.",
+          "Helps doctors treat clouding that can sometimes develop behind an artificial lens after cataract surgery and manage narrow-angle glaucoma.",
       },
       {
-        title: "ICARE — Tonometer",
+        title: "OERTLI FAROS — Phacoemulsification System",
         description:
-          "Measures the pressure inside the eye, helping our doctors assess eye health and check for signs of problems such as glaucoma.",
+          "Used during cataract surgery to gently break down and remove the cloudy natural lens with exceptional fluidic precision.",
         detail:
-          "Measures the pressure inside the eye, helping our doctors assess eye health and check for signs of problems such as glaucoma.",
+          "Used during cataract surgery to gently break down and remove the cloudy natural lens with exceptional fluidic precision.",
       },
       {
-        title: "UNICOS UNIQUE-RK — Autorefractometer / Keratometer",
+        title: "ZEISS VISU 150 — Operating Microscope",
         description:
-          "Measures the eye's focusing power and corneal curvature, helping our doctors assess vision and determine a suitable glasses prescription.",
+          "Gives our surgeons a brilliantly illuminated, high-magnification view of the eye to work with utmost precision during surgery.",
         detail:
-          "Measures the eye's focusing power and corneal curvature, helping our doctors assess vision and determine a suitable glasses prescription.",
+          "Gives our surgeons a brilliantly illuminated, high-magnification view of the eye to work with utmost precision during surgery.",
       },
       {
-        title: "KEELER — Indirect Ophthalmoscope",
+        title: "ALCON INFINITI — Vision System",
         description:
-          "Helps our doctors examine the retina and the back of the eye to assess eye health and look for possible problems.",
+          "Advanced phacoemulsification platform providing dependable anterior segment fluidics and ultrasonic control during cataract surgery.",
         detail:
-          "Helps our doctors examine the retina and the back of the eye to assess eye health and look for possible problems.",
+          "Advanced phacoemulsification platform providing dependable anterior segment fluidics and ultrasonic control during cataract surgery.",
       },
     ],
     disclaimer:
@@ -204,7 +243,7 @@ export const hospital = {
     "OCT and fundus imaging",
     "Visual field analyser",
     "Oertli Faros phacoemulsification system",
-    "Zeiss Visu 160 operating microscope",
+    "Zeiss Visu 150 operating microscope",
     "Slit-lamp bio-microscopy",
     "Retinoscopy and refraction lane",
   ],

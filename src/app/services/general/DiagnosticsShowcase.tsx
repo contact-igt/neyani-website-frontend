@@ -23,7 +23,7 @@ const equipment = [
     alt: "Surgeon performing cataract surgery with a phacoemulsification platform under an operating microscope",
   },
   {
-    title: "ZEISS VISU 160 — Surgical Microscope",
+    title: "ZEISS VISU 150 — Surgical Microscope",
     copy: "High-magnification surgical visualization for fine ocular structures during delicate cataract and eye procedures.",
     image: "/operation-theatre.jpg",
     alt: "ZEISS VISU surgical microscope on a floor stand in the operating theatre at Neyani Eye Hospital",
