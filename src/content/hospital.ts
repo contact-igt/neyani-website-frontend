@@ -33,9 +33,9 @@ export const hospital = {
     "Clinical Establishment Registration No.: GUJKAC202500085PR",
 
   stats: [
-    { value: "Since 2019", label: "Serving Gandhidham since 2019" },
-    { value: "Registered Facility", label: "Clinical Reg. GUJKAC202500085PR" },
-    { value: "Regional Care", label: "Gandhidham Hospital & Bhachau OPD" },
+    { value: "35+ Years Legacy", label: "Serving Kutch Communities Since 1989" },
+    { value: "Certified Specialists", label: "GMC Registered Ophthalmologists" },
+    { value: "Regional Eye Care", label: "Gandhidham Hospital & Bhachau OPD" },
   ],
 
   doctors: [
