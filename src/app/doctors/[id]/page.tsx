@@ -24,9 +24,24 @@ export async function generateMetadata({ params }: ProfilePageProps): Promise<Me
   const { id } = await params;
   const profile = getDoctorProfile(id);
   if (!profile) return {};
+  const canonicalUrl = `https://neyanihospital.in/doctors/${profile.doctor.id}`;
   return {
     title: `${profile.doctor.name} — ${profile.doctor.role} | ${hospital.name}`,
     description: profile.description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: `${profile.doctor.name} — ${profile.doctor.role} | ${hospital.name}`,
+      description: profile.description,
+      url: canonicalUrl,
+      images: [
+        {
+          url: profile.image,
+          alt: profile.doctor.name,
+        },
+      ],
+    },
   };
 }
 
@@ -39,8 +54,29 @@ export default async function DoctorProfilePage({ params }: ProfilePageProps) {
   const isLead = type === "lead";
   const otherDoctors = doctorProfiles.filter((item) => item.doctor.id !== doctor.id);
 
+  const physicianSchema = {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    name: doctor.name,
+    jobTitle: doctor.role,
+    description: profile.description,
+    image: `https://neyanihospital.in${image}`,
+    medicalSpecialty: profile.specialty || "Ophthalmology",
+    knowsLanguage: hospital.languages,
+    worksFor: {
+      "@type": "MedicalClinic",
+      name: hospital.name,
+      url: "https://neyanihospital.in",
+    },
+    ...(doctor.regNo ? { identifier: `GMC Reg: ${doctor.regNo}` } : {}),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianSchema) }}
+      />
       <Header />
       <main className={heroStyles.main}>
         <DoctorsHero specialistsHref="/doctors#specialists-title" />
