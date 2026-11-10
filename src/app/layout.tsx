@@ -58,6 +58,14 @@ export const metadata: Metadata = {
       "Advanced eye care in Gandhidham, Gujarat — cataract surgery, glaucoma, retina care, and modern ophthalmic technology.",
     images: ["/about-hospital-facade-v1.png"],
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" },
+      { url: "/logo.jpeg", sizes: "any" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/logo.jpeg",
+  },
   robots: {
     index: true,
     follow: true,
@@ -121,6 +129,7 @@ const localBusinessSchema = {
     { "@type": "City", name: "Adipur" },
     { "@type": "City", name: "Anjar" },
     { "@type": "City", name: "Bhachau" },
+    { "@type": "City", name: "Rapar" },
     { "@type": "AdministrativeArea", name: "Kutch" },
     { "@type": "AdministrativeArea", name: "Gujarat" },
   ],
