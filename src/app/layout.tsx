@@ -44,10 +44,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/about-hospital-facade-v1.png",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: `${hospital.name} Facade in Gandhidham, Gujarat`,
+        alt: `${hospital.name} Building Facade in Gandhidham, Gujarat`,
       },
     ],
   },
@@ -56,15 +56,15 @@ export const metadata: Metadata = {
     title: `${hospital.name} — Eye Hospital in Gandhidham`,
     description:
       "Advanced eye care in Gandhidham, Gujarat — cataract surgery, glaucoma, retina care, and modern ophthalmic technology.",
-    images: ["/about-hospital-facade-v1.png"],
+    images: ["/og-image.jpg"],
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" },
-      { url: "/logo.jpeg", sizes: "any" },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
     ],
     shortcut: "/favicon.ico",
-    apple: "/logo.jpeg",
+    apple: "/apple-touch-icon.png",
   },
   robots: {
     index: true,
@@ -92,8 +92,8 @@ const localBusinessSchema = {
   name: hospital.name,
   alternateName: "Neyani Eye Centre",
   url: siteUrl,
-  logo: `${siteUrl}/logo.jpeg`,
-  image: `${siteUrl}/about-hospital-facade-v1.png`,
+  logo: `${siteUrl}/logo.png`,
+  image: `${siteUrl}/og-image.jpg`,
   description:
     "Specialist eye hospital in Gandhidham providing cataract surgery, glaucoma management, diabetic retina care, and pediatric ophthalmology across Kutch.",
   address: {
