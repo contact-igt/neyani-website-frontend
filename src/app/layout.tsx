@@ -34,14 +34,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteUrl,
   },
-  icons: {
-    icon: [
-      { url: "/logo.png", type: "image/png" },
-    ],
-    apple: [
-      { url: "/logo.png", type: "image/png" },
-    ],
-  },
   openGraph: {
     title: `${hospital.name} — Eye Hospital & Specialist in Gandhidham, Gujarat`,
     description:
