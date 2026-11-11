@@ -11,12 +11,16 @@
   },
   "dependencies": {
     "@types/react-slick": "^0.23.13",
+    "enquire.js": "^2.1.6",
+    "json2mq": "^0.2.0",
+    "lodash.debounce": "^4.0.8",
     "lucide-react": "^0.511.0",
     "next": "16.3.4",
     "react": "19.2.8",
     "react-countup": "^6.5.3",
     "react-dom": "19.2.8",
     "react-slick": "^0.30.3",
+    "resize-observer-polyfill": "^1.5.1",
     "slick-carousel": "^2.0.0",
     "vercel": "^59.16.0"
   },

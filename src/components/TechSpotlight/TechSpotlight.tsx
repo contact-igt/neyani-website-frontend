@@ -20,6 +20,9 @@ const technologyImages = [
   { src: "/tech-alcon-infiniti.webp", alt: "Alcon Infiniti Vision System — Phacoemulsification Platform" },
 ] as const;
 
+// Keep each device paired with its original image while changing display order.
+const technologyOrder = [8, 4, 3, 0, 1, 2, 5, 6, 7, 9, 10] as const;
+
 export default function TechSpotlight() {
   const { techSpotlight } = hospital;
   const trackRef = useRef<HTMLDivElement>(null);
@@ -99,9 +102,10 @@ export default function TechSpotlight() {
             onScroll={updateScrollState}
             onKeyDown={handleKeyDown}
           >
-            {techSpotlight.items.map((item, i) => (
-              <TechCard key={item.title} item={item} index={i} />
-            ))}
+            {technologyOrder.map((index) => {
+              const item = techSpotlight.items[index];
+              return <TechCard key={item.title} item={item} index={index} />;
+            })}
           </div>
 
           <button

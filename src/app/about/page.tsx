@@ -7,6 +7,7 @@ import Footer from "@/components/Footer/Footer";
 import FAQ from "@/components/FAQ/FAQ";
 import WhatsAppFAB from "@/components/WhatsAppFAB/WhatsAppFAB";
 import FacilitiesCarousel from "./FacilitiesCarousel";
+import FounderSlider from "./FounderSlider";
 import ImpactStats from "./ImpactStats";
 import StatValue from "@/components/StatValue/StatValue";
 import { hospital } from "@/content/hospital";
@@ -99,17 +100,7 @@ export default function AboutPage() {
               </h2>
             </header>
             <article className={styles.founderCard}>
-              <div className={styles.founderPhotoWrap}>
-                <Image
-                  src="/founder-dr-shivpal-singh-rathore.jpg"
-                  alt="Dr. Shivpal Singh Rathore — Founder of Neyani Eye Hospital"
-                  fill
-                  quality={95}
-                  priority
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 480px"
-                  className={styles.founderPhoto}
-                />
-              </div>
+              <FounderSlider />
               <div className={styles.founderBody}>
                 <p className={styles.founderRoleLabel}>FOUNDER OF NEYANI EYE HOSPITAL</p>
                 <h3 className={styles.founderName}>Dr. Shivpal Singh Rathore</h3>

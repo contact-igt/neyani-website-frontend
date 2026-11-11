@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, Eye } from "lucide-react";
 import Slider, { type Settings } from "react-slick";
 import styles from "./Hero.module.css";
@@ -38,11 +39,16 @@ export default function Hero() {
       <div className={styles.panel}>
         <div className={styles.copy}>
           <p className={styles.kicker}><span><Eye size={15} aria-hidden="true" /></span> Specialist eye care in Gandhidham</p>
-          <h1 id="hero-heading">Clearer vision.<br /><span className={styles.headingAccent}>Care you can trust.</span></h1>
-          <p className={styles.intro}>Advanced cataract, retina and children&apos;s eye care—thoughtfully delivered for every stage of life.</p>
+          <h1 id="hero-heading">Expert Eye Care. A Legacy of Trust Since 1989.</h1>
+          <p className={styles.intro}>Advanced cataract surgery and comprehensive ophthalmic care in Gandhidham, backed by two generations of clinical experience and modern surgical technology.</p>
+          <ul className={styles.trustBadges} aria-label="Care highlights">
+            <li>Established 1989</li>
+            <li>Advanced Cataract Care</li>
+            <li>Specialist Eye Services</li>
+          </ul>
           <div className={styles.actions}>
-            <a href="#contact" className={styles.primary}>Book appointment <span><ArrowRight size={17} aria-hidden="true" /></span></a>
-            <a href="#services" className={styles.secondary}>View services <span><ArrowRight size={16} aria-hidden="true" /></span></a>
+            <Link href="/contact#appointment" className={styles.primary}>Book an Appointment <span><ArrowRight size={17} aria-hidden="true" /></span></Link>
+            <Link href="/services/cataract" className={styles.secondary}>Explore Cataract Surgery <span><ArrowRight size={16} aria-hidden="true" /></span></Link>
           </div>
         </div>
       </div>
