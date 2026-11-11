@@ -856,9 +856,10 @@
 }
 
 .founderPhotoWrap {
+  --founder-photo-height: clamp(500px, 48vw, 580px);
   position: relative;
   width: 100%;
-  height: clamp(500px, 48vw, 580px);
+  height: var(--founder-photo-height);
   overflow: hidden;
   border-radius: 24px;
   background: linear-gradient(135deg, #e8f4f8, #d3edf6);
@@ -1004,6 +1005,7 @@
   }
 
   .founderPhotoWrap {
+    --founder-photo-height: 460px;
     height: 460px;
   }
 }
@@ -1064,6 +1066,7 @@
 
   .founderPhotoWrap {
     max-width: 100%;
+    --founder-photo-height: 380px;
     height: 380px;
     border-radius: 16px;
   }
@@ -2557,3 +2560,12 @@
   font-weight: 500;
   line-height: 1.4;
 }
+
+.founderSlider,
+.founderSlider :global(.slick-list),
+.founderSlider :global(.slick-track),
+.founderSlider :global(.slick-slide),
+.founderSlider :global(.slick-slide) > div {
+  height: 100%;
+}
+.founderSlide { position: relative; height: var(--founder-photo-height); }

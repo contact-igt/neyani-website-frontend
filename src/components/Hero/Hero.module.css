@@ -84,3 +84,22 @@
 .kicker { gap:8px; padding:6px 12px 6px 6px; font-size:10px; letter-spacing:.06em; }
 .kicker > span { width:24px; height:24px; }
 .kicker > span svg { width:13px; height:13px; }
+
+/* Space for the expanded care message and trust highlights. */
+.copy { width:100%; padding:40px clamp(28px,4.5vw,68px); }
+.copy h1 { max-width:620px; font-size:clamp(38px,3.8vw,56px); line-height:1.08; }
+.trustBadges { display:flex; flex-wrap:wrap; gap:8px; list-style:none; padding:0; margin:22px 0 0; }
+.trustBadges li { padding:7px 11px; border:1px solid var(--border-subtle); border-radius:999px; background:rgb(255 255 255 / 82%); color:var(--brand-primary-dark); font-size:11px; font-weight:700; line-height:1.4; }
+.actions { gap:10px; margin-top:24px; }
+@media (min-width:701px) and (max-width:1100px) {
+  .hero { min-height:720px; }
+  .panel { width:68%; }
+}
+@media (max-width:700px) {
+  .hero { height:auto; min-height:640px; }
+  .hero::before { z-index:1; background:linear-gradient(180deg,rgb(8 43 55 / 32%),rgb(8 43 55 / 85%) 40%,rgb(8 43 55 / 97%) 100%); }
+  .panel { position:relative; min-height:640px; }
+  .copy { padding:64px 24px 36px; }
+  .copy h1 { font-size:clamp(34px,8vw,48px); line-height:1.08; }
+  .trustBadges li { border-color:rgb(255 255 255 / 28%); background:rgb(255 255 255 / 12%); color:var(--text-on-dark); }
+}
