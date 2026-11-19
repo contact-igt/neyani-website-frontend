@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { absoluteUrl } from "@/config/site";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -24,7 +25,7 @@ export async function generateMetadata({ params }: ProfilePageProps): Promise<Me
   const { id } = await params;
   const profile = getDoctorProfile(id);
   if (!profile) return {};
-  const canonicalUrl = `https://neyanihospital.in/doctors/${profile.doctor.id}`;
+  const canonicalUrl = absoluteUrl(`/doctors/${profile.doctor.id}`);
   return {
     title: `${profile.doctor.name} — ${profile.doctor.role} | ${hospital.name}`,
     description: profile.description,
@@ -60,13 +61,13 @@ export default async function DoctorProfilePage({ params }: ProfilePageProps) {
     name: doctor.name,
     jobTitle: doctor.role,
     description: profile.description,
-    image: `https://neyanihospital.in${image}`,
+    image: absoluteUrl(image),
     medicalSpecialty: profile.specialty || "Ophthalmology",
     knowsLanguage: hospital.languages,
     worksFor: {
       "@type": "MedicalClinic",
       name: hospital.name,
-      url: "https://neyanihospital.in",
+      url: absoluteUrl("/"),
     },
     ...(doctor.regNo ? { identifier: `GMC Reg: ${doctor.regNo}` } : {}),
   };

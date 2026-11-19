@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { absoluteUrl } from "@/config/site";
 import Image from "next/image";
 import Link from "next/link";
 import { AlertTriangle, ArrowLeftRight, ArrowRight, Check, Clock3, Droplets, Eye, FileText, HeartHandshake, ImageIcon, Languages, Phone, ScanEye, ShieldCheck, SlidersHorizontal, Stethoscope, Zap } from "lucide-react";
@@ -13,6 +14,9 @@ import { hospital } from "@/content/hospital";
 import styles from "./oculoplasty.module.css";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: absoluteUrl("/services/oculoplasty"),
+  },
   title: `Oculoplasty & Watering Eye Care — ${hospital.name}`,
   description: "Assessment for persistent watering eyes, eyelid concerns and tear-drainage symptoms at Neyani Eye Hospital in Gandhidham.",
 };

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { absoluteUrl } from "@/config/site";
 import Image from "next/image";
 import Link from "next/link";
 import { Activity, Baby, Cpu, Droplets, Eye, Glasses, Layers, MonitorCheck, Scan, ScanEye, ArrowRight, Check, Focus, Sparkles, Sun } from "lucide-react";
@@ -9,6 +10,9 @@ import { hospital } from "@/content/hospital";
 import styles from "./services.module.css";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: absoluteUrl("/services"),
+  },
   title: `Eye Care Treatments — ${hospital.name}`,
   description: "Explore cataract, glaucoma, retina, pediatric, diagnostic and general eye care treatments at Neyani Eye Hospital in Gandhidham.",
 };

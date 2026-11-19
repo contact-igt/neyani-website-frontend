@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { absoluteUrl } from "@/config/site";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CalendarCheck, CalendarClock, CalendarDays, Check, ChevronDown, ClipboardPlus, Clock3, Droplets, Eye, FileText, Glasses, HeartHandshake, Languages, Microscope, ScanEye, ScanLine, ShieldCheck, Stethoscope, Phone, Users } from "lucide-react";
@@ -54,6 +55,9 @@ const reasons = [
 ] as const;
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: absoluteUrl("/services/general"),
+  },
   title: `${service.title} - ${hospital.name}`,
   description: service.description,
 };

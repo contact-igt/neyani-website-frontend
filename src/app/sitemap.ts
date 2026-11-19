@@ -1,39 +1,32 @@
 import type { MetadataRoute } from "next";
 import { hospital } from "@/content/hospital";
+import { absoluteUrl } from "@/config/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://neyanihospital.in";
-  const now = new Date();
-
   // Core static pages
   const corePages: MetadataRoute.Sitemap = [
     {
-      url: `${baseUrl}`,
-      lastModified: now,
+      url: absoluteUrl("/"),
       changeFrequency: "weekly",
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/services`,
-      lastModified: now,
+      url: absoluteUrl("/services"),
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/doctors`,
-      lastModified: now,
+      url: absoluteUrl("/doctors"),
       changeFrequency: "monthly",
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/about`,
-      lastModified: now,
+      url: absoluteUrl("/about"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/contact`,
-      lastModified: now,
+      url: absoluteUrl("/contact"),
       changeFrequency: "monthly",
       priority: 0.85,
     },
@@ -53,16 +46,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const servicePages: MetadataRoute.Sitemap = serviceSlugs.map((slug) => ({
-    url: `${baseUrl}/services/${slug}`,
-    lastModified: now,
+    url: absoluteUrl(`/services/${slug}`),
     changeFrequency: "weekly",
     priority: slug === "cataract" || slug === "glaucoma" || slug === "retina" ? 0.9 : 0.8,
   }));
 
   // Doctor profile pages
   const doctorPages: MetadataRoute.Sitemap = hospital.doctors.map((doctor) => ({
-    url: `${baseUrl}/doctors/${doctor.id}`,
-    lastModified: now,
+    url: absoluteUrl(`/doctors/${doctor.id}`),
     changeFrequency: "monthly",
     priority: 0.8,
   }));

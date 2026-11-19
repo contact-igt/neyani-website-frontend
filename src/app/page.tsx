@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { absoluteUrl } from "@/config/site";
 import Header from "@/components/Header/Header";
 import Hero from "@/components/Hero/Hero";
 import StatsBand from "@/components/StatsBand/StatsBand";
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   description:
     "Leading eye hospital in Gandhidham offering advanced cataract surgery (Phaco & MICS), glaucoma care, diabetic retina care, and pediatric ophthalmology. Serving Gandhidham, Adipur, Anjar, and Kutch.",
   alternates: {
-    canonical: "https://neyanihospital.in",
+    canonical: absoluteUrl("/"),
   },
 };
 
