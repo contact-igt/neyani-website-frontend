@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { absoluteUrl } from "@/config/site";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Baby, Brain, CalendarCheck, CalendarDays, Check, ChevronDown, ClipboardCheck, Eye, Glasses, HeartHandshake, Languages, Phone, ScanEye, School, ShieldCheck, Smile, Sparkles, Stethoscope, TrendingUp } from "lucide-react";
@@ -77,6 +78,9 @@ const benefits = [
 ] as const;
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: absoluteUrl("/services/pediatric"),
+  },
   title: `Pediatric Eye Care — ${hospital.name}`,
   description: "Gentle pediatric eye examinations and specialist care for squint, lazy eye, refractive errors and childhood eye conditions in Gandhidham.",
 };

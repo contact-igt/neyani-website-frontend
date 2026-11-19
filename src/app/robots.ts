@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { absoluteUrl } from "@/config/site";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -20,8 +21,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://neyanihospital.in/sitemap.xml",
-    host: "https://neyanihospital.in",
+    sitemap: absoluteUrl("/sitemap.xml"),
   };
 }
 

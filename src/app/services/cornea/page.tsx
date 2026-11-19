@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { absoluteUrl } from "@/config/site";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CalendarDays, Check, ClipboardList, Clock3, ContactRound, Droplets, Eye, ImageIcon, MapPinned, Microscope, Phone, ScanEye, ShieldCheck, Sparkles, Sun, Waves } from "lucide-react";
@@ -13,6 +14,9 @@ import { hospital } from "@/content/hospital";
 import styles from "./cornea.module.css";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: absoluteUrl("/services/cornea"),
+  },
   title: `Cornea Care — ${hospital.name}`,
   description: "Cornea assessment, imaging and care for corneal conditions at Neyani Eye Hospital in Gandhidham.",
 };

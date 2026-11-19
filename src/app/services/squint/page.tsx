@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { absoluteUrl } from "@/config/site";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Baby, CalendarDays, Check, Eye, Focus, Glasses, HeartHandshake, Languages, Phone, ScanEye, ShieldCheck, SlidersHorizontal, Stethoscope, Users } from "lucide-react";
@@ -13,6 +14,9 @@ import { hospital } from "@/content/hospital";
 import styles from "./squint.module.css";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: absoluteUrl("/services/squint"),
+  },
   title: `Squint Care — ${hospital.name}`,
   description: "Squint assessment and eye-alignment care for children and adults at Neyani Eye Hospital in Gandhidham.",
 };

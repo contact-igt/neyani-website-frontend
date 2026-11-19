@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { absoluteUrl } from "@/config/site";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Check, Clock3, Eye, MapPin, MessageCircle, Phone } from "lucide-react";
@@ -10,6 +11,9 @@ import AppointmentForm from "./AppointmentForm";
 import styles from "./contact.module.css";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: absoluteUrl("/contact"),
+  },
   title: "Contact Neyani Eye Hospital | Gandhidham & Bhachau",
   description:
     "Find Neyani Eye Hospital's locations in Gandhidham and Bhachau, Kutch. View location details and contact the hospital to enquire about eye consultations and appointments.",

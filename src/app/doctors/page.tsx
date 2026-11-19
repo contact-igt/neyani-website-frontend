@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { absoluteUrl } from "@/config/site";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Quote } from "lucide-react";
@@ -12,6 +13,9 @@ import DoctorsHero from "./DoctorsHero";
 import styles from "./doctors.module.css";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: absoluteUrl("/doctors"),
+  },
   title: `Our Doctors | ${hospital.name}`,
   description: `Meet the ophthalmology specialists at ${hospital.name} in Gandhidham.`,
 };

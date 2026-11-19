@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { absoluteUrl } from "@/config/site";
 import Image from "next/image";
 import Link from "next/link";
 import { Activity, ArrowRight, CalendarDays, Check, Droplets, Eye, Gauge, HeartHandshake, History, Languages, Microscope, Phone, ScanEye, ScanLine, ShieldCheck, SlidersHorizontal, Stethoscope } from "lucide-react";
@@ -70,6 +71,9 @@ const benefits = [
 ] as const;
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: absoluteUrl("/services/glaucoma"),
+  },
   title: `${glaucoma.title} — ${hospital.name}`,
   description: glaucoma.description,
 };

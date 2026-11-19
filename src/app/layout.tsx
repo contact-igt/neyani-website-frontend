@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "slick-carousel/slick/slick.css";
 import { hospital } from "@/content/hospital";
-
-const siteUrl = "https://neyanihospital.in";
+import { siteUrl } from "@/config/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -31,9 +30,6 @@ export const metadata: Metadata = {
   authors: [{ name: "Dr. Yajuvendra Singh Rathore" }],
   creator: hospital.name,
   publisher: hospital.name,
-  alternates: {
-    canonical: siteUrl,
-  },
   openGraph: {
     title: `${hospital.name} — Eye Hospital & Specialist in Gandhidham, Gujarat`,
     description:

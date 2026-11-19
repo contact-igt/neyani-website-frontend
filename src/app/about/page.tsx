@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { absoluteUrl } from "@/config/site";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Baby, CalendarDays, Check, Eye, GraduationCap, Heart, Info, Languages, MapPin, MessageCircle, Phone, ScanEye, ShieldCheck, UsersRound } from "lucide-react";
@@ -14,6 +15,9 @@ import { hospital } from "@/content/hospital";
 import styles from "./about.module.css";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: absoluteUrl("/about"),
+  },
   title: "Neyani Eye Hospital | Our Legacy and Founder",
   description:
     "Learn about Neyani Eye Hospital's history, founded by Dr. Shivpal Singh Rathore in Rapar, Kutch, in 1989, and its commitment to eye care across the region.",

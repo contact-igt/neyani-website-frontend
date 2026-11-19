@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { absoluteUrl } from "@/config/site";
 import Image from "next/image";
 import Link from "next/link";
 import { Activity, ArrowRight, CalendarDays, Check, ChevronDown, CircleAlert, Droplet, Eye, HeartHandshake, History, Images, Microscope, Phone, ScanEye, ScanLine, ShieldCheck, Stethoscope, Zap } from "lucide-react";
@@ -85,6 +86,9 @@ const benefits = [
 ] as const;
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: absoluteUrl("/services/retina"),
+  },
   title: `${retina.title} — ${hospital.name}`,
   description: retina.description,
 };

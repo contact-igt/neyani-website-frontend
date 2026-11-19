@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { absoluteUrl } from "@/config/site";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CalendarDays, Check, Droplets, Eye, Glasses, HeartHandshake, Languages, Microscope, Phone, ScanEye, ShieldCheck, SlidersHorizontal, Stethoscope, Sun } from "lucide-react";
@@ -12,6 +13,9 @@ import { hospital } from "@/content/hospital";
 import styles from "./pterygium.module.css";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: absoluteUrl("/services/pterygium"),
+  },
   title: `Pterygium Treatment — ${hospital.name}`,
   description: "Assessment and treatment planning for pterygium, eye irritation and vision concerns at Neyani Eye Hospital in Gandhidham.",
 };
