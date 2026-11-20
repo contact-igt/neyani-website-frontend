@@ -1,72 +1,45 @@
-import { NextResponse } from "next/server";
+﻿import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
-  try {
-    const body = await request.json();
-    const { name, phone, treatment, message, details, source } = body;
+  const body = await request.json().catch(() => null);
+  const { requestId, name, phone, treatment, message, details, source } = body ?? {};
+  if (
+    typeof requestId !== "string" ||
+    typeof name !== "string" || !name.trim() ||
+    typeof phone !== "string" || !phone.trim()
+  ) {
+    return NextResponse.json({ error: "Name and phone number are required." }, { status: 400 });
+  }
 
-    if (!name || !phone) {
-      return NextResponse.json(
-        { error: "Name and phone number are required." },
-        { status: 400 }
-      );
-    }
-
-    const webhookUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
-
-    if (!webhookUrl) {
-      console.warn("GOOGLE_SHEETS_WEBHOOK_URL is not configured.");
-      // In development or when webhook isn't configured yet, log the submission
-      console.log("Appointment Form Submission Received:", {
-        name,
-        phone,
-        treatment: treatment || details,
-        message: message || details || "",
-        source: source || "Website",
-        timestamp: new Date().toISOString(),
-      });
-
-      return NextResponse.json(
-        {
-          success: true,
-          warning: "Webhook URL not set in environment variables. Logged to console.",
-        },
-        { status: 200 }
-      );
-    }
-
-    const payload = {
-      timestamp: new Date().toLocaleString("en-IN", {
-        timeZone: "Asia/Kolkata",
-        dateStyle: "medium",
-        timeStyle: "short",
-      }),
-      name: String(name).trim(),
-      phone: String(phone).trim(),
-      treatment: String(treatment || details || "General Consultation").trim(),
-      message: String(message || details || "").trim(),
-      source: String(source || "Website").trim(),
-    };
-
-    const response = await fetch(webhookUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    });
-
-    if (!response.ok) {
-      throw new Error(`Google Apps Script responded with HTTP ${response.status}`);
-    }
-
-    return NextResponse.json({ success: true });
-  } catch (error: any) {
-    console.error("Error submitting to Google Sheets:", error);
+  const { NEYANI_LEADS_API_URL: endpoint } = process.env;
+  const clientKey = process.env.NEYANI_CLIENT_KEY?.trim();
+  if (!endpoint || !clientKey) {
     return NextResponse.json(
-      { error: "Failed to record appointment request. Please try again." },
-      { status: 500 }
+      { error: "Online appointments are temporarily unavailable. Please contact the hospital." },
+      { status: 503 },
     );
   }
-}
 
+  try {
+    const response = await fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "X-Client-Key": clientKey },
+      body: JSON.stringify({ requestId, name, phone, treatment, message: message || details, source }),
+      signal: AbortSignal.timeout(10000),
+      redirect: "error",
+    });
+    if (response.status === 400) {
+      return NextResponse.json({ error: "Check your name, phone number and appointment details." }, { status: 400 });
+    }
+    if (response.ok && (await response.json()).success === true) {
+      return NextResponse.json({ success: true });
+    }
+  } catch {
+    // A retry keeps the same request ID so an uncertain response cannot create another lead.
+  }
+
+  return NextResponse.json(
+    { error: "We couldn't confirm your appointment request. Please try again." },
+    { status: 502 },
+  );
+}

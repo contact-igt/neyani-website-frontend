@@ -1,12 +1,16 @@
 "use client";
 
-import { useState, FormEvent } from "react";
-import { ArrowRight, CheckCircle2, Loader2, AlertCircle } from "lucide-react";
+import { useRef, useState, FormEvent } from "react";
+import { useRouter } from "next/navigation";
+import { createAppointmentRequestId } from "@/lib/appointment-request-id";
+import { ArrowRight, Loader2, AlertCircle } from "lucide-react";
 import styles from "./contact.module.css";
 
 export default function AppointmentForm() {
-  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const router = useRouter();
+  const [status, setStatus] = useState<"idle" | "submitting" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const submission = useRef<{ fields: string; requestId: string } | null>(null);
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -25,46 +29,30 @@ export default function AppointmentForm() {
     };
 
     try {
+      const fields = JSON.stringify(payload);
+      if (submission.current?.fields !== fields) {
+        submission.current = { fields, requestId: createAppointmentRequestId() };
+      }
+
       const response = await fetch("/api/appointment", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({ ...payload, requestId: submission.current.requestId }),
       });
 
       const result = await response.json();
 
-      if (!response.ok) {
+      if (!response.ok || result.success !== true) {
         throw new Error(result.error || "Failed to submit request.");
       }
 
-      setStatus("success");
+      submission.current = null;
       form.reset();
-    } catch (err: any) {
+      router.replace("/thank-you");
+    } catch (err) {
       setStatus("error");
-      setErrorMessage(err.message || "Failed to record your appointment. Please try again.");
+      setErrorMessage(err instanceof Error ? err.message : "Failed to record your appointment. Please try again.");
     }
-  }
-
-  if (status === "success") {
-    return (
-      <div className={styles.successCard} role="status" aria-live="polite">
-        <div className={styles.successIconWrap}>
-          <CheckCircle2 size={44} aria-hidden="true" />
-        </div>
-        <p className={styles.successPre}>Request Received</p>
-        <h3 className={styles.successTitle}>Thank You! We Have Received Your Details</h3>
-        <p className={styles.successText}>
-          Your appointment request has been recorded. Our team at Neyani Eye Hospital will contact you shortly on your phone to confirm your visit.
-        </p>
-        <button
-          type="button"
-          className={styles.resetButton}
-          onClick={() => setStatus("idle")}
-        >
-          Book Another Appointment
-        </button>
-      </div>
-    );
   }
 
   return (
