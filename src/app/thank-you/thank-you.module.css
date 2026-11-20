@@ -1,0 +1,89 @@
+.page {
+  display: grid;
+  place-items: center;
+  min-height: 78svh;
+  padding: clamp(132px, 17vw, 190px) 20px 72px;
+  background: #f4fafb;
+}
+
+.confirmation {
+  width: min(100%, 720px);
+  padding: clamp(28px, 6vw, 64px);
+  border: 1px solid #cbe7ef;
+  border-top: 5px solid var(--brand-primary);
+  border-radius: 28px;
+  background: #fcfeff;
+  text-align: center;
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  background: #e0f3f3;
+  color: #07776f;
+}
+
+.confirmation h1 {
+  max-width: 15ch;
+  margin: 0 auto;
+  color: var(--title-primary);
+  font-size: clamp(29px, 5vw, 52px);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.confirmation p {
+  max-width: 47ch;
+  margin: 18px auto 0;
+  color: var(--text-primary);
+  line-height: 1.65;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px 24px;
+  margin-top: 28px;
+}
+
+.book,
+.home {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 44px;
+  font-weight: 700;
+}
+
+.book {
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: var(--brand-primary-dark);
+  color: #fff;
+}
+
+.book:hover {
+  background: var(--title-primary);
+}
+
+.book svg {
+  flex-shrink: 0;
+}
+
+.home {
+  color: var(--brand-primary-dark);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.actions a:focus-visible {
+  outline: 2px solid var(--brand-primary-dark);
+  outline-offset: 4px;
+}
